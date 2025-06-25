@@ -1,26 +1,56 @@
 @import "tailwindcss";
+@font-face {
+  font-family: iran-sans;
+  src: url("/fonts/iran-sans.ttf");
+}
+@font-face {
+  font-family: aviny;
+  src: url("/fonts/aviny.ttf");
+}
 
+@font-face {
+  font-family: kalameh;
+  font-size: 128px;
+  src: url("/fonts/kalameh.ttf");
+}
 :root {
   --background: #ffffff;
   --foreground: #171717;
 }
-
-@theme inline {
+* {
+  direction: rtl;
+}
+::selection {
+  background-color: var(--color-primary-main);
+  color: black;
+}
+@theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-primary-50: oklch(97.5% 0.02 92.46);
+  --color-primary-100: oklch(95% 0.04 92.46);
+  --color-primary-200: oklch(90% 0.07 92.46);
+  --color-primary-300: oklch(83% 0.1 92.46);
+  --color-primary-400: oklch(76% 0.13 92.46);
+  --color-primary-500: oklch(70% 0.15 92.46);
+  --color-primary-600: oklch(63% 0.16 92.46);
+  --color-primary-700: oklch(54% 0.16 92.46);
+  --color-primary-800: oklch(45% 0.15 92.46);
+  --color-primary-900: oklch(35% 0.13 92.46);
+  --color-primary-main: oklch(87.22% 0.177 92.46);
+  --font-iran-sans: iran-sans;
+  --font-kalameh: kalameh;
+  --font-aviny: aviny;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
 }
