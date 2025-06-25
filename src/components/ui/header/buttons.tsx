@@ -1,4 +1,4 @@
-import NextLink from "@/components/link";
+import NextLink from "@/components/ui/link";
 import { FaUser } from "react-icons/fa";
 import { FiShoppingCart } from "react-icons/fi";
 

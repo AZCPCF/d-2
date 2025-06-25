@@ -1,4 +1,4 @@
-import NextButton from "@/components/button";
+import NextButton from "@/components/ui/button";
 import { BiSearch } from "react-icons/bi";
 
 export default function HeaderSearchInput() {

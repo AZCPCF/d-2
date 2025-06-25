@@ -1,4 +1,4 @@
-import NextImage from "@/components/image";
+import NextImage from "@/components/ui/image";
 import Link from "next/link";
 
 export default function EnamadLogo() {

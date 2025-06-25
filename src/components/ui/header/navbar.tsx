@@ -1,6 +1,6 @@
 import { FaChevronDown } from "react-icons/fa";
 import { NavbarRequestType } from ".";
-import NextLink from "../../link";
+import NextLink from "../link";
 
 const navLinks = [
   {

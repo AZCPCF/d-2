@@ -1,4 +1,4 @@
-import NextLink from "@/components/link";
+import NextLink from "@/components/ui/link";
 
 const mainLinks = [
   { href: "t", label: "اخبار و مقالات" },

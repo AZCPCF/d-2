@@ -1,4 +1,4 @@
-import NextButton from "@/components/button";
+import NextButton from "@/components/ui/button";
 import { CategoryInterface, ImageFromApiInterface } from "@/interfaces";
 import { fetcher } from "@/lib/fetcher";
 import Image from "next/image";

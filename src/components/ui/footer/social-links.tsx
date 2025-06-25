@@ -1,4 +1,4 @@
-import NextLink from "@/components/link";
+import NextLink from "@/components/ui/link";
 import { FaInstagram, FaTelegramPlane, FaWhatsapp } from "react-icons/fa";
 const socialLinks = [
   { icon: <FaInstagram fontSize={24} />, href: "/" },
