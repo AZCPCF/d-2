@@ -1,14 +1,5 @@
 @import "tailwindcss";
 @font-face {
-  font-family: iran-sans;
-  src: url("/fonts/iran-sans.ttf");
-}
-@font-face {
-  font-family: aviny;
-  src: url("/fonts/aviny.ttf");
-}
-
-@font-face {
   font-family: kalameh;
   font-size: 128px;
   src: url("/fonts/kalameh.ttf");
@@ -19,6 +10,7 @@
 }
 * {
   direction: rtl;
+  font-family: kalameh;
 }
 ::selection {
   background-color: var(--color-primary-main);
@@ -27,30 +19,18 @@
 @theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-primary-50: oklch(97.5% 0.02 92.46);
-  --color-primary-100: oklch(95% 0.04 92.46);
-  --color-primary-200: oklch(90% 0.07 92.46);
-  --color-primary-300: oklch(83% 0.1 92.46);
-  --color-primary-400: oklch(76% 0.13 92.46);
-  --color-primary-500: oklch(70% 0.15 92.46);
-  --color-primary-600: oklch(63% 0.16 92.46);
-  --color-primary-700: oklch(54% 0.16 92.46);
-  --color-primary-800: oklch(45% 0.15 92.46);
-  --color-primary-900: oklch(35% 0.13 92.46);
+  --color-primary-50: oklch(97.001% 0.04168 92.208);
+  --color-primary-100: oklch(94.996% 0.07026 92.402);
+  --color-primary-200: oklch(93.082% 0.09722 92.393);
+  --color-primary-300: oklch(91.211% 0.12544 92.716);
+  --color-primary-400: oklch(89.203% 0.15355 92.583);
+  --color-primary-500: oklch(87.218% 0.17688 92.432);
+  --color-primary-600: oklch(74.01% 0.15145 92.842);
+  --color-primary-700: oklch(56.188% 0.11492 92.299);
+  --color-primary-800: oklch(37.513% 0.07668 91.482);
+  --color-primary-900: oklch(20.853% 0.04264 91.867);
   --color-primary-main: oklch(87.22% 0.177 92.46);
   --font-iran-sans: iran-sans;
-  --font-kalameh: kalameh;
+  --: kalameh;
   --font-aviny: aviny;
-}
-
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-} */
-
-body {
-  background: var(--background);
-  color: var(--foreground);
 }
