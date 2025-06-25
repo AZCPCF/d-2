@@ -8,9 +8,13 @@ const nextConfig: NextConfig = {
         hostname: "api.d2collection.com",
         pathname: "/uploads/*",
       },
+      {
+        protocol: "https",
+        hostname: "trustseal.enamad.ir",
+        pathname: "/**",
+      },
     ],
   },
 };
-
 
 export default nextConfig;
