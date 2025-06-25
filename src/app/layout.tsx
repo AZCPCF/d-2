@@ -1,3 +1,4 @@
+import Footer from "@/components/ui/footer";
 import Header from "@/components/ui/header";
 import type { Metadata } from "next";
 import { ReactNode } from "react";
@@ -18,6 +19,7 @@ export default function RootLayout({
       <body className="antialiased">
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
