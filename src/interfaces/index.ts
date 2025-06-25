@@ -5,9 +5,9 @@ export interface CategoryInterface {
   parent_id?: string;
 }
 export interface ImageFromApiInterface {
-  width: number;
-  height: number;
-  size: number;
+  width?: number;
+  height?: number;
+  size?: number;
   url: string;
   alt?: string;
 }
