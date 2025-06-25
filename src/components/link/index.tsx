@@ -17,7 +17,7 @@ export default function NextLink({
       role={role || "link"}
       href={href}
       className={cn(
-        "hover:text-primary-main duration-100 font-kalameh",
+        "hover:text-primary-main duration-100 ",
         className
       )}
       {...rest}

@@ -37,7 +37,7 @@ export default async function Header() {
             />
           </Link>
           <NextButton
-            className="bg-gray-100 h-max p-3 max-[500px]:p-1.5 outline-0 rounded-md font-kalameh text-lg items-center text-[#727272] gap-2 hover:bg-gray-200 transition-colors duration-200 max-md:block hidden"
+            className="bg-gray-100 h-max p-3 max-[500px]:p-1.5 outline-0 rounded-md  text-lg items-center text-[#727272] gap-2 hover:bg-gray-200 transition-colors duration-200 max-md:block hidden"
             role="button"
             title={<MdMenu fontSize={24} />}
           />

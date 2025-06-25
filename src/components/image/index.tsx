@@ -7,7 +7,11 @@ export default function NextImage(
 ) {
   return (
     <Image
-      src={props.url.startsWith("https") ? props.url : `${fileUrl}${props.url}`}
+      src={
+        props.url.startsWith("https") || props.url.startsWith("/images")
+          ? props.url
+          : `${fileUrl}${props.url}`
+      }
       {...props}
       alt={props.alt}
     />
