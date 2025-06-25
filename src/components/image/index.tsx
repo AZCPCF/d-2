@@ -1,4 +1,5 @@
 import { ImageFromApiInterface } from "@/interfaces";
+import { fileUrl } from "@/utils/env";
 import Image from "next/image";
 
 export default function NextImage(
@@ -6,7 +7,7 @@ export default function NextImage(
 ) {
   return (
     <Image
-      src="https://api.d2collection.com/uploads/1e20b72e-e573-4672-af6c-7de2c496fd1a.webp"
+      src={props.url.startsWith("https") ? props.url : `${fileUrl}${props.url}`}
       {...props}
       alt={props.alt}
     />

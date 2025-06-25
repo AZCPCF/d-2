@@ -1,25 +1,30 @@
-import { RiMenuLine } from "react-icons/ri";
+import { FaChevronDown } from "react-icons/fa";
 import { NavbarRequestType } from ".";
 import NextLink from "../../link";
-import { FaChevronDown } from "react-icons/fa";
+
+const navLinks = [
+  {
+    href: "test",
+    label: (
+      <div className="flex items-center gap-2">
+        <FaChevronDown />
+        <span>محصولات</span>
+      </div>
+    ),
+  },
+  { href: "test", label: "مقالات" },
+  { href: "test", label: "درباره ما" },
+  { href: "test", label: "تماس با ما" },
+];
 
 export default function HeaderNavbar(
   props: Pick<NavbarRequestType, "categories">
 ) {
   return (
     <div className="flex gap-10 max-md:hidden">
-      <NextLink
-        href={"test"}
-        label={
-          <div className="flex items-center gap-2">
-          <FaChevronDown/>
-            <span>محصولات</span>
-          </div>
-        }
-      />
-      <NextLink href={"test"} label="مقالات" />
-      <NextLink href={"test"} label="درباره ما" />
-      <NextLink href={"test"} label="تماس با ما" />
+      {navLinks.map((link, index) => (
+        <NextLink className="text-xl" key={index} href={link.href} label={link.label} />
+      ))}
     </div>
   );
 }
