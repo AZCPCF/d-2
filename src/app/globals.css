@@ -42,3 +42,9 @@
 .scrollbar-none::-webkit-scrollbar {
   display: none;
 }
+body:has(.category){
+  background-color: red;
+}
+button{
+  cursor: pointer;
+}
