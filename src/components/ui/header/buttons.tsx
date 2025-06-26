@@ -22,7 +22,7 @@ export default function HeaderButtons() {
           </div>
         }
         href="https://account.a.test"
-        className="p-2.25 max-[500px]:p-1.5 rounded-md text-lg bg-primary-main hover:text-white duration-100 cursor-pointer text-white"
+        className="p-2.25 max-[500px]:p-1.5 rounded-md text-lg bg-primary-400 hover:text-white duration-100 cursor-pointer text-white"
       />
     </div>
   );
