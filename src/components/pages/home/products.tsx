@@ -6,6 +6,7 @@ import { cn } from "@/utils/cn";
 import { formatNumberWithCommas } from "@/utils/formater";
 import "keen-slider/keen-slider.min.css";
 import { useKeenSlider } from "keen-slider/react";
+import Link from "next/link";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 interface Props {
@@ -53,8 +54,8 @@ export default function HomePageProductsSlider({
             key={`home-special-suggestion-product-${index}`}
             className="keen-slider__slide min-h-max p-2"
           >
-            <a
-              href={product.page_url}
+            <Link
+              href={`${product.page_url}/${product.title}`}
               className="block bg-white shadow-md rounded min-h-max"
             >
               <NextImage
@@ -88,7 +89,7 @@ export default function HomePageProductsSlider({
                   ) : undefined}
                 </div>
               </div>
-            </a>
+            </Link>
           </div>
         ))}
       </div>
