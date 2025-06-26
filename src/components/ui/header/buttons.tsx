@@ -10,7 +10,7 @@ export default function HeaderButtons() {
         target="_blank"
         label={<FiShoppingCart fontSize={24} />}
         href="https://account.a.test"
-        className=" max-[500px]:p-1.5 p-2.5 bg-black text-white flex justify-center hover:text-white rounded-lg text-xl duration-100 cursor-pointer"
+        className="p-2.25 max-[500px]:p-1.5 bg-black text-white flex justify-center hover:text-white rounded-lg text-lg duration-100 cursor-pointer"
       />
       {/* login button */}
       <NextLink
@@ -22,7 +22,7 @@ export default function HeaderButtons() {
           </div>
         }
         href="https://account.a.test"
-        className="  p-2.25 max-[500px]:p-1.5 rounded-md text-lg bg-primary-main hover:text-white duration-100 cursor-pointer text-white"
+        className="p-2.25 max-[500px]:p-1.5 rounded-md text-lg bg-primary-main hover:text-white duration-100 cursor-pointer text-white"
       />
     </div>
   );
