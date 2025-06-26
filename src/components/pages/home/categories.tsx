@@ -55,7 +55,7 @@ export default function HomePageCategories() {
           >
             <NextImage
               {...category.image}
-              className="transform group-hover:scale-105 transition-transform duration-300 rounded-lg"
+              className="transform group-hover:scale-110 transition-transform duration-300 rounded-lg"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent rounded-lg" />
             <p className="absolute bottom-3 left-3 max-md:left-1.5 max-md:bottom-1.5 text-white text-lg max-md:text-sm font-semibold z-10 drop-shadow-md">
