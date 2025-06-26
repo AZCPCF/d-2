@@ -42,9 +42,9 @@
 .scrollbar-none::-webkit-scrollbar {
   display: none;
 }
-body:has(.category){
-  background-color: red;
+body:has(.story-modal) {
+  overflow: hidden;
 }
-button{
+button {
   cursor: pointer;
 }
