@@ -1,7 +1,6 @@
 "use client";
 import NextImage from "@/components/ui/image";
 import { ImageFromApiInterface } from "@/interfaces";
-import { useEffect } from "react";
 
 export default function StoryModal({
   story,
