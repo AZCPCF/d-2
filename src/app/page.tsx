@@ -1,9 +1,14 @@
 import HomePageAboutUs from "@/components/pages/home/about-us";
+import HomePageArticles from "@/components/pages/home/articles";
 import HomePageCategories from "@/components/pages/home/categories";
 import HomePageProductsSlider from "@/components/pages/home/products";
 import HomePageSlider from "@/components/pages/home/slider";
 import HomeStories from "@/components/pages/home/stories";
-import { ImageFromApiInterface, ProductInterface } from "@/interfaces";
+import {
+  ArticleInterface,
+  ImageFromApiInterface,
+  ProductInterface,
+} from "@/interfaces";
 import { AboutUsRequestInterface } from "@/interfaces/pages/about-us";
 import { fetcher } from "@/lib/fetcher";
 export interface HomePageRequestInterface {
@@ -18,6 +23,7 @@ export interface HomePageRequestInterface {
   }[];
   special_suggestion: ProductInterface[];
   top_sellers: ProductInterface[];
+  articles: ArticleInterface[];
 }
 export default async function Home() {
   const res = await fetcher<HomePageRequestInterface>({
@@ -42,6 +48,7 @@ export default async function Home() {
         title="پر فروش ترین ها"
         products={res.top_sellers}
       />
+      <HomePageArticles articles={res.articles} />
     </main>
   );
 }

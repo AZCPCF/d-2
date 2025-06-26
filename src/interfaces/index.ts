@@ -22,3 +22,16 @@ export interface ProductInterface {
   discount: number;
   image_1: ImageFromApiInterface;
 }
+export interface DateInterface {
+  timestamp: number;
+  date: string;
+  jdate: string;
+  string: string;
+}
+export interface ArticleInterface {
+  id: number;
+  title: string;
+  main_image: ImageFromApiInterface;
+  date: DateInterface;
+  page_url: string;
+}
