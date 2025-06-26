@@ -47,7 +47,7 @@ export default function HomePageProductsSlider({
         </a>
       </h1>
 
-      <div ref={sliderRef} className="keen-slider bg-primary-main">
+      <div ref={sliderRef} className="keen-slider bg-primary-300">
         {products.map((product, index) => (
           <div
             key={`home-special-suggestion-product-${index}`}
@@ -92,7 +92,7 @@ export default function HomePageProductsSlider({
           </div>
         ))}
       </div>
-      <div className="flex justify-end items-center gap-4 p-6 bg-primary-main">
+      <div className="flex justify-end items-center gap-4 p-6 bg-primary-300">
         <button
           onClick={() => instanceRef.current?.prev()}
           className="p-2 rounded-full bg-white shadow hover:scale-105 transition"
