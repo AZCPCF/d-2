@@ -34,3 +34,11 @@
   --: kalameh;
   --font-aviny: aviny;
 }
+.scrollbar-none {
+  overflow: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none;
+}
