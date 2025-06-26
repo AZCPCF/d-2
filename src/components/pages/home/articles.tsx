@@ -1,13 +1,26 @@
+"use client";
+
 import Link from "next/link";
 import NextImage from "@/components/ui/image";
 import { ArticleInterface } from "@/interfaces";
 import { IoIosArrowBack } from "react-icons/io";
+import { useKeenSlider } from "keen-slider/react";
+import "keen-slider/keen-slider.min.css";
 
 export default function HomePageArticles({
   articles,
 }: {
   articles: ArticleInterface[];
 }) {
+  const [sliderRef] = useKeenSlider<HTMLDivElement>({
+    rtl: true,
+    slides: {
+      perView: "auto",
+      spacing:  16,
+    },
+    mode: "free",
+  });
+
   return (
     <section className="px-4 py-16 mx-auto w-full">
       <h1 className="flex items-center justify-between flex-wrap gap-4 text-4xl font-extrabold text-primary-main m-10 max-md:m-4 relative">
@@ -22,12 +35,13 @@ export default function HomePageArticles({
           </span>
         </a>
       </h1>
-      <div className="flex gap-4 overflow-x-auto scrollbar-none p-6 scroll-smooth">
+
+      <div ref={sliderRef} className="keen-slider py-6">
         {articles.map((article, index) => (
           <Link
             key={`home-page-article-${index}`}
             href={article.page_url}
-            className="min-w-[250px] max-w-[250px] flex-shrink-0 group block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 relative"
+            className="keen-slider__slide !min-w-[250px] !max-w-[250px] flex-shrink-0 group block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 relative"
           >
             <div className="relative h-48 w-full overflow-hidden">
               <NextImage
