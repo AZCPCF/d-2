@@ -2,6 +2,7 @@ export interface CategoryInterface {
   id: number;
   title: string;
   has_sub_category: boolean;
+  page_url:string;
   parent_id?: string | number;
   sub_categories?: CategoryInterface[];
 }
