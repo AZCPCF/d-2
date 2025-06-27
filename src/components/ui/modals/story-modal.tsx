@@ -15,7 +15,7 @@ export default function StoryModal({
 }) {
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm story-modal"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm modal"
       onClick={onClose}
     >
       <div
@@ -26,7 +26,7 @@ export default function StoryModal({
       >
         <button
           onClick={onClose}
-          className="absolute top-2 right-3 text-4xl text-gray-600"
+          className="absolute top-2 left-3 text-4xl text-gray-600"
         >
           ×
         </button>
