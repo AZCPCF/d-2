@@ -42,7 +42,10 @@
 .scrollbar-none::-webkit-scrollbar {
   display: none;
 }
-body:has(.story-modal) {
+body:has(.modal) {
+  overflow: hidden;
+}
+body:has(.mobile-nav){
   overflow: hidden;
 }
 button {
