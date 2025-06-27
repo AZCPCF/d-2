@@ -1,14 +1,12 @@
-import NextButton from "@/components/ui/button";
 import { CategoryInterface, ImageFromApiInterface } from "@/interfaces";
 import { fetcher } from "@/lib/fetcher";
 import Image from "next/image";
-import { MdMenu } from "react-icons/md";
+import Link from "next/link";
 import HeaderButtons from "./buttons";
+import MobileNavbar from "./mobile-navbar";
 import HeaderNavbar from "./navbar";
 import HeaderSearchInput from "./search-input";
 import TopBanner from "./top-banner";
-import Link from "next/link";
-import MobileNavbar from "./mobile-navbar";
 export type NavbarRequestType = {
   banner: {
     url: string;
