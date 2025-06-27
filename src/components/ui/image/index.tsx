@@ -13,12 +13,23 @@ export default function NextImage(
       ? props.url
       : `${fileUrl}${props.url}`
   );
+  const [isLoading, setIsLoading] = useState(true);
+
   return (
-    <Image
-      {...props}
-      src={src}
-      alt={props.alt}
-      onError={() => setSrc("/images/404.png")}
-    />
+    <div className={cn("relative", props.className)}>
+      {isLoading && (
+        <div className="absolute inset-0 flex items-center justify-center animate-pulse">
+          <span className="text-xs text-gray-400">درحال بارگذاری...</span>
+        </div>
+      )}
+      <Image
+        {...props}
+        src={src}
+        alt={props.alt}
+        onError={() => setSrc("/images/404.png")}
+        onLoad={() => setIsLoading(false)}
+        className={cn(props.className, isLoading ? "invisible" : "block")}
+      />
+    </div>
   );
 }
