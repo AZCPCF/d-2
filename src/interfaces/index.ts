@@ -2,7 +2,7 @@ export interface CategoryInterface {
   id: number;
   title: string;
   has_sub_category: boolean;
-  page_url:string;
+  page_url: string;
   parent_id?: string | number;
   sub_categories?: CategoryInterface[];
 }
@@ -28,6 +28,7 @@ export interface DateInterface {
   date: string;
   jdate: string;
   string: string;
+  str: string;
 }
 export interface ArticleInterface {
   id: number;
@@ -35,4 +36,9 @@ export interface ArticleInterface {
   main_image: ImageFromApiInterface;
   date: DateInterface;
   page_url: string;
+}
+export interface LicenseInreface {
+  id: number;
+  text: string;
+  image: ImageFromApiInterface;
 }
