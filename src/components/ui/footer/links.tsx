@@ -2,18 +2,18 @@ import NextLink from "@/components/ui/link";
 
 const mainLinks = [
   { href: "t", label: "اخبار و مقالات" },
-  { href: "t", label: "درباره ما" },
-  { href: "t", label: "تماس با ما" },
+  { href: "about-us", label: "درباره ما" },
+  { href: "contact-us", label: "تماس با ما" },
   { href: "t", label: "گالری" },
-  { href: "t", label: "سوالات متداول" },
+  { href: "faq", label: "سوالات متداول" },
 ];
 
 const otherLinks = [
-  { href: "t", label: "ورود" },
-  { href: "t", label: "نحوه ثبت سفارش" },
-  { href: "t", label: "حریم خصوصی" },
-  { href: "t", label: "قوانین سایت" },
-  { href: "t", label: "گواهی نامه ها" },
+  { href: "http://localhost:5173", label: "ورود" },
+  { href: "payment-rules", label: "نحوه ثبت سفارش" },
+  { href: "privacy", label: "حریم خصوصی" },
+  { href: "rules", label: "قوانین سایت" },
+  { href: "licenses", label: "گواهی نامه ها" },
 ];
 export default function FooterLinks() {
   return (
