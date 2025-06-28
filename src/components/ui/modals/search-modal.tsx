@@ -61,7 +61,7 @@ export default function SearchModal({ onClose }: { onClose: () => void }) {
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder="نام محصول را وارد کنید..."
-          className="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 mt-5"
+          className="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary-500 mt-5"
         />
 
         {loading && (
@@ -70,37 +70,38 @@ export default function SearchModal({ onClose }: { onClose: () => void }) {
 
         {!loading && query && (
           <ul className="w-full mt-4 space-y-2">
-            {results.slice(0, 6).map((product, index) => (
-              <li
-                key={product.id}
-                className="border border-gray-200 flex rounded-lg overflow-hidden group transition-all duration-300 hover:shadow-md hover:ring-1 hover:ring-indigo-500"
-
-              >
-                <NextLink
-                  label={
-                    <>
-                      <NextImage
-                        alt={`محصول ${index + 1}`}
-                        {...product.image_1}
-                        className="w-16 h-16 object-cover transition-transform duration-300 group-hover:scale-105"
-                      />
-                      <span className="p-4 text-sm sm:text-base transition-colors duration-200 group-hover:text-indigo-700">
-                        {product.title}
-                      </span>
-                    </>
-                  }
-                  className="w-full h-full flex  hover:text-indigo-700"
-                  href={`${product.page_url}/${product.title}`}
-                />
-              </li>
-            ))}
+            {results.length ? results
+              .filter((_, index) => index < 6)
+              .map((product, index) => (
+                <li
+                  key={product.id}
+                  className="border border-gray-200 flex rounded-lg overflow-hidden group transition-all duration-300 hover:shadow-md hover:ring-1 hover:ring-secondary-500"
+                >
+                  <NextLink
+                    label={
+                      <>
+                        <NextImage
+                          alt={`محصول ${index + 1}`}
+                          {...product.image_1}
+                          className="w-16 h-16 object-cover transition-transform duration-300 group-hover:scale-105"
+                        />
+                        <span className="p-4 text-sm sm:text-base transition-colors duration-200 group-hover:text-secondary-700">
+                          {product.title}
+                        </span>
+                      </>
+                    }
+                    className="w-full h-full flex  hover:text-secondary-700"
+                    href={`${product.page_url}/${product.title}`}
+                  />
+                </li>
+              )) : <p>محصولی یافت نشد.</p>}
 
             {results.length > 6 && (
-              <li className="text-center text-indigo-600 hover:underline cursor-pointer">
+              <li className="text-center text-secondary-600 hover:underline cursor-pointer">
                 <NextLink
                   label={`مشاهده ${results.length - 6} محصول دیگر`}
                   href={`/products?q=${query}`}
-                  className="hover:text-indigo-600"
+                  className="hover:text-secondary-600"
                 />
               </li>
             )}
