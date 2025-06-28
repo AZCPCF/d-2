@@ -19,7 +19,7 @@ export type NavbarRequestType = {
 export default async function Header() {
   const res = await fetcher<NavbarRequestType>({ endpoint: "navbar" });
   return (
-    <header className="shadow-md relative">
+    <header className="shadow-md relative bg-white">
       <TopBanner banner={res.banner} />
       <div className="w-full flex gap-5 max-[500px]:px-2 max-[500px]:gap-2 p-5 items-center justify-between">
         <div className="flex  items-center max-[500px]:gap-3 gap-5">
