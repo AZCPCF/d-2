@@ -61,7 +61,7 @@ export default function MobileNavbar({
                   <NextLink
                     href={`/products/category/${cat.page_url}`}
                     label={cat.title}
-                    className="py-2 text-gray-800"
+                    className={cn("py-2 text-gray-800",!cat.has_sub_category && "w-full")}
                     onClick={() => setOpen(false)}
                   />
                   {cat.has_sub_category && (
@@ -86,7 +86,7 @@ export default function MobileNavbar({
                           <NextLink
                             href={`/products/category/${sub.id}`}
                             label={sub.title}
-                            className="text-sm text-gray-700"
+                            className={cn("text-sm text-gray-700",!sub.has_sub_category&&"w-full")}
                             onClick={() => setOpen(false)}
                           />
                           {sub.has_sub_category && (
@@ -99,11 +99,11 @@ export default function MobileNavbar({
                         {expandedSub === sub.id && sub.sub_categories && (
                           <ul className="ml-4 mt-1 space-y-1 border-r border-primary-main pr-2">
                             {sub.sub_categories.map((deep) => (
-                              <li key={deep.id} className="p-0.5">
+                              <li key={deep.id} className="p-0.5 flex">
                                 <NextLink
                                   href={`/products/category/${deep.id}`}
                                   label={deep.title}
-                                  className="text-xs text-gray-600"
+                                  className="text-xs text-gray-600 w-full"
                                   onClick={() => setOpen(false)}
                                 />
                               </li>
