@@ -45,6 +45,7 @@ export default async function Home() {
       <HomePageAboutUs data={aboutUsRes.data} />
       <HomePageProductsSlider
         href="/top-sellers"
+        primary={false}
         title="پر فروش ترین ها"
         products={res.top_sellers}
       />
