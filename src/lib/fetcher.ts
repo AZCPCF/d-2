@@ -1,5 +1,5 @@
 "use server";
-import { apiUrl, tokenKey } from "@/utils/env";
+import { apiUrlPrimary, apiUrlSecondary, tokenKey } from "@/utils/env";
 import { cookies } from "next/headers";
 
 type RequestOptions<B = unknown> = {
@@ -10,6 +10,7 @@ type RequestOptions<B = unknown> = {
   params?: Record<string, string | number | boolean | undefined>;
   cache?: RequestCache;
   next?: NextFetchRequestConfig;
+  apiUrl?: "primary" | "secondary";
 };
 
 export const fetcher = async <T, B = unknown>({
@@ -19,6 +20,7 @@ export const fetcher = async <T, B = unknown>({
   body,
   params,
   cache = "force-cache",
+  apiUrl = "primary",
   next,
 }: RequestOptions<B>): Promise<T> => {
   const cookieStore = await cookies();
@@ -48,17 +50,22 @@ export const fetcher = async <T, B = unknown>({
       ).toString()}`
     : "";
 
-  const res = await fetch(`${apiUrl}${endpoint}${queryString}`, {
-    method,
-    headers,
-    body: isFormData
-      ? body
-      : body
-      ? JSON.stringify(body as Record<string, unknown>)
-      : undefined,
-    cache,
-    next,
-  });
+  const res = await fetch(
+    `${
+      apiUrl == "primary" ? apiUrlPrimary : apiUrlSecondary
+    }${endpoint}${queryString}`,
+    {
+      method,
+      headers,
+      body: isFormData
+        ? body
+        : body
+        ? JSON.stringify(body as Record<string, unknown>)
+        : undefined,
+      cache,
+      next,
+    }
+  );
 
   if (!res.ok) {
     const errorText = await res.text();
