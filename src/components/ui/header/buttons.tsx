@@ -10,7 +10,7 @@ export default function HeaderButtons() {
         target="_blank"
         label={<FiShoppingCart fontSize={24} />}
         href="https://account.a.test"
-        className="p-2.25 max-[500px]:p-1.5 bg-black text-white flex justify-center hover:text-white rounded-lg text-lg duration-100 cursor-pointer"
+        className="p-2.25 max-[500px]:p-1.5 bg-secondary-main text-white flex justify-center hover:text-white rounded-lg text-lg duration-100 cursor-pointer"
       />
       {/* Login Button */}
       <NextLink
