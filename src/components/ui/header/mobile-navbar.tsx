@@ -61,14 +61,17 @@ export default function MobileNavbar({
                   <NextLink
                     href={`/products/category/${cat.page_url}`}
                     label={cat.title}
-                    className={cn("py-2 text-gray-800",!cat.has_sub_category && "w-full")}
+                    className={cn(
+                      "py-2 text-gray-800",
+                      !cat.sub_categories?.length && "w-full"
+                    )}
                     onClick={() => setOpen(false)}
                   />
-                  {cat.has_sub_category && (
+                  {cat.sub_categories?.length ? (
                     <span className="text-2xl text-gray-500">
                       {expanded === cat.id ? "–" : "+"}
                     </span>
-                  )}
+                  ) : undefined}
                 </div>
 
                 {expanded === cat.id && cat.sub_categories && (
@@ -84,32 +87,36 @@ export default function MobileNavbar({
                           }
                         >
                           <NextLink
-                            href={`/products/category/${sub.id}`}
+                            href={`/products/category/${sub.page_url}`}
                             label={sub.title}
-                            className={cn("text-sm text-gray-700",!sub.has_sub_category&&"w-full")}
+                            className={cn(
+                              "text-sm text-gray-700",
+                              !sub.sub_categories?.length && "w-full"
+                            )}
                             onClick={() => setOpen(false)}
                           />
-                          {sub.has_sub_category && (
+                          {sub.sub_categories?.length ? (
                             <span className="text-2xl text-gray-400">
                               {expandedSub === sub.id ? "–" : "+"}
                             </span>
-                          )}
+                          ) : undefined}
                         </div>
 
-                        {expandedSub === sub.id && sub.sub_categories && (
-                          <ul className="ml-4 mt-1 space-y-1 border-r border-primary-main pr-2">
-                            {sub.sub_categories.map((deep) => (
-                              <li key={deep.id} className="p-0.5 flex">
-                                <NextLink
-                                  href={`/products/category/${deep.id}`}
-                                  label={deep.title}
-                                  className="text-xs text-gray-600 w-full"
-                                  onClick={() => setOpen(false)}
-                                />
-                              </li>
-                            ))}
-                          </ul>
-                        )}
+                        {expandedSub === sub.id &&
+                          sub.sub_categories?.length && (
+                            <ul className="ml-4 mt-1 space-y-1 border-r border-primary-main pr-2">
+                              {sub.sub_categories.map((deep) => (
+                                <li key={deep.id} className="p-0.5 flex">
+                                  <NextLink
+                                    href={`/products/category/${deep.page_url}`}
+                                    label={deep.title}
+                                    className="text-xs text-gray-600 w-full"
+                                    onClick={() => setOpen(false)}
+                                  />
+                                </li>
+                              ))}
+                            </ul>
+                          )}
                       </li>
                     ))}
                   </ul>
