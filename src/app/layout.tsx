@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { ReactNode } from "react";
 import "./globals.css";
 import AppBar from "@/components/ui/app-bar";
+import { ClientContextProvider } from "@/contexts/client-context";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,10 +19,12 @@ export default function RootLayout({
   return (
     <html lang="fa" dir="rtl">
       <body className="antialiased">
-        <Header />
-        {children}
-        <Footer />
-        <AppBar/>
+        <ClientContextProvider>
+          <Header />
+          {children}
+          <Footer />
+          <AppBar />
+        </ClientContextProvider>
       </body>
     </html>
   );
