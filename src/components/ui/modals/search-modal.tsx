@@ -21,6 +21,7 @@ export default function SearchModal({ onClose }: { onClose: () => void }) {
         const { data } = await fetcher<{ data: ProductInterface[] }>({
           endpoint: "search_products",
           params: { search: query },
+          apiUrl: "secondary",
         });
         console.log(data);
         setResults(data);
@@ -67,7 +68,7 @@ export default function SearchModal({ onClose }: { onClose: () => void }) {
                 .filter((_, index) => index < 6)
                 .map((product, index) => (
                   <li
-                    key={product.id}
+                    key={`search-product-${index}`}
                     className="border border-gray-200 flex rounded-lg overflow-hidden group transition-all duration-300 hover:shadow-md hover:ring-1 hover:ring-secondary-500"
                   >
                     <NextLink
