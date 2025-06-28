@@ -1,8 +1,8 @@
 import Image from "next/image";
+import CreatedByInFooter from "./created-by";
 import EnamadLogo from "./enamad-logo";
 import FooterLinks from "./links";
-import SocialLinks from "./social-links";
-import CreatedByInFooter from "./created-by";
+import SocialLinksHeader from "./social-links";
 
 export default function Footer() {
   return (
@@ -28,7 +28,7 @@ export default function Footer() {
         <FooterLinks />
         <div className="w-full flex flex-wrap col-span-3  text-lg justify-between flex-col items-center max-lg:col-span-full">
           <EnamadLogo />
-          <SocialLinks />
+          <SocialLinksHeader />
         </div>
       </div>
       <CreatedByInFooter />
