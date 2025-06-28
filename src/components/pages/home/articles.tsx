@@ -41,7 +41,7 @@ export default function HomePageArticles({
           <Link
             key={`home-page-article-${index}`}
             href={article.page_url}
-            className="keen-slider__slide !min-w-[250px] !max-w-[250px] flex-shrink-0 group block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 relative"
+            className="keen-slider__slide -m-0.5 !min-w-[250px] !max-w-[250px] flex-shrink-0 group block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 relative"
           >
             <div className="relative h-48 w-full overflow-hidden">
               <NextImage
@@ -55,7 +55,7 @@ export default function HomePageArticles({
                 {article.title}
               </h2>
               <p className="text-sm text-gray-500 absolute bottom-2 left-2">
-                {article.date.string}
+                {article.date.str}
               </p>
             </div>
           </Link>
