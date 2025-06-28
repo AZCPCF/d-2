@@ -1,12 +1,12 @@
 "use client";
 
 import { useRef } from "react";
-import { HomePageRequestInterface } from "@/app/page";
 import NextImage from "@/components/ui/image";
 import { cn } from "@/utils/cn";
 import "keen-slider/keen-slider.min.css";
 import { useKeenSlider } from "keen-slider/react";
 import type { KeenSliderInstance } from "keen-slider";
+import { HomePageRequestInterface } from "@/interfaces/pages/home";
 
 export default function HomePageSlider(
   props: Pick<HomePageRequestInterface, "slides">
