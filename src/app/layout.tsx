@@ -3,6 +3,7 @@ import Header from "@/components/ui/header";
 import type { Metadata } from "next";
 import { ReactNode } from "react";
 import "./globals.css";
+import AppBar from "@/components/ui/app-bar";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -20,6 +21,7 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
+        <AppBar/>
       </body>
     </html>
   );
