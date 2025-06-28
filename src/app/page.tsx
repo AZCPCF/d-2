@@ -4,33 +4,12 @@ import HomePageCategories from "@/components/pages/home/categories";
 import HomePageProductsSlider from "@/components/pages/home/products";
 import HomePageSlider from "@/components/pages/home/slider";
 import HomeStories from "@/components/pages/home/stories";
-import {
-  ArticleInterface,
-  ImageFromApiInterface,
-  ProductInterface,
-} from "@/interfaces";
-import { AboutUsRequestInterface } from "@/interfaces/pages/about-us";
+import { HomePageRequestInterface } from "@/interfaces/pages/home";
 import { fetcher } from "@/lib/fetcher";
-export interface HomePageRequestInterface {
-  slides: { id: number; link: string; image: ImageFromApiInterface }[];
-  stories: {
-    id: number;
-    title: string;
-    type: string;
-    link: string;
-    image_1: ImageFromApiInterface;
-    image_2: ImageFromApiInterface;
-  }[];
-  special_suggestion: ProductInterface[];
-  top_sellers: ProductInterface[];
-  articles: ArticleInterface[];
-}
+
 export default async function Home() {
   const res = await fetcher<HomePageRequestInterface>({
     endpoint: "home_page",
-  });
-  const aboutUsRes = await fetcher<AboutUsRequestInterface>({
-    endpoint: "about_us",
   });
   return (
     <main>
@@ -42,7 +21,7 @@ export default async function Home() {
         href="/incredible-offers"
         products={res.special_suggestion}
       />
-      <HomePageAboutUs data={aboutUsRes.data} />
+      <HomePageAboutUs />
       <HomePageProductsSlider
         href="/top-sellers"
         primary={false}
