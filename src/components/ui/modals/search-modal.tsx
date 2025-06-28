@@ -9,8 +9,6 @@ export default function SearchModal({ onClose }: { onClose: () => void }) {
   const [query, setQuery] = useState("");
   const [results, setResults] = useState<ProductInterface[]>([]);
   const [loading, setLoading] = useState(false);
-
-  // Debounced search
   useEffect(() => {
     if (!query.trim()) {
       setResults([]);
@@ -37,14 +35,8 @@ export default function SearchModal({ onClose }: { onClose: () => void }) {
   }, [query]);
 
   return (
-    <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm px-4 modal"
-      onClick={onClose}
-    >
-      <div
-        className="bg-white w-full max-w-xl p-4 rounded-xl relative shadow-lg flex justify-center flex-wrap"
-        onClick={(e) => e.stopPropagation()}
-      >
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm px-4 modal">
+      <div className="bg-white w-full max-w-xl p-4 rounded-xl relative shadow-lg flex justify-center flex-wrap">
         <div className="w-full flex items-center">
           <button
             onClick={onClose}
@@ -70,31 +62,35 @@ export default function SearchModal({ onClose }: { onClose: () => void }) {
 
         {!loading && query && (
           <ul className="w-full mt-4 space-y-2">
-            {results.length ? results
-              .filter((_, index) => index < 6)
-              .map((product, index) => (
-                <li
-                  key={product.id}
-                  className="border border-gray-200 flex rounded-lg overflow-hidden group transition-all duration-300 hover:shadow-md hover:ring-1 hover:ring-secondary-500"
-                >
-                  <NextLink
-                    label={
-                      <>
-                        <NextImage
-                          alt={`محصول ${index + 1}`}
-                          {...product.image_1}
-                          className="w-16 h-16 object-cover transition-transform duration-300 group-hover:scale-105"
-                        />
-                        <span className="p-4 text-sm sm:text-base transition-colors duration-200 group-hover:text-secondary-700">
-                          {product.title}
-                        </span>
-                      </>
-                    }
-                    className="w-full h-full flex  hover:text-secondary-700"
-                    href={`${product.page_url}/${product.title}`}
-                  />
-                </li>
-              )) : <p>محصولی یافت نشد.</p>}
+            {results.length ? (
+              results
+                .filter((_, index) => index < 6)
+                .map((product, index) => (
+                  <li
+                    key={product.id}
+                    className="border border-gray-200 flex rounded-lg overflow-hidden group transition-all duration-300 hover:shadow-md hover:ring-1 hover:ring-secondary-500"
+                  >
+                    <NextLink
+                      label={
+                        <>
+                          <NextImage
+                            alt={`محصول ${index + 1}`}
+                            {...product.image_1}
+                            className="w-16 h-16 object-cover transition-transform duration-300 group-hover:scale-105"
+                          />
+                          <span className="p-4 text-sm sm:text-base transition-colors duration-200 group-hover:text-secondary-700">
+                            {product.title}
+                          </span>
+                        </>
+                      }
+                      className="w-full h-full flex  hover:text-secondary-700"
+                      href={`${product.page_url}/${product.title}`}
+                    />
+                  </li>
+                ))
+            ) : (
+              <p>محصولی یافت نشد.</p>
+            )}
 
             {results.length > 6 && (
               <li className="text-center text-secondary-600 hover:underline cursor-pointer">
