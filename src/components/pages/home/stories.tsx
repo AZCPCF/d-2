@@ -1,8 +1,8 @@
 "use client";
 import { useState } from "react";
-import { HomePageRequestInterface } from "@/app/page";
 import StoryModal from "@/components/ui/modals/story-modal";
 import NextImage from "@/components/ui/image";
+import { HomePageRequestInterface } from "@/interfaces/pages/home";
 
 export default function HomeStories(
   props: Pick<HomePageRequestInterface, "stories">
