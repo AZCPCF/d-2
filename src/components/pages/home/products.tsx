@@ -13,12 +13,14 @@ interface Props {
   products: ProductInterface[];
   title?: string;
   href?: string;
+  primary?: boolean;
 }
 
 export default function HomePageProductsSlider({
   products,
   title,
   href,
+  primary = true,
 }: Props) {
   const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
     rtl: true,
@@ -48,7 +50,13 @@ export default function HomePageProductsSlider({
         </a>
       </h1>
 
-      <div ref={sliderRef} className="keen-slider bg-primary-300">
+      <div
+        ref={sliderRef}
+        className={cn(
+          "keen-slider",
+          primary ? "bg-primary-300" : "bg-secondary-300"
+        )}
+      >
         {products.map((product, index) => (
           <div
             key={`home-special-suggestion-product-${index}`}
@@ -93,18 +101,23 @@ export default function HomePageProductsSlider({
           </div>
         ))}
       </div>
-      <div className="flex justify-end items-center gap-4 p-6 bg-primary-300">
+      <div
+        className={cn(
+          "flex justify-end items-center gap-4 p-6 bg-primary-300",
+          primary ? "bg-primary-300 text-primary-main" : "bg-secondary-300 text-secondary-main"
+        )}
+      >
         <button
           onClick={() => instanceRef.current?.prev()}
           className="p-2 rounded-full bg-white shadow hover:scale-105 transition"
         >
-          <IoIosArrowForward className="text-2xl text-primary-main" />
+          <IoIosArrowForward className="text-2xl" />
         </button>
         <button
           onClick={() => instanceRef.current?.next()}
           className="p-2 rounded-full bg-white shadow hover:scale-105 transition"
         >
-          <IoIosArrowBack className="text-2xl text-primary-main" />
+          <IoIosArrowBack className="text-2xl" />
         </button>
       </div>
     </section>
