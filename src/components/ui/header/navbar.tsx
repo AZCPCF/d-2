@@ -26,7 +26,7 @@ export default function HeaderNavbar({
             {categories.map((cat) => (
               <li key={cat.id} className="relative group/item">
                 <NextLink
-                  href={`/products/category/${cat.page_url}`}
+                  href={`/categories/${cat.page_url}`}
                   label={cat.title}
                   className="block px-4 py-2 hover:bg-primary-50 hover:text-primary-700 transition whitespace-nowrap"
                 />
@@ -36,7 +36,7 @@ export default function HeaderNavbar({
                     {cat.sub_categories.map((sub) => (
                       <li key={sub.id} className="relative group/subitem">
                         <NextLink
-                          href={`/products/category/${sub.page_url}`}
+                          href={`/categories/${sub.page_url}`}
                           label={sub.title}
                           className="block px-4 py-2 text-sm hover:bg-primary-100 hover:text-primary-800 transition whitespace-nowrap"
                         />
@@ -46,7 +46,7 @@ export default function HeaderNavbar({
                             {sub.sub_categories.map((deep) => (
                               <li key={deep.id}>
                                 <NextLink
-                                  href={`/products/category/${deep.page_url}`}
+                                  href={`/categories/${deep.page_url}`}
                                   label={deep.title}
                                   className="block px-4 py-2 text-sm hover:bg-primary-100 hover:text-primary-800 transition whitespace-nowrap"
                                 />
