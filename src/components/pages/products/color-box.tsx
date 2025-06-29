@@ -1,3 +1,4 @@
+"use client";
 import { cn } from "@/utils/cn";
 import { generateDynamicClass } from "@/utils/style-injector";
 import { ReactNode } from "react";
@@ -5,11 +6,11 @@ import { ReactNode } from "react";
 export function ColorBox({
   color,
   className,
-  children
+  children,
 }: {
   color?: string;
   className?: string;
-  children?:ReactNode
+  children?: ReactNode;
 }) {
   const classNameDefault = generateDynamicClass(`background-color: ${color};`);
 
@@ -20,6 +21,8 @@ export function ColorBox({
         "w-4 h-4 p-2 shadow-sm border border-black/20 rounded-md",
         classNameDefault
       )}
-    >{children}</div>
+    >
+      {children}
+    </div>
   );
 }
