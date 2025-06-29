@@ -1,9 +1,9 @@
 "use client";
-import { useState } from "react";
-import { LicenseInreface } from "@/interfaces";
 import NextImage from "@/components/ui/image";
+import NextModal from "@/components/ui/modal";
+import { LicenseInreface } from "@/interfaces";
 import clsx from "clsx";
-import LicenseModal from "@/components/ui/modals/license-modal";
+import { useState } from "react";
 
 interface Props {
   licenses: LicenseInreface[];
@@ -39,8 +39,21 @@ export default function LicenseGallery({ licenses }: Props) {
       </div>
 
       {selectedLicense && (
-        <LicenseModal
-          license={selectedLicense}
+        <NextModal
+          jsx={
+            <>
+              <div className="aspect-[4/3] overflow-hidden">
+                <NextImage
+                  alt={selectedLicense.text}
+                  {...selectedLicense.image}
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              <p className="p-3 text-lg text-gray-700 text-center">
+                {selectedLicense.text}
+              </p>
+            </>
+          }
           onClose={() => setSelectedLicense(null)}
         />
       )}
