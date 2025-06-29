@@ -22,7 +22,7 @@ export default function ProductCard({
     >
       <div className="absolute top-2 z-10 left-2 gap-3 flex flex-col">
         {product?.colors_cache?.map((item) => (
-          <ColorBox key={item.color} color={item.color} />
+          <ColorBox title={item.title} key={item.color} color={item.color} />
         ))}
 
         {product?.color_count > 3 ? (
@@ -30,6 +30,7 @@ export default function ProductCard({
             className={
               "w-4 p-2 h-4 rounded-xs shadow-sm border border-secondary-main flex justify-center items-center bg-secondary-main text-white"
             }
+            title={`${product?.color_count - 3} رنگ دیگر`}
           >
             {product?.color_count - 3}
           </ColorBox>
