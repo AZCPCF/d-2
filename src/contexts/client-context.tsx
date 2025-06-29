@@ -9,9 +9,14 @@ import {
   useState,
 } from "react";
 interface ClientContextInterface {
-  aboutUs?: AboutUsRequestInterface["data"];
+  aboutUs?: Partial<AboutUsRequestInterface["data"]>;
 }
-export const clientContext = createContext<ClientContextInterface>({});
+export const clientContext = createContext<ClientContextInterface>({
+  aboutUs: {
+    content:
+      "پوشاک D2 با بیش از دو دهه سابقه فعالیت در زمینه تولید و عرضه پوشاک مردانه و بچگانه با پایبندی به دو اصل کلیدی، 7 روز ضمانت بازگشت کالا و تضمین اصل‌بودن کالا، موفق شده ،به یکی از بهترین فروشگاه اینترنتی ایران تبدیل  شود.\r\n\r\n ما به جرئت میتونیم بگیم که از فروشگاه ما دست خالی بیرون نمیرید و خرید لذت بخشی را تجربه میکنید.",
+  },
+});
 export const ClientContextProvider = ({
   children,
 }: {
