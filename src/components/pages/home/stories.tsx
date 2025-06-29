@@ -1,8 +1,8 @@
 "use client";
-import { useState } from "react";
-import StoryModal from "@/components/ui/modals/story-modal";
 import NextImage from "@/components/ui/image";
+import NextModal from "@/components/ui/modal";
 import { HomePageRequestInterface } from "@/interfaces/pages/home";
+import { useState } from "react";
 
 export default function HomeStories(
   props: Pick<HomePageRequestInterface, "stories">
@@ -33,8 +33,24 @@ export default function HomeStories(
       </section>
 
       {selectedStory && (
-        <StoryModal
-          story={selectedStory}
+        <NextModal
+          jsx={
+            <>
+              <NextImage
+                {...selectedStory.image_2}
+                alt={selectedStory.title}
+                className="rounded-lg w-full aspect-square mb-4 p-4"
+              />
+              <h2 className="text-xl font-semibold">{selectedStory.title}</h2>
+              <a
+                href={selectedStory.link}
+                className="text-blue-500 underline text-sm mt-2 block text-end"
+                target="_blank"
+              >
+                مشاهده بیشتر
+              </a>
+            </>
+          }
           onClose={() => setSelectedStory(null)}
         />
       )}
