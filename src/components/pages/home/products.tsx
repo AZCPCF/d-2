@@ -1,13 +1,12 @@
 "use client";
 
-import NextImage from "@/components/ui/image";
 import { ProductInterface } from "@/interfaces";
 import { cn } from "@/utils/cn";
-import { formatNumberWithCommas } from "@/utils/formater";
 import "keen-slider/keen-slider.min.css";
 import { useKeenSlider } from "keen-slider/react";
 import Link from "next/link";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+import ProductCard from "../products/card";
 
 interface Props {
   products: ProductInterface[];
@@ -62,49 +61,16 @@ export default function HomePageProductsSlider({
             key={`home-special-suggestion-product-${index}`}
             className="keen-slider__slide min-h-max p-2"
           >
-            <Link
-              href={`${product.page_url}/${product.title}`}
-              className="block bg-white shadow-md rounded min-h-max"
-            >
-              <NextImage
-                alt={`product-slide-special-suggestion-${product.id}`}
-                {...product.image_1}
-                className="w-full aspect-square rounded-t"
-              />
-              <div className="flex flex-col justify-between h-[100px] p-2 text-left">
-                <h3 className="text-sm font-semibold line-clamp-2 text-right">
-                  {product.title}
-                </h3>
-
-                <div>
-                  {product.discount ? (
-                    <div className="text-sm text-gray-800">
-                      {formatNumberWithCommas(product.price)} تومان
-                    </div>
-                  ) : undefined}
-                  <div
-                    className={cn(
-                      "text-base font-bold",
-                      !product.discount ? "text-gray-800" : "text-red-500"
-                    )}
-                  >
-                    {formatNumberWithCommas(product.after_price)} تومان
-                  </div>
-                  {product.discount ? (
-                    <span className="text-green-600 text-xs">
-                      تخفیف {product.discount}%
-                    </span>
-                  ) : undefined}
-                </div>
-              </div>
-            </Link>
+            <ProductCard product={product} className="hover:scale-100" />
           </div>
         ))}
       </div>
       <div
         className={cn(
           "flex justify-end items-center gap-4 p-6 bg-primary-300",
-          primary ? "bg-primary-300 text-primary-main" : "bg-secondary-300 text-secondary-main"
+          primary
+            ? "bg-primary-300 text-primary-main"
+            : "bg-secondary-300 text-secondary-main"
         )}
       >
         <button
