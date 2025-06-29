@@ -1,59 +1,26 @@
 import NextImage from "@/components/ui/image";
+import { categoriesLinks } from "@/static";
 import Link from "next/link";
 
-const categories = [
-  {
-    link: "men-clothes",
-    image: {
-      width: 1200,
-      height: 750,
-      url: "/images/categories/man.jpeg",
-      alt: "پوشاک مردانه",
-    },
-  },
-  {
-    link: "children-clothes-boys",
-    image: {
-      width: 1200,
-      height: 750,
-      url: "/images/categories/boy.jpeg",
-      alt: "پوشاک پسرانه",
-    },
-  },
-  {
-    link: "children-clothes-girls",
-    image: {
-      width: 1200,
-      height: 750,
-      url: "/images/categories/girl.jpeg",
-      alt: "پوشاک دخترانه",
-    },
-  },
-  {
-    link: "shoes-and-sneakers",
-    image: {
-      width: 1200,
-      height: 750,
-      url: "/images/categories/shoes.jpeg",
-      alt: "کفش و کتونی",
-    },
-  },
-];
-
-export default function HomePageCategories() {
+export default function HomePageCategories({
+  title = "فروشگاه پوشاک D2",
+}: {
+  title?: string;
+}) {
   return (
     <section className="px-4 py-12 mx-auto">
       <h1 className="text-center text-4xl font-extrabold text-primary-main mb-10">
-        فروشگاه پوشاک D2
+        {title}
       </h1>
       <div className="grid grid-cols-4 max-lg:grid-cols-2 gap-6 max-md:gap-3">
-        {categories.map((category, index) => (
+        {categoriesLinks.map((category, index) => (
           <Link
             href={`/categories/${category.link}`}
             key={`home-page-category-${index}`}
             className="group relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-shadow"
           >
             <NextImage
+              alt={`دسته بندی ${index + 1}`}
               {...category.image}
               className="transform group-hover:scale-110 transition-transform duration-300 rounded-lg"
             />
