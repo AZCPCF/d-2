@@ -7,7 +7,7 @@ export default function NotFound() {
       <section className="flex flex-col items-center justify-center my-40 text-right px-4">
         <h1 className="text-7xl font-extrabold text-secondary-main mb-4 flex gap-2 items-center">
           <span>4</span>
-          <FaQuestionCircle className="text-5xl" />
+          <FaQuestionCircle className="text-4xl" />
           <span>4</span>
         </h1>
         <h2 className="text-3xl text-gray-900 mb-2">صفحه پیدا نشد</h2>
