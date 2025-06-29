@@ -1,3 +1,4 @@
+import { ImageFromApiInterface } from "@/interfaces";
 import { ReactNode } from "react";
 import { IconType } from "react-icons";
 import { BiInfoCircle, BiPhoneCall, BiSolidUser } from "react-icons/bi";
@@ -9,8 +10,8 @@ import {
 } from "react-icons/fa";
 import { PiArticle } from "react-icons/pi";
 
-type appBarlinkType = { href: string; label: string; icon: IconType };
-export const appBarlinks: appBarlinkType[] = [
+type AppBarlinkType = { href: string; label: string; icon: IconType };
+export const appBarlinks: AppBarlinkType[] = [
   { href: "/", label: "خانه", icon: FaHome },
   { href: "http://localhost:5173", label: "حساب کاربری", icon: BiSolidUser },
   { href: "/articles-hub", label: "مقالات", icon: PiArticle },
@@ -28,8 +29,8 @@ export const socialLinksData: SocialLinkType[] = [
   { icon: <FaTelegramPlane fontSize={24} />, href: "telegram" },
 ];
 
-type footerLinkType = { href: string; label: string };
-export const footerLinks: { main: footerLinkType[]; others: footerLinkType[] } =
+type FooterLinkType = { href: string; label: string };
+export const footerLinks: { main: FooterLinkType[]; others: FooterLinkType[] } =
   {
     main: [
       { href: "t", label: "اخبار و مقالات" },
@@ -46,3 +47,43 @@ export const footerLinks: { main: footerLinkType[]; others: footerLinkType[] } =
       { href: "licenses", label: "گواهی نامه ها" },
     ],
   };
+
+type CategoriesLinkType = { link: string; image: ImageFromApiInterface };
+export const categoriesLinks: CategoriesLinkType[] = [
+  {
+    link: "men-clothes",
+    image: {
+      width: 1200,
+      height: 750,
+      url: "/images/categories/man.jpeg",
+      alt: "پوشاک مردانه",
+    },
+  },
+  {
+    link: "children-clothes-boys",
+    image: {
+      width: 1200,
+      height: 750,
+      url: "/images/categories/boy.jpeg",
+      alt: "پوشاک پسرانه",
+    },
+  },
+  {
+    link: "children-clothes-girls",
+    image: {
+      width: 1200,
+      height: 750,
+      url: "/images/categories/girl.jpeg",
+      alt: "پوشاک دخترانه",
+    },
+  },
+  {
+    link: "shoes-and-sneakers",
+    image: {
+      width: 1200,
+      height: 750,
+      url: "/images/categories/shoes.jpeg",
+      alt: "کفش و کتونی",
+    },
+  },
+];
