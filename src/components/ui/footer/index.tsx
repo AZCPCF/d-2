@@ -3,6 +3,7 @@ import CreatedByInFooter from "./created-by";
 import EnamadLogo from "./enamad-logo";
 import FooterLinks from "./links";
 import SocialLinksHeader from "./social-links";
+import FooterDescription from "./description";
 
 export default function Footer() {
   return (
@@ -16,13 +17,7 @@ export default function Footer() {
             height={352}
             alt="d2-footer-logo"
           />
-          <p>
-            پوشاک D2 با بیش از دو دهه سابقه فعالیت در زمینه تولید و عرضه پوشاک
-            مردانه و بچگانه با پایبندی به دو اصل کلیدی، ۷ روز ضمانت بازگشت کالا
-            و تضمین اصل‌بودن کالا، موفق شده ،به یکی از بهترین فروشگاه اینترنتی
-            ایران تبدیل شود.و ما به جرئت میتونیم بگیم که از فروشگاه ما دست خالی
-            بیرون نمیرید و خرید لذت بخشی را تجربه میکنید.
-          </p>
+          <FooterDescription />
         </div>
         <div className="col-span-1 max-lg:hidden"></div>
         <FooterLinks />
