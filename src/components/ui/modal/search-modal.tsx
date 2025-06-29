@@ -23,7 +23,6 @@ export default function SearchModal({ onClose }: { onClose: () => void }) {
           params: { search: query },
           apiUrl: "secondary",
         });
-        console.log(data);
         setResults(data);
       } catch (err) {
         console.error("Search error:", err);
