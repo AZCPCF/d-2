@@ -59,7 +59,7 @@ export default function MobileNavbar({
                   }
                 >
                   <NextLink
-                    href={`/products/category/${cat.page_url}`}
+                    href={`/categories/${cat.page_url}`}
                     label={cat.title}
                     className={cn(
                       "py-2 text-gray-800",
@@ -87,7 +87,7 @@ export default function MobileNavbar({
                           }
                         >
                           <NextLink
-                            href={`/products/category/${sub.page_url}`}
+                            href={`/categories/${sub.page_url}`}
                             label={sub.title}
                             className={cn(
                               "text-sm text-gray-700",
@@ -108,7 +108,7 @@ export default function MobileNavbar({
                               {sub.sub_categories.map((deep) => (
                                 <li key={deep.id} className="p-0.5 flex">
                                   <NextLink
-                                    href={`/products/category/${deep.page_url}`}
+                                    href={`/categories/${deep.page_url}`}
                                     label={deep.title}
                                     className="text-xs text-gray-600 w-full"
                                     onClick={() => setOpen(false)}
