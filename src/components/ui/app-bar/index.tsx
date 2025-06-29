@@ -1,6 +1,6 @@
 "use client";
 
-import { appBarlinks } from "@/data";
+import { appBarlinks } from "@/static";
 import { cn } from "@/utils/cn";
 import { usePathname } from "next/navigation";
 import NextLink from "../link";
