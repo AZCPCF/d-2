@@ -6,7 +6,10 @@ export interface CategoryInterface {
   parent_id?: string | number;
   sub_categories?: CategoryInterface[];
 }
-
+export interface ColorInterface {
+  title: string;
+  color: string;
+}
 export interface ImageFromApiInterface {
   width?: number;
   height?: number;
@@ -19,6 +22,8 @@ export interface ProductInterface {
   title: string;
   page_url: string;
   price: number;
+  colors_cache: ColorInterface[];
+  color_count: number;
   after_price: number;
   discount: number;
   image_1: ImageFromApiInterface;
