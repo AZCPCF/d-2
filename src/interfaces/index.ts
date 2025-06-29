@@ -42,3 +42,11 @@ export interface LicenseInreface {
   text: string;
   image: ImageFromApiInterface;
 }
+export interface PaginationInterface {
+  pagination: {
+    current_page: number;
+    limit: number;
+    total: number;
+    total_page: number;
+  };
+}
