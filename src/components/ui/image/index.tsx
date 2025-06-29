@@ -4,31 +4,37 @@ import { cn } from "@/utils/cn";
 import { fileUrl } from "@/utils/env";
 import Image from "next/image";
 import { useState } from "react";
-
-export default function NextImage(
-  props: ImageFromApiInterface & { className?: string; alt: string }
-) {
+export default function NextImage({
+  className,
+  alt,
+  wrapperClassName,
+  ...imageProps
+}: ImageFromApiInterface & {
+  className?: string;
+  alt: string;
+  wrapperClassName?: string;
+}) {
   const [src, setSrc] = useState(
-    props.url.startsWith("https") || props.url.startsWith("/images")
-      ? props.url
-      : `${fileUrl}${props.url}`
+    imageProps.url.startsWith("https") || imageProps.url.startsWith("/images")
+      ? imageProps.url
+      : `${fileUrl}${imageProps.url}`
   );
   const [isLoading, setIsLoading] = useState(true);
 
   return (
-    <div className={cn("relative", props.className)}>
+    <div className={cn("relative", wrapperClassName)}>
       {isLoading && (
         <div className="absolute inset-0 flex items-center justify-center animate-pulse">
           <span className="text-xs text-gray-400">درحال بارگذاری...</span>
         </div>
       )}
       <Image
-        {...props}
+        {...imageProps}
         src={src}
-        alt={props.alt}
+        alt={alt}
         onError={() => setSrc("/images/404.png")}
         onLoad={() => setIsLoading(false)}
-        className={cn(props.className, isLoading ? "invisible" : "block")}
+        className={cn(className, isLoading ? "invisible" : "block")}
       />
     </div>
   );
