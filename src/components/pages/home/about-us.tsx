@@ -9,7 +9,7 @@ export default function HomePageAboutUs() {
   return (
     <section className="grid max-md:grid-cols-1 grid-cols-2 gap-10 px-4 py-12 bg-white max-full mx-auto">
       <div className="overflow-hidden rounded-2xl shadow-md group">
-        {aboutUs?.poster.url ? (
+        {aboutUs?.poster?.url ? (
           <NextImage
             {...aboutUs?.poster}
             alt={aboutUs?.poster.alt || "درباره ما"}
