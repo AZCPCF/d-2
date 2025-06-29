@@ -25,6 +25,7 @@ export default async function Category({
             <ProductCard
               key={`categories-product-item-${index}`}
               product={product}
+              showColors
             />
           ))}
         </div>

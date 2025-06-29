@@ -8,9 +8,11 @@ import { ColorBox } from "./color-box";
 export default function ProductCard({
   product,
   className,
+  showColors = false,
 }: {
   product: ProductInterface;
   className?: string;
+  showColors?: boolean;
 }) {
   return (
     <Link
@@ -20,22 +22,24 @@ export default function ProductCard({
         className
       )}
     >
-      <div className="absolute top-2 z-10 left-2 gap-3 flex flex-col">
-        {product?.colors_cache?.map((item) => (
-          <ColorBox title={item.title} key={item.color} color={item.color} />
-        ))}
+      {showColors ? (
+        <div className="absolute top-2 z-10 left-2 gap-3 flex flex-col">
+          {product?.colors_cache?.map((item) => (
+            <ColorBox title={item.title} key={item.color} color={item.color} />
+          ))}
 
-        {product?.color_count > 3 ? (
-          <ColorBox
-            className={
-              "w-4 p-2 h-4 rounded-xs shadow-sm border border-secondary-main flex justify-center items-center bg-secondary-main text-white"
-            }
-            title={`${product?.color_count - 3} رنگ دیگر`}
-          >
-            {product?.color_count - 3}
-          </ColorBox>
-        ) : undefined}
-      </div>
+          {product?.color_count > 3 ? (
+            <ColorBox
+              className={
+                "w-4 p-2 h-4 rounded-xs shadow-sm border border-secondary-main flex justify-center items-center bg-secondary-main text-white"
+              }
+              title={`${product?.color_count - 3} رنگ دیگر`}
+            >
+              {product?.color_count - 3}
+            </ColorBox>
+          ) : undefined}
+        </div>
+      ) : undefined}
       <NextImage
         alt={`product-slide-special-suggestion-${product.id}`}
         {...product.image_1}
