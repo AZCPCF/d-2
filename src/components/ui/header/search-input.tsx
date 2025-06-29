@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { BiSearch } from "react-icons/bi";
 import NextButton from "@/components/ui/button";
-import SearchModal from "../modals/search-modal";
+import SearchModal from "../modal/search-modal";
 
 export default function HeaderSearchInput() {
   const [open, setOpen] = useState(false);
