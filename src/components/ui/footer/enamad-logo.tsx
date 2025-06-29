@@ -16,7 +16,7 @@ export default function EnamadLogo() {
           "https://trustseal.enamad.ir/logo.aspx?id=527519&Code=rob4yxOTAgWtwcl4QWQ1lXSxyRO3CRxz"
         }
         alt="enamad-logo"
-        className="w-[100px] brightness-0"
+        className="w-[100px]"
         width={100}
         height={100}
       />
