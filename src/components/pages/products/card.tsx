@@ -18,7 +18,7 @@ export default function ProductCard({
     <Link
       href={`/product/${product.page_url}/${product.title}`}
       className={cn(
-        "block bg-white shadow-md rounded min-h-max duration-200 relative",
+        "block bg-white shadow-md rounded min-h-max duration-200 relative hover:scale-105",
         className
       )}
     >
@@ -31,7 +31,7 @@ export default function ProductCard({
           {product?.color_count > 3 ? (
             <ColorBox
               className={
-                "w-4 p-2 h-4 rounded-xs shadow-sm border border-secondary-main flex justify-center items-center bg-secondary-main text-white"
+                "border border-secondary-main flex !justify-center !items-center bg-secondary-main text-white p-2 pt-2.5"
               }
               title={`${product?.color_count - 3} رنگ دیگر`}
             >
