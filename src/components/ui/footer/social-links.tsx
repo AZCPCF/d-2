@@ -4,7 +4,7 @@ export default function SocialLinksHeader() {
     <div className="w-full flex flex-wrap pb-5">
       <p className="w-full text-end">ما را در شبکه های اجتماعی دنبال کنید</p>
       <div className="w-full flex justify-end items-center pt-3 gap-3">
-        <SocialLinks className="hover:text-white" />
+        <SocialLinks className="hover:text-primary-800" />
       </div>
     </div>
   );
