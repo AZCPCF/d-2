@@ -13,13 +13,17 @@ interface Props {
   title?: string;
   href?: string;
   primary?: boolean;
+  haveLink?: boolean;
+  disableButtons?: boolean;
 }
 
 export default function HomePageProductsSlider({
   products,
-  title,
-  href,
+  title = "پیشنهاد شگفت انگیز",
+  href = "/incredible-offers",
   primary = true,
+  disableButtons = false,
+  haveLink = true,
 }: Props) {
   const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
     rtl: true,
@@ -35,12 +39,15 @@ export default function HomePageProductsSlider({
   if (!products || products.length === 0) return null;
 
   return (
-    <section className="my-20 max-md:my-10">
-      <h1 className="flex items-center justify-between flex-wrap gap-4 text-4xl font-extrabold text-primary-main m-10 max-md:m-4 relative">
-        <span>{title || "پیشنهاد شگفت انگیز"}</span>
+    <section className={cn("my-20 max-md:my-10", !products.length && "hidden")}>
+      <h1 className={cn("flex items-center justify-between flex-wrap gap-4 text-4xl font-extrabold text-primary-main m-10 max-md:m-4 relative",!haveLink&&"justify-center")}>
+        <span>{title}</span>
         <Link
-          href={href || "/incredible-offers"}
-          className="text-xl max-md:text-base group inline-flex items-center gap-2 font-semibold text-primary-main rounded px-4 py-1 transition max-md:w-full max-md:flex justify-end max-md:p-0 mt-4"
+          href={href}
+          className={cn(
+            "text-xl max-md:text-base group inline-flex items-center gap-2 font-semibold text-primary-main rounded px-4 py-1 transition max-md:w-full max-md:flex justify-end max-md:p-0 mt-4",
+            !haveLink && "hidden"
+          )}
         >
           مشاهده همه
           <span className="opacity-0 translate-x-[-4px] group-hover:opacity-100 group-hover:translate-x-0 transition duration-300 max-md:opacity-100">
@@ -53,7 +60,8 @@ export default function HomePageProductsSlider({
         ref={sliderRef}
         className={cn(
           "keen-slider",
-          primary ? "bg-primary-300" : "bg-secondary-300"
+          primary ? "bg-primary-300" : "bg-secondary-300",
+          disableButtons && "py-2"
         )}
       >
         {products.map((product, index) => (
@@ -70,7 +78,8 @@ export default function HomePageProductsSlider({
           "flex justify-end items-center gap-4 p-6 bg-primary-300",
           primary
             ? "bg-primary-300 text-primary-main"
-            : "bg-secondary-300 text-secondary-main"
+            : "bg-secondary-300 text-secondary-main",
+          disableButtons && "hidden"
         )}
       >
         <button
