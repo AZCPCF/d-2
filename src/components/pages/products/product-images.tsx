@@ -1,21 +1,16 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
 import NextImage from "@/components/ui/image";
 import { ProductInterface } from "@/interfaces";
-import { IoMdClose } from "react-icons/io";
 import { cn } from "@/utils/cn";
+import { useCallback, useEffect, useState } from "react";
+import { FaRegImages } from "react-icons/fa";
+import { IoMdClose } from "react-icons/io";
 
 export default function ProductImages({ res }: { res: ProductInterface }) {
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState<number>(-1);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const images = res.images;
-  const activeImage = images[activeIndex];
-
-  const openModal = (index: number) => {
-    setActiveIndex(index);
-    setIsModalOpen(true);
-  };
+  const activeImage = activeIndex != -1 ? res.images[activeIndex] : res.image_1;
 
   const closeModal = () => {
     setIsModalOpen(false);
@@ -24,14 +19,16 @@ export default function ProductImages({ res }: { res: ProductInterface }) {
   const handleKeyDown = useCallback(
     (e: KeyboardEvent) => {
       if (e.key === "ArrowRight") {
-        setActiveIndex((prev) => (prev + 1) % images.length);
+        setActiveIndex((prev) => (prev + 1) % res.images.length);
       } else if (e.key === "ArrowLeft") {
-        setActiveIndex((prev) => (prev - 1 + images.length) % images.length);
+        setActiveIndex(
+          (prev) => (prev - 1 + res.images.length) % res.images.length
+        );
       } else if (e.key === "Escape" && isModalOpen) {
         closeModal();
       }
     },
-    [isModalOpen, images.length]
+    [isModalOpen, res.images.length]
   );
 
   useEffect(() => {
@@ -54,18 +51,19 @@ export default function ProductImages({ res }: { res: ProductInterface }) {
 
         {/* Thumbnails */}
         <div className="flex gap-4 max-md:gap-2 flex-wrap w-full max-md:justify-center flex-row-reverse">
-          {images.map((img, index) => {
+          {res.images.map((img, index) => {
             const isActive = index === activeIndex;
             return (
               <button
                 key={img.url}
-                onClick={() => openModal(index)}
+                onClick={() => setActiveIndex(index)}
                 aria-label={`نمایش تصویر ${index + 1}`}
-                className={`rounded-lg shadow-lg overflow-hidden w-[100px] h-[100px]
+                className={cn(
+                  `rounded-lg shadow-lg overflow-hidden w-[100px] h-[100px]
                 max-lg:w-[75px] max-lg:h-[75px] max-md:w-[65px] max-md:h-[65px]
-                border-2 ${
+                border-2`,
                   isActive ? "border-primary-500" : "border-gray-200"
-                }`}
+                )}
               >
                 <NextImage
                   alt={img.alt || `${res.title} thumbnail ${index + 1}`}
@@ -75,6 +73,14 @@ export default function ProductImages({ res }: { res: ProductInterface }) {
               </button>
             );
           })}
+          {/* View Gallery Button */}
+          <button
+            onClick={() => setIsModalOpen(true)}
+            className={`rounded-lg shadow-lg overflow-hidden w-[100px] h-[100px]
+                max-lg:w-[75px] max-lg:h-[75px] max-md:w-[65px] max-md:h-[65px] bg-secondary-400 flex justify-center items-center text-white hover:bg-secondary-main duration-200`}
+          >
+            <FaRegImages fontSize={36} />
+          </button>
         </div>
       </div>
 
@@ -100,7 +106,7 @@ export default function ProductImages({ res }: { res: ProductInterface }) {
 
             {/* Thumbnail Bar in Bottom */}
             <div className="absolute bottom-4 left-4 right-4 bg-black/40 backdrop-blur-md p-2 rounded-lg flex gap-2 justify-start flex-row-reverse overflow-x-auto">
-              {images.map((img, index) => {
+              {res.images.map((img, index) => {
                 const isActive = index === activeIndex;
                 return (
                   <button
