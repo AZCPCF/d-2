@@ -64,6 +64,11 @@ export interface ArticleInterface {
   id: number;
   title: string;
   main_image: ImageFromApiInterface;
+  text: string;
+  tag_title: string;
+  tags: { page_url: string; title: string }[];
+  category: CategoryInterface;
+  similar: ArticleInterface[];
   date: DateInterface;
   page_url: string;
 }
