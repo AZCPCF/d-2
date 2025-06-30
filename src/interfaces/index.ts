@@ -9,6 +9,23 @@ export interface CategoryInterface {
 export interface ColorInterface {
   title: string;
   color: string;
+  color_id: string;
+}
+export interface CommentInterface {
+  id: number;
+  name: string;
+  message: string;
+  created_at: DateInterface;
+  customer: { full_name: string };
+  admin_answer: string;
+}
+
+export interface SizeInterface {
+  id: number;
+  title: string;
+  stock: number;
+  stock_id: string;
+  color_size: string;
 }
 export interface ImageFromApiInterface {
   width?: number;
@@ -27,6 +44,14 @@ export interface ProductInterface {
   after_price: number;
   discount: number;
   image_1: ImageFromApiInterface;
+  image_2: ImageFromApiInterface;
+  images: ImageFromApiInterface[];
+  color_size_cache: (ColorInterface & { sizes: SizeInterface[] })[];
+  stock_sum: number;
+  description: string;
+  categories: CategoryInterface[];
+  similar: ProductInterface[];
+  comments: CommentInterface[];
 }
 export interface DateInterface {
   timestamp: number;

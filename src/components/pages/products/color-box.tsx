@@ -33,8 +33,8 @@ export function ColorBox({
       )}
       <div
         className={cn(
-          className,
           "w-4 h-4 p-2 shadow-sm border border-black/20 rounded-md",
+          className,
           classNameDefault
         )}
       >

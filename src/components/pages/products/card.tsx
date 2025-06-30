@@ -16,7 +16,7 @@ export default function ProductCard({
 }) {
   return (
     <Link
-      href={`${product.page_url}/${product.title}`}
+      href={`/product/${product.page_url}/${product.title}`}
       className={cn(
         "block bg-white shadow-md rounded min-h-max duration-200 relative",
         className
