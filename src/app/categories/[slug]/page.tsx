@@ -20,7 +20,7 @@ export default async function Category({
         <h1 className="text-4xl font-bold text-center text-primary-main p-4">
           {res.category.title}
         </h1>
-        <div className="grid grid-cols-6 gap-5 max-xl:grid-cols-5 max-lg:grid-cols-4 max-md:grid-cols-3 max-sm:grid-cols-2">
+        <div className="grid grid-cols-6 gap-5 max-xl:grid-cols-5 max-lg:grid-cols-4 max-md:grid-cols-3 max-sm:grid-cols-2 max-sm:gap-3">
           {res.data.map((product, index) => (
             <ProductCard
               key={`categories-product-item-${index}`}
