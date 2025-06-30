@@ -10,6 +10,7 @@ import { useEffect, useMemo, useState } from "react";
 import { FiHeart } from "react-icons/fi";
 import { ColorBox } from "./color-box";
 import { formatNumberWithCommas } from "@/utils/formater";
+import Tooltip from "@/components/ui/tooltip";
 
 interface Props {
   res: ProductInterface;
@@ -51,10 +52,7 @@ export default function ProductSelector({ colorOptions, res }: Props) {
               <FiHeart className="text-xl text-red-500" />
             </button>
 
-            {/* Tooltip */}
-            <div className="absolute bottom-full mb-1 left-1/2 -translate-x-1/2 scale-0 group-hover:scale-100 transition-transform px-2 py-1 bg-secondary-main text-sm text-white rounded shadow-md z-10 whitespace-nowrap">
-              افزودن به علاقه‌مندی‌ها
-            </div>
+            <Tooltip title="افزودن به علاقه‌مندی‌ها" className="text-base text-white"/>
           </div>
           <h3 className="font-medium mb-2 text-xl text-gray-500 text-start">
             رنگ بندی‌های محصول
