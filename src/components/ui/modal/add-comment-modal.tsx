@@ -5,7 +5,6 @@ import { CommentSchemaValues } from "@/schemas/add-comment";
 import Toast from "@/utils/toast";
 import { useActionState, useEffect, useState, useTransition } from "react";
 import { FaSpinner } from "react-icons/fa";
-import { IoMdClose } from "react-icons/io";
 
 type FormState = {
   success: boolean;
