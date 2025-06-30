@@ -10,7 +10,7 @@ export default function FooterLinks() {
           {footerLinks.main.map((link, i) => (
             <li key={i} className="w-full">
               <NextLink
-                className="hover:text-white w-full list-decimal"
+                className="w-full hover:text-primary-800"
                 href={link.href}
                 label={link.label}
               />
@@ -24,11 +24,7 @@ export default function FooterLinks() {
         <ul className="!text-xl mt-5 flex flex-wrap *:w-full gap-5 max-sm:gap-2">
           {footerLinks.others.map((link, i) => (
             <li key={i}>
-              <NextLink
-                className="hover:text-white"
-                href={link.href}
-                label={link.label}
-              />
+              <NextLink href={link.href} label={link.label} className="hover:text-primary-800" />
             </li>
           ))}
         </ul>
