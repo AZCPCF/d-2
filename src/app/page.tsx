@@ -23,7 +23,7 @@ export default async function Home() {
       />
       <HomePageAboutUs />
       <HomePageProductsSlider
-        href="/top-sellers"
+        href="/best-selling"
         primary={false}
         title="پر فروش ترین ها"
         products={res.top_sellers}
