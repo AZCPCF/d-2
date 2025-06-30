@@ -7,11 +7,10 @@ export function parser(input: string): {
   ParsedNode: ({ className }: { className?: string }) => JSX.Element | null;
 } {
   const hasScript = /<\s*script\b[^>]*>/i.test(input);
-  const hasEventHandlers = /on\w+=["']?/i.test(input);
   const hasJsProtocol = /javascript:/i.test(input);
   const hasIframe = /<\s*iframe\b[^>]*>/i.test(input);
 
-  const isSafe = !(hasScript || hasEventHandlers || hasJsProtocol || hasIframe);
+  const isSafe = !(hasScript || hasJsProtocol || hasIframe);
 
   const text = input
     .replace(/<\s*script\b[^>]*>(.*?)<\s*\/script\s*>/gi, "")
@@ -26,7 +25,10 @@ export function parser(input: string): {
       isSafe ? (
         <pre
           dangerouslySetInnerHTML={{ __html: text }}
-          className={cn("text-xl max-md:text-lg px-6 py-4 w-full text-wrap", className)}
+          className={cn(
+            "parser text-xl max-md:text-lg px-6 py-4 w-full text-wrap overflow-hidden",
+            className
+          )}
         />
       ) : null,
   };
