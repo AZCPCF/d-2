@@ -40,14 +40,19 @@ export default function ProductImages({ res }: { res: ProductInterface }) {
     <div className="col-span-4 max-md:col-span-12 max-md:order-first max-lg:col-span-6">
       <div className="sticky top-4 max-md:static flex flex-col items-end gap-6 max-md:items-center">
         {/* Main Image */}
-        <div className="w-full aspect-square relative shadow-lg rounded-lg max-w-xl max-md:max-w-[calc(100%-20px)]">
+        <button
+          onClick={() => {
+            setActiveIndex(-1);
+          }}
+          className="w-full aspect-square relative shadow-lg rounded-lg max-w-xl max-md:max-w-[calc(100%-20px)]"
+        >
           <NextImage
             key={activeImage.url}
             alt={activeImage.alt || res.title}
             {...activeImage}
             className="rounded-lg"
           />
-        </div>
+        </button>
 
         {/* Thumbnails */}
         <div className="flex gap-4 max-md:gap-2 flex-wrap w-full max-md:justify-center flex-row-reverse">
