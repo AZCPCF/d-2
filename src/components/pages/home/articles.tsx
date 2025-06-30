@@ -1,11 +1,10 @@
 "use client";
 
-import Link from "next/link";
-import NextImage from "@/components/ui/image";
 import { ArticleInterface } from "@/interfaces";
-import { IoIosArrowBack } from "react-icons/io";
-import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
+import { useKeenSlider } from "keen-slider/react";
+import { IoIosArrowBack } from "react-icons/io";
+import ArticleCard from "../articles/card";
 
 export default function HomePageArticles({
   articles,
@@ -16,7 +15,7 @@ export default function HomePageArticles({
     rtl: true,
     slides: {
       perView: "auto",
-      spacing:  16,
+      spacing: 16,
     },
     mode: "free",
   });
@@ -26,7 +25,7 @@ export default function HomePageArticles({
       <h1 className="flex items-center justify-between flex-wrap gap-4 text-4xl font-extrabold text-primary-main m-10 max-md:m-4 relative">
         <span>جدیدترین مقالات</span>
         <a
-          href={"/articles"}
+          href={"/articles-hub"}
           className="text-xl max-md:text-base group inline-flex items-center gap-2 font-semibold text-primary-main rounded px-4 py-1 transition max-md:w-full max-md:flex justify-end max-md:p-0 mt-4"
         >
           مشاهده همه
@@ -38,27 +37,12 @@ export default function HomePageArticles({
 
       <div ref={sliderRef} className="keen-slider py-6">
         {articles.map((article, index) => (
-          <Link
+          <div
             key={`home-page-article-${index}`}
-            href={article.page_url}
-            className="keen-slider__slide -m-0.5 !min-w-[250px] !max-w-[250px] flex-shrink-0 group block bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 relative"
+            className="keen-slider__slide -m-0.5 !min-w-[250px] !max-w-[250px] rounded-lg shadow-md hover:shadow-lg duration-300"
           >
-            <div className="relative h-48 w-full overflow-hidden">
-              <NextImage
-                {...article.main_image}
-                alt={article.main_image.alt || article.title}
-                className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-300"
-              />
-            </div>
-            <div className="p-4 h-36 relative">
-              <h2 className="text-lg font-bold text-gray-800 group-hover:text-primary-main transition-colors duration-200 line-clamp-2">
-                {article.title}
-              </h2>
-              <p className="text-sm text-gray-500 absolute bottom-2 left-2">
-                {article.date.str}
-              </p>
-            </div>
-          </Link>
+            <ArticleCard article={article} />
+          </div>
         ))}
       </div>
     </section>
