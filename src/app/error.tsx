@@ -20,10 +20,10 @@ export default function GlobalError({
       <body>
         <main>
           <section className="flex flex-col items-center justify-center my-40 text-right px-4">
-            <h1 className="text-7xl font-extrabold text-red-600 mb-4 flex gap-2 items-center">
-              <span>0</span>
+            <h1 className="font-extrabold text-red-600 mb-4 flex gap-2 items-center">
               <FaBug fontSize={48} />
-              <span>5</span>
+              <FaBug fontSize={48} />
+              <span className='text-8xl'>5</span>
             </h1>
             <h2 className="text-3xl text-gray-900 mb-2">خطایی رخ داده است</h2>
             <p className="text-gray-600 mb-6 text-lg max-[500px]:text-sm">
