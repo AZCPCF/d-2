@@ -84,7 +84,8 @@ export default function SearchModal({ onClose }: { onClose: () => void }) {
                         </>
                       }
                       className="w-full h-full flex  hover:text-secondary-700"
-                      href={`${product.page_url}/${product.title}`}
+                      href={`/product/${product.page_url}/${product.title}`}
+                      onClick={onClose}
                     />
                   </li>
                 ))
