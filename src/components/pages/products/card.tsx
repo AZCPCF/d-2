@@ -18,7 +18,7 @@ export default function ProductCard({
     <Link
       href={`/product/${product.page_url}/${product.title}`}
       className={cn(
-        "block bg-white shadow-md rounded min-h-max duration-200 relative hover:scale-105",
+        "block bg-white shadow-md rounded min-h-max duration-200 relative",
         className
       )}
     >
