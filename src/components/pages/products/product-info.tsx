@@ -5,7 +5,7 @@ import ProductSelector from "./product-picker";
 
 export default function ProductInfo({res}:{res:ProductInterface}) {
   return (
-    <aside className="col-span-4 max-md:col-span-12 max-lg:col-span-6 max-md:mt-8">
+    <aside className="col-span-4 max-md:col-span-12 max-lg:col-span-6">
       <div className="sticky top-4 max-md:static flex flex-col gap-4">
         <div className="flex flex-wrap items-center gap-1 text-sm text-secondary-600">
           {res.categories.reverse().map((category, index, self) => (
