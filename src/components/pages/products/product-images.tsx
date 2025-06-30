@@ -21,7 +21,6 @@ export default function ProductImages({ res }: { res: ProductInterface }) {
     setIsModalOpen(false);
   };
 
-  // Optional: Keyboard navigation for modal
   const handleKeyDown = useCallback(
     (e: KeyboardEvent) => {
       if (e.key === "ArrowRight") {
@@ -100,7 +99,7 @@ export default function ProductImages({ res }: { res: ProductInterface }) {
             </div>
 
             {/* Thumbnail Bar in Bottom */}
-            <div className="absolute bottom-4 left-4 right-4 bg-black/40 backdrop-blur-md p-2 rounded-lg flex gap-2 justify-around overflow-x-auto px-8">
+            <div className="absolute bottom-4 left-4 right-4 bg-black/40 backdrop-blur-md p-2 rounded-lg flex gap-2 justify-start flex-row-reverse overflow-x-auto">
               {images.map((img, index) => {
                 const isActive = index === activeIndex;
                 return (
