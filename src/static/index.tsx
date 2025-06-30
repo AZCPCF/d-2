@@ -34,17 +34,17 @@ export const footerLinks: { main: FooterLinkType[]; others: FooterLinkType[] } =
   {
     main: [
       { href: "t", label: "اخبار و مقالات" },
-      { href: "about-us", label: "درباره ما" },
-      { href: "contact-us", label: "تماس با ما" },
-      { href: "gallery", label: "گالری" },
-      { href: "faq", label: "سوالات متداول" },
+      { href: "/about-us", label: "درباره ما" },
+      { href: "/contact-us", label: "تماس با ما" },
+      { href: "/gallery", label: "گالری" },
+      { href: "/faq", label: "سوالات متداول" },
     ],
     others: [
       { href: "http://localhost:5173", label: "ورود" },
-      { href: "payment-rules", label: "نحوه ثبت سفارش" },
-      { href: "privacy", label: "حریم خصوصی" },
-      { href: "rules", label: "قوانین سایت" },
-      { href: "licenses", label: "گواهی نامه ها" },
+      { href: "/payment-rules", label: "نحوه ثبت سفارش" },
+      { href: "/privacy", label: "حریم خصوصی" },
+      { href: "/rules", label: "قوانین سایت" },
+      { href: "/licenses", label: "گواهی نامه ها" },
     ],
   };
 
