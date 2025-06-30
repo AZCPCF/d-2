@@ -10,7 +10,7 @@
 }
 * {
   direction: rtl;
-  font-family: kalameh;
+  font-family: kalameh !important;
 }
 ::selection {
   background-color: var(--color-primary-main);
@@ -65,4 +65,12 @@ body:has(.body-gray) {
 }
 .form-input {
   @apply w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:border-0 focus:ring-primary-main;
+}
+.parser{
+  & figure{
+    @apply !max-w-full
+  }
+  & img{
+    @apply !max-w-full
+  }
 }
