@@ -3,6 +3,7 @@ import { ArticleInterface } from "@/interfaces";
 import { fetcher } from "@/lib/fetcher";
 
 export default async function ArticlesHub() {
+  
   const res = await fetcher<{
     important: ArticleInterface[];
     other: ArticleInterface[];
@@ -15,20 +16,14 @@ export default async function ArticlesHub() {
     {
       title: "جدید ترین مقالات مد و پوشاک",
       data: res.important,
-      bg: "bg-gray-50",
-      text: "text-primary-main",
     },
     {
       title: "مقالات منتخب پوشاک",
       data: res.other_important,
-      bg: "bg-primary-400",
-      text: "text-secondary-main",
     },
     {
       title: "سایر مقالات",
       data: res.other,
-      bg: "bg-secondary-400",
-      text: "text-primary-main",
     },
   ];
 
@@ -37,13 +32,17 @@ export default async function ArticlesHub() {
       {sections.map((section, i) => (
         <section
           key={i}
-          className={`${section.bg} p-10 grid grid-cols-1 shadow-md rounded-lg max-sm:p-4`}
+          className={`bg-gray-50 p-10 grid grid-cols-1 shadow-md rounded-lg max-sm:p-4`}
         >
-          <h1
-            className={`text-3xl sm:text-4xl font-bold text-center ${section.text} p-4 tracking-wide`}
-          >
-            {section.title}
-          </h1>
+          <div className="text-center pb-8">
+            <h1 className="max-sm:text-3xl text-4xl font-bold text-primary-main">
+              {section.title}
+            </h1>
+            <p className="text-gray-500 text-md">
+              مشاهده مقالات منتخب این دسته برای آشنایی بیشتر با سبک‌ها، برندها و
+              ترندهای روز.
+            </p>
+          </div>
           <div className="grid grid-cols-6 gap-5 max-xl:grid-cols-5 max-lg:grid-cols-4 max-md:grid-cols-3 max-sm:grid-cols-1">
             {section.data.map((article, index) => (
               <div
