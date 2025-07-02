@@ -5,6 +5,7 @@ import { fetcher } from "@/lib/fetcher";
 import { parser } from "@/utils/parser";
 
 export default async function AboutUs() {
+  
   const res = await fetcher<AboutUsRequestInterface>({
     endpoint: "about_us",
   });
