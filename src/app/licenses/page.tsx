@@ -3,6 +3,8 @@ import { LicenseInreface } from "@/interfaces";
 import { fetcher } from "@/lib/fetcher";
 
 export default async function Licenses() {
+  
+
   const res = await fetcher<{ data: LicenseInreface[] }>({
     endpoint: "licenses",
   });
