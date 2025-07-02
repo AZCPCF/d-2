@@ -33,7 +33,7 @@ type FooterLinkType = { href: string; label: string };
 export const footerLinks: { main: FooterLinkType[]; others: FooterLinkType[] } =
   {
     main: [
-      { href: "t", label: "اخبار و مقالات" },
+      { href: "/articles-hub", label: "اخبار و مقالات" },
       { href: "/about-us", label: "درباره ما" },
       { href: "/contact-us", label: "تماس با ما" },
       { href: "/gallery", label: "گالری" },
