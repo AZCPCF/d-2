@@ -7,6 +7,7 @@ import "keen-slider/keen-slider.min.css";
 import { useKeenSlider } from "keen-slider/react";
 import type { KeenSliderInstance } from "keen-slider";
 import { HomePageRequestInterface } from "@/interfaces/pages/home";
+import Link from "next/link";
 
 export default function HomePageSlider(
   props: Pick<HomePageRequestInterface, "slides">
@@ -59,7 +60,7 @@ export default function HomePageSlider(
       )}
     >
       {props.slides.map((slide, index) => (
-        <a
+        <Link
           href={slide.link}
           key={`home-page-slider-${index}`}
           className={cn(
@@ -69,7 +70,7 @@ export default function HomePageSlider(
           )}
         >
           <NextImage alt={`slide-${slide.id}`} {...slide.image} />
-        </a>
+        </Link>
       ))}
     </section>
   );
