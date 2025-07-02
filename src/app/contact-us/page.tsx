@@ -4,6 +4,7 @@ import { AboutUsRequestInterface } from "@/interfaces/pages/about-us";
 import { fetcher } from "@/lib/fetcher";
 
 export default async function ContactUs() {
+  
   const res = await fetcher<AboutUsRequestInterface>({
     endpoint: "about_us",
   });
