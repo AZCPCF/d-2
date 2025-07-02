@@ -64,13 +64,16 @@ body:has(.body-gray) {
   background-color: var(--color-gray-100);
 }
 .form-input {
-  @apply w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:border-0 focus:ring-primary-main;
+  @apply w-full border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary-main;
 }
-.parser{
-  & figure{
-    @apply !max-w-full
+.parser {
+  & figure {
+    @apply !max-w-full;
   }
-  & img{
-    @apply !max-w-full
+  & img {
+    @apply !max-w-full;
   }
+}
+.loading {
+  @apply bg-gradient-to-r from-[#ccc] via-[#ddd] to-[#ccc] animate-pulse;
 }
