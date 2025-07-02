@@ -7,7 +7,7 @@ type RequestOptions<B = unknown> = {
   method?: "GET" | "POST" | "PUT" | "DELETE" | "PATCH";
   headers?: Record<string, string>;
   body?: B;
-  params?: Record<string, string | number | boolean | undefined>;
+  params?: Record<string, string | number | boolean | undefined | string[]>;
   cache?: RequestCache;
   next?: NextFetchRequestConfig;
   apiUrl?: "primary" | "secondary";
