@@ -10,6 +10,7 @@ export default async function Product({
 }: {
   params: Promise<{ slug: string }>;
 }) {
+  await new Promise((res) => setTimeout(res, 4000));
   const { slug } = await params;
   const res = await fetcher<ProductInterface>({
     endpoint: `products/${slug[0]}`,
