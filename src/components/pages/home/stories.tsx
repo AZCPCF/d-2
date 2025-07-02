@@ -2,6 +2,7 @@
 import NextImage from "@/components/ui/image";
 import NextModal from "@/components/ui/modal";
 import { HomePageRequestInterface } from "@/interfaces/pages/home";
+import Link from "next/link";
 import { useState } from "react";
 
 export default function HomeStories(
@@ -42,13 +43,13 @@ export default function HomeStories(
                 className="rounded-lg w-full aspect-square mb-4 p-4"
               />
               <h2 className="text-xl font-semibold">{selectedStory.title}</h2>
-              <a
+              <Link
                 href={selectedStory.link}
                 className="text-blue-500 underline text-sm mt-2 block text-end"
                 target="_blank"
               >
                 مشاهده بیشتر
-              </a>
+              </Link>
             </>
           }
           onClose={() => setSelectedStory(null)}
