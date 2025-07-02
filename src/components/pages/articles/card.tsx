@@ -16,7 +16,7 @@ export default function ArticleCard({
         <NextImage
           {...article.main_image}
           alt={article.main_image.alt || article.title}
-          className="w-full h-full group-hover:scale-105 transition-transform duration-300"
+          className="w-full h-52 group-hover:scale-105 transition-transform duration-300"
         />
       </div>
       <div className="p-4 h-36 relative bg-white">
