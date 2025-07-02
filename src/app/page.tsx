@@ -12,23 +12,23 @@ export default async function Home() {
     endpoint: "home_page",
   });
   return (
-    <main>
-      <HomeStories stories={res.stories} />
-      <HomePageSlider slides={res.slides} />
-      <HomePageCategories />
-      <HomePageProductsSlider
-        title="پیشنهاد شگفت انگیز"
-        href="/incredible-offers"
-        products={res.special_suggestion}
-      />
-      <HomePageAboutUs />
-      <HomePageProductsSlider
-        href="/best-selling"
-        primary={false}
-        title="پر فروش ترین ها"
-        products={res.top_sellers}
-      />
-      <HomePageArticles articles={res.articles} />
-    </main>
+      <main>
+        <HomeStories stories={res.stories} />
+        <HomePageSlider slides={res.slides} />
+        <HomePageCategories />
+        <HomePageProductsSlider
+          title="پیشنهاد شگفت انگیز"
+          href="/incredible-offers"
+          products={res.special_suggestion}
+        />
+        <HomePageAboutUs />
+        <HomePageProductsSlider
+          href="/best-selling"
+          primary={false}
+          title="پر فروش ترین ها"
+          products={res.top_sellers}
+        />
+        <HomePageArticles articles={res.articles} />
+      </main>
   );
 }
