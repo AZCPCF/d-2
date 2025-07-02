@@ -40,7 +40,7 @@ export default function HomePageProductsSlider({
 
   return (
     <section className={cn("my-20 max-md:my-10", !products.length && "hidden")}>
-      <h1 className={cn("flex items-center justify-between flex-wrap gap-4 text-4xl font-extrabold text-primary-main m-10 max-md:m-4 relative",!haveLink&&"justify-center")}>
+      <h1 className={cn("flex items-center justify-between flex-wrap gap-4 text-4xl font-extrabold text-primary-main m-10 max-md:m-4 relative")}>
         <span>{title}</span>
         <Link
           href={href}
