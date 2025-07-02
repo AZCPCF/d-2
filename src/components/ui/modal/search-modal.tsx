@@ -36,7 +36,7 @@ export default function SearchModal({ onClose }: { onClose: () => void }) {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm px-4 modal">
-      <div className="bg-white w-full max-w-xl p-4 rounded-xl relative shadow-lg flex justify-center flex-wrap">
+      <div className="bg-white w-full min-h-[650px] max-w-xl p-4 rounded-xl relative shadow-lg">
         <div className="w-full flex items-center">
           <button
             onClick={onClose}
@@ -53,7 +53,7 @@ export default function SearchModal({ onClose }: { onClose: () => void }) {
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder="نام محصول را وارد کنید..."
-          className="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary-500 mt-5"
+          className="w-full p-4 border border-gray-300 h-max rounded-lg focus:outline-none focus:ring-2 focus:ring-secondary-500 mt-5"
         />
 
         {loading && (
