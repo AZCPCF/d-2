@@ -3,6 +3,8 @@ import { FaqRequestInterface } from "@/interfaces/pages/faq";
 import { fetcher } from "@/lib/fetcher";
 
 export default async function Faq() {
+  
+
   const res = await fetcher<FaqRequestInterface>({ endpoint: "faq" });
 
   return (
