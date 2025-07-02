@@ -5,7 +5,7 @@ import { TbLicense } from "react-icons/tb";
 import { VscLaw } from "react-icons/vsc";
 
 export default async function Rules() {
-  await new Promise((res) => setTimeout(res, 4000));
+  
   const res = await fetcher<{ data: { rules: string } }>({
     endpoint: "privacy_rules",
   });
