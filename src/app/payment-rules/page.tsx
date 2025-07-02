@@ -4,6 +4,7 @@ import { parser } from "@/utils/parser";
 import { BiInfoCircle, BiShoppingBag } from "react-icons/bi";
 
 export default async function PaymentRules() {
+  
   const res = await fetcher<{ data: { text: string } }>({
     endpoint: "how_to_order",
     apiUrl: "secondary",
