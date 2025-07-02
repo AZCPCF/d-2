@@ -7,6 +7,7 @@ export interface CategoryInterface {
   sub_categories?: CategoryInterface[];
 }
 export interface ColorInterface {
+  id: number;
   title: string;
   color: string;
   color_id: string;
@@ -84,4 +85,8 @@ export interface PaginationInterface {
     total: number;
     total_page: number;
   };
+}
+export interface FilterInterface {
+  colors: ColorInterface[];
+  sizes: SizeInterface[];
 }
