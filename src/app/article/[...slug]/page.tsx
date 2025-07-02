@@ -3,12 +3,14 @@ import { ShareButton } from "@/components/ui/share-button";
 import { ArticleInterface } from "@/interfaces";
 import { fetcher } from "@/lib/fetcher";
 import { parser } from "@/utils/parser";
+import Link from "next/link";
 
 export default async function Article({
   params,
 }: {
   params: Promise<{ slug: string }>;
 }) {
+  
   const { slug } = await params;
   const res = await fetcher<ArticleInterface>({
     endpoint: `article/${slug[0]}`,
@@ -44,7 +46,7 @@ export default async function Article({
               مقالات مشابه
             </h2>
             {res.similar.map((item) => (
-              <a
+              <Link
                 key={item.id}
                 href={`/article/${item.page_url}`}
                 className="flex items-start gap-4 border-b last:border-0 pb-3 hover:bg-gray-100 duration-200 rounded-md rounded-b-none p-2"
@@ -52,7 +54,7 @@ export default async function Article({
                 <NextImage
                   alt={item.title}
                   {...item.main_image}
-                  className="max-w-[96px] max-h-[96px] h-auto object-contain rounded"
+                  className="max-w-[96px] h-[96px] object-contain rounded"
                 />
 
                 <div className="flex flex-col justify-between text-sm">
@@ -61,7 +63,7 @@ export default async function Article({
                   </p>
                   <p className="text-gray-400 text-xs mt-1">{item.date.str}</p>
                 </div>
-              </a>
+              </Link>
             ))}
           </div>
         </div>
