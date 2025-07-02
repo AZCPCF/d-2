@@ -3,6 +3,8 @@ import { GalleryRequestInterface } from "@/interfaces/pages/gallery";
 import { fetcher } from "@/lib/fetcher";
 
 export default async function Page() {
+  
+
   const res = await fetcher<GalleryRequestInterface>({ endpoint: "galleries" });
   return (
     <main className="bg-gray-100 p-10 max-md:p-4">
