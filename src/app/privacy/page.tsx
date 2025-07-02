@@ -5,6 +5,7 @@ import { BiInfoCircle } from "react-icons/bi";
 import { VscLaw } from "react-icons/vsc";
 
 export default async function Privacy() {
+  await new Promise((res) => setTimeout(res, 4000));
   const res = await fetcher<{ data: { privacy: string } }>({
     endpoint: "privacy_rules",
   });
