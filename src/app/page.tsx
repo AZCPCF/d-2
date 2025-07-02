@@ -12,7 +12,7 @@ export default async function Home() {
     endpoint: "home_page",
   });
   return (
-      <main>
+      <main className="home">
         <HomeStories stories={res.stories} />
         <HomePageSlider slides={res.slides} />
         <HomePageCategories />
