@@ -3,6 +3,7 @@ import { GetByCategoryRequestInterface } from "@/interfaces/pages/category";
 import { fetcher } from "@/lib/fetcher";
 
 export default async function BestSelling() {
+  
   const res = await fetcher<GetByCategoryRequestInterface>({
     endpoint: "products",
   });
