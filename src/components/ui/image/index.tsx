@@ -3,7 +3,8 @@ import { ImageFromApiInterface } from "@/interfaces";
 import { cn } from "@/utils/cn";
 import { fileUrl } from "@/utils/env";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+
 export default function NextImage({
   className,
   alt,
@@ -14,12 +15,21 @@ export default function NextImage({
   alt: string;
   wrapperClassName?: string;
 }) {
-  const [src, setSrc] = useState(
+  const resolvedUrl =
     imageProps.url.startsWith("https") || imageProps.url.startsWith("/images")
       ? imageProps.url
-      : `${fileUrl}${imageProps.url}`
-  );
+      : `${fileUrl}${imageProps.url}`;
+
+  const [src, setSrc] = useState(resolvedUrl);
   const [isLoading, setIsLoading] = useState(true);
+
+  // ✅ Only update if URL actually changes
+  useEffect(() => {
+    if (src !== resolvedUrl) {
+      setSrc(resolvedUrl);
+      setIsLoading(true);
+    }
+  }, [resolvedUrl]);
 
   return (
     <div className={cn("relative", wrapperClassName)}>
