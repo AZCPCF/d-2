@@ -1,6 +1,7 @@
 import ArticleCard from "@/components/pages/articles/card";
 import { ArticleInterface } from "@/interfaces";
 import { fetcher } from "@/lib/fetcher";
+import { cn } from "@/utils/cn";
 
 export default async function ArticlesHub() {
   
@@ -14,31 +15,34 @@ export default async function ArticlesHub() {
 
   const sections = [
     {
+      id:1,
       title: "جدید ترین مقالات مد و پوشاک",
       data: res.important,
     },
     {
+      id:2,
       title: "مقالات منتخب پوشاک",
       data: res.other_important,
     },
     {
+      id:3,
       title: "سایر مقالات",
       data: res.other,
     },
   ];
 
   return (
-    <main className="bg-gray-200/75 p-10 max-sm:p-4 flex flex-col gap-10">
+    <main className="py-10 max-sm:p-4 flex flex-col">
       {sections.map((section, i) => (
         <section
           key={i}
-          className={`bg-gray-50 p-10 grid grid-cols-1 shadow-md rounded-lg max-sm:p-4`}
+          className={cn(`bg-white shadow-md p-10 grid grid-cols-1 max-sm:p-4`,section.id==2&&"bg-primary-400")}
         >
           <div className="text-center pb-8">
-            <h1 className="max-sm:text-3xl text-4xl font-bold text-primary-main">
+            <h1 className={cn("max-sm:text-3xl text-4xl font-bold text-primary-main",section.id==2&&"text-white")}>
               {section.title}
             </h1>
-            <p className="text-gray-500 text-md">
+            <p className={cn("text-gray-500 text-md",section.id==2&&"text-gray-100")}>
               مشاهده مقالات منتخب این دسته برای آشنایی بیشتر با سبک‌ها، برندها و
               ترندهای روز.
             </p>
