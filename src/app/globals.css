@@ -78,9 +78,10 @@ body:has(.body-gray) {
   @apply bg-gradient-to-r from-[#ccc] via-[#ddd] to-[#ccc] animate-pulse;
 }
 
-body:has(.home) main{
-  @apply !bg-white
+main {
+  @apply !bg-gray-50;
 }
-main{
-  @apply !bg-gray-300/50
+.range-slider__range,
+.range-slider__thumb {
+  @apply !bg-primary-main;
 }
