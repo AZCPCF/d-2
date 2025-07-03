@@ -23,20 +23,25 @@ export default function NextImage({
   const [src, setSrc] = useState(resolvedUrl);
   const [isLoading, setIsLoading] = useState(true);
 
-  // ✅ Only update if URL actually changes
   useEffect(() => {
-    if (src !== resolvedUrl) {
-      setSrc(resolvedUrl);
-      setIsLoading(true);
-    }
-  }, [resolvedUrl, src]);
+    setSrc((prev) => {
+      if (prev !== resolvedUrl) {
+        setIsLoading(true);
+        return resolvedUrl;
+      }
+      return prev;
+    });
+  }, [resolvedUrl]);
 
   return (
     <div className={cn("relative", wrapperClassName)}>
       {isLoading && (
-        <div className="absolute inset-0 flex items-center justify-center animate-pulse">
-          <span className="text-xs text-gray-400">درحال بارگذاری...</span>
-        </div>
+        <div
+          className={cn(
+            "absolute inset-0 bg-gray-200 loading rounded",
+            className
+          )}
+        />
       )}
       <Image
         {...imageProps}
