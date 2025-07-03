@@ -2,7 +2,7 @@
 @font-face {
   font-family: kalameh;
   font-size: 128px;
-  src: url("/fonts/kalameh.ttf");
+  src: url("./kalameh.ttf");
 }
 :root {
   --background: #ffffff;
@@ -79,7 +79,7 @@ body:has(.body-gray) {
 }
 
 main {
-  @apply !bg-gray-50;
+  @apply !bg-white;
 }
 .range-slider__range,
 .range-slider__thumb {
