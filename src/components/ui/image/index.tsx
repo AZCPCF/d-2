@@ -29,7 +29,7 @@ export default function NextImage({
       setSrc(resolvedUrl);
       setIsLoading(true);
     }
-  }, [resolvedUrl]);
+  }, [resolvedUrl, src]);
 
   return (
     <div className={cn("relative", wrapperClassName)}>
