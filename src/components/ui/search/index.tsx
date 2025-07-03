@@ -1,11 +1,12 @@
 "use client";
-import { useEffect, useReducer, useState } from "react";
-import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import dynamic from "next/dynamic";
-import { FilterInterface } from "@/interfaces";
 import { ColorBox } from "@/components/pages/products/color-box";
+import { FilterInterface } from "@/interfaces";
 import { cn } from "@/utils/cn";
 import { formatNumberWithCommas } from "@/utils/formater";
+import dynamic from "next/dynamic";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { useEffect, useReducer } from "react";
+import "react-range-slider-input/dist/style.css";
 // ✨ Define this before the return statement
 const sortOptions = [
   { value: "", label: "جدیدترین" },
@@ -18,7 +19,6 @@ const sortOptions = [
 const RangeSlider = dynamic(() => import("react-range-slider-input"), {
   ssr: false,
 });
-import "react-range-slider-input/dist/style.css";
 
 type FilterState = {
   search: string;
@@ -121,7 +121,7 @@ export default function Search({ colors, sizes }: FilterInterface) {
     colorArray.forEach((id) => dispatch({ type: "TOGGLE_COLOR", payload: id }));
     dispatch({ type: "SET_AVAILABLE", payload: availableParam });
     dispatch({ type: "SET_SIZE", payload: sizeId });
-  }, []);
+  }, [searchParams]);
 
   // 🧩 Total active filters
   const activeFilterCount = [
@@ -145,13 +145,13 @@ export default function Search({ colors, sizes }: FilterInterface) {
       params.delete("color_ids");
     }
 
-    onlyAvailable
-      ? params.set("only_available", "1")
-      : params.delete("only_available");
+    if (onlyAvailable) {
+      params.set("only_available", "1");
+    } else params.delete("only_available");
 
-    selectedSize !== null
-      ? params.set("size_id", selectedSize.toString())
-      : params.delete("size_id");
+    if (selectedSize !== null) {
+      params.set("size_id", selectedSize.toString());
+    } else params.delete("size_id");
 
     replace(`${pathname}?${params.toString()}`);
     dispatch({ type: "SET_MODAL_OPEN", payload: false });
@@ -187,18 +187,18 @@ export default function Search({ colors, sizes }: FilterInterface) {
           ))}
         </ul>
         <div className="max-md:w-full flex justify-end mt-4">
-        <button
-          className="mb-4 px-4 py-2 text-lg bg-primary-main text-white rounded-md relative"
-          onClick={() => dispatch({ type: "SET_MODAL_OPEN", payload: true })}
+          <button
+            className="mb-4 px-4 py-2 text-lg bg-primary-main text-white rounded-md relative"
+            onClick={() => dispatch({ type: "SET_MODAL_OPEN", payload: true })}
           >
-          فیلتر محصولات
-          {activeFilterCount > 0 && (
-            <span className="absolute -top-2 -right-2 inline-flex items-center justify-center w-5 h-5 text-xs font-bold text-white bg-red-600 rounded-full">
-              {activeFilterCount}
-            </span>
-          )}
-        </button>
-          </div>
+            فیلتر محصولات
+            {activeFilterCount > 0 && (
+              <span className="absolute -top-2 -right-2 inline-flex items-center justify-center w-5 h-5 text-xs font-bold text-white bg-red-600 rounded-full">
+                {activeFilterCount}
+              </span>
+            )}
+          </button>
+        </div>
       </div>
 
       {/* 🔳 Mobile Filter Toggle Button */}
