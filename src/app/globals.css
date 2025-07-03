@@ -2,7 +2,7 @@
 @font-face {
   font-family: kalameh;
   font-size: 128px;
-  src: url("./kalameh.woff2");
+  src: url("./kalameh.ttf");
 }
 :root {
   --background: #ffffff;
