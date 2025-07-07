@@ -3,9 +3,19 @@ import AboutMediaSlider from "@/components/pages/about-us/slider";
 import { AboutUsRequestInterface } from "@/interfaces/pages/about-us";
 import { fetcher } from "@/lib/fetcher";
 import { parser } from "@/utils/parser";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "درباره ما | فروشگاه پوشاک دی دو",
+  keywords: [
+    "پوشاک مردانه",
+    "پوشاک بچگانه",
+    "فروشگاه اینترنتی پوشاک",
+    "فروشگاه پوشاک دی دو",
+  ],
+};
 
 export default async function AboutUs() {
-  
   const res = await fetcher<AboutUsRequestInterface>({
     endpoint: "about_us",
   });
@@ -25,7 +35,6 @@ export default async function AboutUs() {
               images={res.data.images}
               poster={res.data.poster}
               video={res.data.video}
-              videoText={res.data.video_text}
             />
           </div>
         </div>
