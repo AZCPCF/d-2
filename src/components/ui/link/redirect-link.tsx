@@ -2,20 +2,29 @@ import { cn } from "@/utils/cn";
 import Link from "next/link";
 import { ReactNode } from "react";
 
-export default function RedirectLink(props: {
+interface RedirectLinkProps {
   href: string;
   className?: string;
   title: ReactNode;
-}) {
+  ariaLabel?: string; // optional for accessibility
+}
+
+export default function RedirectLink({
+  href,
+  className,
+  title,
+  ariaLabel,
+}: RedirectLinkProps) {
   return (
     <Link
-      href={props.href}
+      href={href}
       className={cn(
         "flex items-center gap-2 w-full p-4 text-white bg-primary-400 rounded-lg text-xl",
-        props.className
+        className
       )}
+      aria-label={ariaLabel}
     >
-      {props.title}
+      {title}
     </Link>
   );
 }
