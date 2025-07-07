@@ -11,8 +11,10 @@ export default function HeaderSearchInput() {
     <>
       <NextButton
         onClick={() => setOpen(true)}
-        className="bg-gray-100 h-max lg:w-60  p-3 max-[500px]:p-1.5 outline-0 rounded-full max-lg:rounded-md text-lg flex justify-between items-center text-[#727272] gap-2 hover:bg-gray-200 transition-colors duration-200"
+        className="bg-gray-100 h-max lg:w-60 p-3 max-[500px]:p-1.5 outline-0 rounded-full max-lg:rounded-md text-lg flex justify-between items-center text-[#727272] gap-2 hover:bg-gray-200 transition-colors duration-200"
         role="button"
+        aria-expanded={open}
+        aria-controls="search-modal"
         title={
           <>
             <span className="max-lg:hidden">جستجو محصول</span>
