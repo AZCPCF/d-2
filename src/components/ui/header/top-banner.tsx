@@ -1,20 +1,22 @@
 import NextImage from "@/components/ui/image";
 import { NavbarRequestType } from ".";
 
-export default function TopBanner(props: Pick<NavbarRequestType, "banner">) {
+export default function TopBanner({ banner }: Pick<NavbarRequestType, "banner">) {
   return (
     <div>
+      {/* Desktop/Large screen banner */}
       <NextImage
         className="w-full"
         wrapperClassName="max-md:hidden"
-        {...props.banner.image}
-        alt={props.banner.image_phone.alt || "banner"}
+        {...banner.image}
+        alt={banner.image.alt || "banner"}
       />
+      {/* Mobile banner */}
       <NextImage
         className="w-full"
         wrapperClassName="max-md:block hidden"
-        {...props.banner.image_phone}
-        alt={props.banner.image_phone.alt || "banner-phone"}
+        {...banner.image_phone}
+        alt={banner.image_phone.alt || "banner-phone"}
       />
     </div>
   );
