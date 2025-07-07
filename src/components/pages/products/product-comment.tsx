@@ -70,7 +70,7 @@ export default function ProductComments({ comments, productId }: Props) {
 
       {showModal && (
         <AddCommentModal
-          productId={productId}
+          product_id={productId}
           onClose={() => setShowModal(false)}
         />
       )}
