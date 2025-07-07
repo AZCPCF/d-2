@@ -1,6 +1,6 @@
 import Footer from "@/components/ui/footer";
 import Header from "@/components/ui/header";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { ReactNode } from "react";
 import "./globals.css";
 import AppBar from "@/components/ui/app-bar";
@@ -8,6 +8,16 @@ import { ClientContextProvider } from "@/contexts/client-context";
 import localFont from "next/font/local";
 import { cn } from "@/utils/cn";
 import { Toaster } from "sonner";
+
+export const viewport: Viewport = {
+  themeColor: "#fed00b",
+  colorScheme: "light",
+  width: "device-width",
+  initialScale: 1,
+  minimumScale: 1,
+  maximumScale: 5,
+  userScalable: true,
+};
 
 export const metadata: Metadata = {
   title: "فروش انواع لباس مردانه و بچگانه | فروشگاه پوشاک دی دو",
@@ -28,10 +38,6 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
   },
-  themeColor: "#fed00b",
-  colorScheme: "light",
-  viewport:
-    "width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5, user-scalable=yes",
   robots: {
     index: true,
     follow: true,
@@ -67,7 +73,7 @@ export const metadata: Metadata = {
       "فروشگاه اینترنتی پوشاک D2 در شمال کشور با تولید انواع لباس و پوشاک مردانه و بچگانه و هدف اصلی فروشگاه دی دو لباس ارزان با کیفیت عالی در مازندران و ارسال و فروش اینترنتی به سایر نقاط کشور است.",
     // images: ["https://d2collection.com/_next/static/media/logo.7e20632b.png"],
   },
-   icons: {
+  icons: {
     // icon: "/_next/static/media/logo.7e20632b.png",
   },
   // other: {
@@ -103,10 +109,10 @@ export default function RootLayout({
             classNames: {
               toast: "!bg-gray-50",
               title: "text-lg font-bold",
-              success:"!text-teal-500",
-              error:"!text-red-500",
-              warning:"!text-yellow-500",
-              info:"!text-blue-500",
+              success: "!text-teal-500",
+              error: "!text-red-500",
+              warning: "!text-yellow-500",
+              info: "!text-blue-500",
               description: "!text-sm !text-zinc-400",
             },
           }}
