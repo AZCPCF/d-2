@@ -1,17 +1,17 @@
 "use client";
 import NextImage from "@/components/ui/image";
 import NextModal from "@/components/ui/modal";
-import { LicenseInreface } from "@/interfaces";
+import { LicenseInterface } from "@/interfaces";
 import clsx from "clsx";
 import { useState } from "react";
 
 interface Props {
-  licenses: LicenseInreface[];
+  licenses: LicenseInterface[];
 }
 
 export default function LicenseGallery({ licenses }: Props) {
   const [selectedLicense, setSelectedLicense] =
-    useState<LicenseInreface | null>(null);
+    useState<LicenseInterface | null>(null);
 
   return (
     <>
