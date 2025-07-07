@@ -3,12 +3,28 @@
 import { fetcher } from "@/lib/fetcher";
 import { CommentSchema } from "@/schemas/add-comment";
 
-export async function submitProductComment(formData: FormData) {
+interface SubmitProductCommentResult {
+  success: boolean;
+  errors: Record<string, string[]> | {};
+  values: Record<string, unknown>;
+}
+
+/**
+ * Validates and submits a product comment.
+ * 
+ * @param formData - FormData containing `message` and `product_id`.
+ * @returns Object with success flag, validation errors (if any), and submitted values.
+ */
+export async function submitProductComment(
+  formData: FormData
+): Promise<SubmitProductCommentResult> {
+  // Extract and prepare raw data from formData
   const raw = {
-    message: `${formData.get("message")}`,
-    productId: Number(formData.get("productId")),
+    message: String(formData.get("message") ?? ""),
+    product_id: Number(formData.get("product_id")),
   };
 
+  // Validate input using Zod schema
   const parsed = CommentSchema.safeParse(raw);
   if (!parsed.success) {
     return {
@@ -18,12 +34,14 @@ export async function submitProductComment(formData: FormData) {
     };
   }
 
+  // Submit validated formData to API
   const res = await fetcher<{ message: string }>({
-    endpoint: "product_comments",
+    endpoint: "comment",
     method: "POST",
     body: formData,
   });
 
+  // Return result status
   return {
     success: res.message === "ok",
     errors: {},
