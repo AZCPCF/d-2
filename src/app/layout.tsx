@@ -14,7 +14,6 @@ export const metadata: Metadata = {
   description:
     "فروشگاه اینترنتی پوشاک D2 در شمال کشور با تولید انواع لباس و پوشاک مردانه و بچگانه و هدف اصلی فروشگاه دی دو لباس ارزان با کیفیت عالی در مازندران و ارسال و فروش اینترنتی به سایر نقاط کشور است.",
   applicationName: "فروشگاه پوشاک D2",
-  creator: "AZCPCF",
   publisher: "شرکت داده کاو وب",
   keywords: [
     "پوشاک مردانه",
@@ -25,7 +24,7 @@ export const metadata: Metadata = {
     "کتونی",
     "لباس مردانه",
   ],
-  metadataBase: new URL("https://d2collection.com"),
+  // metadataBase: new URL("https://d2collection.com"),
   alternates: {
     canonical: "/",
   },
@@ -49,34 +48,34 @@ export const metadata: Metadata = {
     title: "فروشگاه پوشاک دی دو",
     description:
       "فروشگاه اینترنتی پوشاک D2 در شمال کشور با تولید انواع لباس و پوشاک مردانه و بچگانه و هدف اصلی فروشگاه دی دو لباس ارزان با کیفیت عالی در مازندران و ارسال و فروش اینترنتی به سایر نقاط کشور است.",
-    url: "https://d2collection.com",
+    // url: "https://d2collection.com",
     siteName: "فروشگاه پوشاک دی دو",
     locale: "fa-IR",
-    images: [
-      {
-        url: "https://d2collection.com/_next/static/media/logo.7e20632b.png",
-        width: 1200,
-        height: 630,
-        alt: "فروشگاه پوشاک دی دو",
-      },
-    ],
+    // images: [
+    //   {
+    //     url: "https://d2collection.com/_next/static/media/logo.7e20632b.png",
+    //     width: 1200,
+    //     height: 630,
+    //     alt: "فروشگاه پوشاک دی دو",
+    //   },
+    // ],
   },
   twitter: {
     card: "summary_large_image",
     title: "فروشگاه پوشاک دی دو",
     description:
       "فروشگاه اینترنتی پوشاک D2 در شمال کشور با تولید انواع لباس و پوشاک مردانه و بچگانه و هدف اصلی فروشگاه دی دو لباس ارزان با کیفیت عالی در مازندران و ارسال و فروش اینترنتی به سایر نقاط کشور است.",
-    images: ["https://d2collection.com/_next/static/media/logo.7e20632b.png"],
+    // images: ["https://d2collection.com/_next/static/media/logo.7e20632b.png"],
   },
-  icons: {
+   icons: {
     // icon: "/_next/static/media/logo.7e20632b.png",
   },
-  other: {
-    "google-site-verification": "EL9Fiday4Iyqg073cWgC5GwhpAzj0F1BrTSuLnbxNdg",
-    category: "men-clothes , shoes-and-sneakers , کتونی, لباس مردانه",
-    enamad: "۴۴۳۱۲۹۶۴",
-    author: "d2collection",
-  },
+  // other: {
+  //   "google-site-verification": "EL9Fiday4Iyqg073cWgC5GwhpAzj0F1BrTSuLnbxNdg",
+  //   category: "men-clothes , shoes-and-sneakers , کتونی, لباس مردانه",
+  //   enamad: "۴۴۳۱۲۹۶۴",
+  //   author: "d2collection",
+  // },
 };
 
 const kalamehFont = localFont({
