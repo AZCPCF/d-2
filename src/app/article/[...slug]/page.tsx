@@ -1,16 +1,19 @@
 import NextImage from "@/components/ui/image";
 import { ShareButton } from "@/components/ui/share-button";
-import { ArticleInterface } from "@/interfaces";
+import { ArticleInterface, SeoInterface } from "@/interfaces";
 import { fetcher } from "@/lib/fetcher";
 import { parser } from "@/utils/parser";
+import { Metadata } from "next";
 import Link from "next/link";
-
-export default async function Article({
-  params,
-}: {
-  params: Promise<{ slug: string }>;
-}) {
-  
+type Props = { params: Promise<{ slug: string[] }> };
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
+  const res = await fetcher<{ seo_options: SeoInterface }>({
+    endpoint: `article_seo_options/${slug[0]}`,
+  });
+  return res.seo_options;
+}
+export default async function Article({ params }: Props) {
   const { slug } = await params;
   const res = await fetcher<ArticleInterface>({
     endpoint: `article/${slug[0]}`,
