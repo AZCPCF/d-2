@@ -21,7 +21,7 @@ export default function EmptyData({ title }: EmptyDataProps) {
       {/* Link back to homepage */}
       <Link
         href="/"
-        className="inline-block bg-secondary-main text-white text-lg font-medium px-6 py-3 rounded-lg hover:bg-secondary-600 transition-colors duration-200"
+        className="inline-block bg-primary-main text-white text-lg font-medium px-6 py-3 rounded-lg hover:bg-primary-600 transition-colors duration-200"
       >
         بازگشت به صفحه اصلی
       </Link>
