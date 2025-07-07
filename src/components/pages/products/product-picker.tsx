@@ -1,17 +1,16 @@
 "use client";
 
+import Tooltip from "@/components/ui/tooltip";
 import type {
   ColorInterface,
   ProductInterface,
   SizeInterface,
 } from "@/interfaces";
 import { cn } from "@/utils/cn";
+import { formatNumberWithCommas } from "@/utils/formater";
 import { useEffect, useMemo, useState } from "react";
 import { FiHeart } from "react-icons/fi";
 import { ColorBox } from "./color-box";
-import { formatNumberWithCommas } from "@/utils/formater";
-import Tooltip from "@/components/ui/tooltip";
-import { addToCart } from "@/actions/add-cart";
 
 interface Props {
   res: ProductInterface;
@@ -24,7 +23,7 @@ export default function ProductSelector({ colorOptions, res }: Props) {
     [colorOptions]
   );
   const [selectedColorId, setSelectedColorId] = useState(initialColorId);
-  const [status,setStatus] = useState(false)
+  // const [status,setStatus] = useState(false)
   const selectedColor = useMemo(
     () => colorOptions.find((c) => c.color_id === selectedColorId),
     [selectedColorId, colorOptions]
@@ -159,7 +158,7 @@ export default function ProductSelector({ colorOptions, res }: Props) {
         {selectedColor && selectedSizeId ? (
           <button
             onClick={async () => {
-              setStatus((await addToCart({ count: 1, stock_id: +selectedSizeId })).success)
+              // setStatus((await addToCart({ count: 1, stock_id: +selectedSizeId })).success)
             }}
             className="w-full mt-4 bg-primary-400 hover:bg-primary-main duration-200 text-white text-base font-semibold py-3 rounded-lg"
           >
