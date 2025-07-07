@@ -1,9 +1,19 @@
 import Faqs from "@/components/pages/faq";
 import { FaqRequestInterface } from "@/interfaces/pages/faq";
 import { fetcher } from "@/lib/fetcher";
+import { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "سوالات متداول | فروشگاه پوشاک دی دو",
+  keywords: [
+    "سوالات متداول",
+    "پوشاک مردانه",
+    "پوشاک بچگانه",
+    "فروشگاه اینترنتی پوشاک",
+    "فروشگاه پوشاک دی دو",
+  ],
+};
 
 export default async function Faq() {
-  
 
   const res = await fetcher<FaqRequestInterface>({ endpoint: "faq" });
 
