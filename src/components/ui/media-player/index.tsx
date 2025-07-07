@@ -77,7 +77,11 @@ export default function MediaPlayer({ src, poster }: MediaPlayerProps) {
   const togglePlay = () => {
     const video = videoRef.current;
     if (!video) return;
-    video.paused ? video.play() : video.pause();
+    if (video.paused) {
+      video.play();
+      return;
+    }
+    video.pause();
   };
 
   // Seek video by progress slider (percentage)
