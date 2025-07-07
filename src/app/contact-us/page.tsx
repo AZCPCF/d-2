@@ -2,7 +2,17 @@ import ContactUsForm from "@/components/pages/contact-us/form";
 import ContactUsLinks from "@/components/pages/contact-us/links";
 import { AboutUsRequestInterface } from "@/interfaces/pages/about-us";
 import { fetcher } from "@/lib/fetcher";
-
+import { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "تماس با ما | فروشگاه پوشاک دی دو",
+  keywords: [
+    "تماس با ما",
+    "پوشاک مردانه",
+    "پوشاک بچگانه",
+    "فروشگاه اینترنتی پوشاک",
+    "فروشگاه پوشاک دی دو",
+  ],
+};
 export default async function ContactUs() {
   
   const res = await fetcher<AboutUsRequestInterface>({
