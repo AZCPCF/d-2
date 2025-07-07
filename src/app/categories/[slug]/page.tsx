@@ -42,12 +42,12 @@ export default async function Category({ params, searchParams }: Props) {
   return (
     <main
       className={cn(
-        "min-h-screen px-6 py-10 max-sm:px-3",
+        "px-6 py-10 max-sm:px-3",
         !hasProducts && "bg-white"
       )}
     >
       {hasProducts ? (
-        <section className="max-w-7xl mx-auto space-y-10">
+        <section className="mx-auto space-y-10">
           {/* Title */}
           <h1 className="text-4xl font-bold text-center text-primary-main">
             {res.category.title}
