@@ -1,5 +1,6 @@
 import LicenseGallery from "@/components/pages/licenses/gallery";
-import { LicenseInreface } from "@/interfaces";
+import { LicenseInterface } from "@/interfaces";
+
 import { fetcher } from "@/lib/fetcher";
 import { Metadata } from "next";
 export const metadata: Metadata = {
@@ -13,9 +14,7 @@ export const metadata: Metadata = {
   ],
 };
 export default async function Licenses() {
-  
-
-  const res = await fetcher<{ data: LicenseInreface[] }>({
+  const res = await fetcher<{ data: LicenseInterface[] }>({
     endpoint: "licenses",
   });
 
