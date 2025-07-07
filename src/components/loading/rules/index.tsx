@@ -9,8 +9,8 @@ export default function RulesPageLoading({
   title: string;
 }) {
   return (
-    <main className="p-10 max-md:p-4 mx-auto bg-gray-100">
-      <section className="w-full bg-white rounded-xl shadow-sm mb-6">
+    <main className="p-10 max-md:p-4 mx-auto bg-gray-100 min-h-screen">
+      <section className="w-full bg-white rounded-xl shadow-sm mb-6" role="status" aria-label="Loading rules content">
         <h1 className="flex items-center gap-3 max-sm:text-3xl text-4xl font-extrabold text-primary-main border-b border-gray-200 px-6 py-4">
           {icon}
           {title}
