@@ -101,7 +101,13 @@ export default function Search({ colors, sizes }: FilterInterface) {
     replace(pathname);
     dispatch({ type: "SET_MODAL_OPEN", payload: false });
   }
-
+  const activeFilterCount = [
+    search ? 1 : 0,
+    onlyAvailable ? 1 : 0,
+    selectedColors ? 1 : 0,
+    selectedSize !== null ? 1 : 0,
+    value[0] > 0 || value[1] < 3000000 ? 1 : 0,
+  ].reduce((acc, val) => acc + val, 0);
   // 🛠️ Populate initial state from URL
   useEffect(() => {
     const min = parseInt(searchParams.get("min_price") || "0");
@@ -122,15 +128,6 @@ export default function Search({ colors, sizes }: FilterInterface) {
     dispatch({ type: "SET_AVAILABLE", payload: availableParam });
     dispatch({ type: "SET_SIZE", payload: sizeId });
   }, [searchParams]);
-
-  // 🧩 Total active filters
-  const activeFilterCount = [
-    search ? 1 : 0,
-    onlyAvailable ? 1 : 0,
-    selectedColors.length,
-    selectedSize !== null ? 1 : 0,
-    value[0] > 0 || value[1] < 3000000 ? 1 : 0,
-  ].reduce((acc, val) => acc + val, 0);
 
   // 🎯 Apply Filters
   function handleSearch() {
