@@ -18,7 +18,7 @@ export default function GlobalError({
   return (
     <html>
       <body>
-        <main>
+        <main className='home'>
           <section className="flex flex-col items-center justify-center my-40 text-right px-4">
             <h1 className="font-extrabold text-red-600 mb-4 flex gap-2 items-center">
               <FaBug fontSize={48} />
