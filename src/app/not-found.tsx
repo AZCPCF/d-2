@@ -3,7 +3,7 @@ import { FaQuestionCircle } from "react-icons/fa";
 
 export default function NotFound() {
   return (
-    <main>
+    <main className="home">
       <section className="flex flex-col items-center justify-center my-40 text-right px-4">
         <h1 className="text-7xl font-extrabold text-secondary-main mb-4 flex gap-2 items-center">
           <span>4</span>
