@@ -2,15 +2,21 @@ import HomePageProductsSlider from "@/components/pages/home/products";
 import ProductDescription from "@/components/pages/products/product-description";
 import ProductImages from "@/components/pages/products/product-images";
 import ProductInfo from "@/components/pages/products/product-info";
-import { ProductInterface } from "@/interfaces";
+import { ProductInterface, SeoInterface } from "@/interfaces";
 import { fetcher } from "@/lib/fetcher";
+import { Metadata } from "next";
+type Props = {
+  params: Promise<{ slug: string[] }>;
+};
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
+  const res = await fetcher<{ seo_options: SeoInterface }>({
+    endpoint: `product_seo_options/${slug[0]}`,
+  });
+  return res.seo_options;
+}
 
-export default async function Product({
-  params,
-}: {
-  params: Promise<{ slug: string }>;
-}) {
-  
+export default async function Product({ params }: Props) {
   const { slug } = await params;
   const res = await fetcher<ProductInterface>({
     endpoint: `products/${slug[0]}`,
