@@ -1,6 +1,17 @@
 import Galleries from "@/components/pages/gallery";
 import { GalleryRequestInterface } from "@/interfaces/pages/gallery";
 import { fetcher } from "@/lib/fetcher";
+import { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "گالری تصاویر | فروشگاه پوشاک دی دو",
+  keywords: [
+    "گالری تصاویر",
+    "پوشاک مردانه",
+    "پوشاک بچگانه",
+    "فروشگاه اینترنتی پوشاک",
+    "فروشگاه پوشاک دی دو",
+  ],
+};
 
 export default async function Page() {
   
