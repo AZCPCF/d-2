@@ -39,7 +39,7 @@ export default function HomePageProductsSlider({
   if (!products || products.length === 0) return null;
 
   return (
-    <section className={cn("my-20 max-md:my-10", !products.length && "hidden")}>
+    <section className={cn("my-20 max-md:my-10 px-4 rounded-xl", !products.length && "hidden")}>
       <h1 className={cn("flex items-center justify-between flex-wrap gap-4 text-4xl font-extrabold text-primary-main m-10 max-md:m-4 relative")}>
         <span>{title}</span>
         <Link
@@ -59,7 +59,7 @@ export default function HomePageProductsSlider({
       <div
         ref={sliderRef}
         className={cn(
-          "keen-slider",
+          "keen-slider rounded-t-xl",
           primary ? "bg-primary-300" : "bg-secondary-300",
           disableButtons && "py-2"
         )}
@@ -75,7 +75,7 @@ export default function HomePageProductsSlider({
       </div>
       <div
         className={cn(
-          "flex justify-end items-center gap-4 p-6 bg-primary-300",
+          "flex justify-end items-center rounded-b-xl gap-4 p-6 bg-primary-300",
           primary
             ? "bg-primary-300 text-primary-main"
             : "bg-secondary-300 text-secondary-main",
