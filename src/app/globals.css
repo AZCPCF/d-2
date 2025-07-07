@@ -77,10 +77,13 @@ body:has(.body-gray) {
 .loading {
   @apply bg-gradient-to-r from-[#ccc] via-[#ddd] to-[#ccc] animate-pulse;
 }
-
-main {
-  @apply !bg-white;
+body:has(.home) main {
+  background-color: white;
 }
+main {
+  @apply bg-[#ececec] min-h-screen;
+}
+
 .range-slider__range,
 .range-slider__thumb {
   @apply !bg-primary-main;
