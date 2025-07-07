@@ -2,6 +2,16 @@ import ProductCard from "@/components/pages/products/card";
 import { GetByCategoryRequestInterface } from "@/interfaces/pages/category";
 import { fetcher } from "@/lib/fetcher";
 
+import { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "پرفروش ترین پوشاک  | فروشگاه پوشاک دی دو",
+  keywords: [
+    "پرفروش ترین پوشاک مردانه",
+    "پرفروش ترین پوشاک بچگانه",
+    "فروشگاه اینترنتی پوشاک",
+    "فروشگاه پوشاک دی دو",
+  ],
+};
 export default async function BestSelling() {
   
   const res = await fetcher<GetByCategoryRequestInterface>({
