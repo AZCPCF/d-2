@@ -3,7 +3,17 @@ import { fetcher } from "@/lib/fetcher";
 import { parser } from "@/utils/parser";
 import { TbLicense } from "react-icons/tb";
 import { VscLaw } from "react-icons/vsc";
-
+import { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "قوانین سایت | فروشگاه پوشاک دی دو",
+  keywords: [
+    "قوانین سایت",
+    "پوشاک مردانه",
+    "پوشاک بچگانه",
+    "فروشگاه اینترنتی پوشاک",
+    "فروشگاه پوشاک دی دو",
+  ],
+};
 export default async function Rules() {
   
   const res = await fetcher<{ data: { rules: string } }>({
