@@ -6,12 +6,14 @@ export interface CategoryInterface {
   parent_id?: string | number;
   sub_categories?: CategoryInterface[];
 }
+
 export interface ColorInterface {
   id: number;
   title: string;
   color: string;
   color_id: string;
 }
+
 export interface CommentInterface {
   id: number;
   name: string;
@@ -28,6 +30,7 @@ export interface SizeInterface {
   stock_id: string;
   color_size: string;
 }
+
 export interface ImageFromApiInterface {
   width?: number;
   height?: number;
@@ -35,6 +38,7 @@ export interface ImageFromApiInterface {
   url: string;
   alt?: string;
 }
+
 export interface ProductInterface {
   id: number;
   title: string;
@@ -54,6 +58,7 @@ export interface ProductInterface {
   similar: ProductInterface[];
   comments: CommentInterface[];
 }
+
 export interface DateInterface {
   timestamp: number;
   date: string;
@@ -61,6 +66,7 @@ export interface DateInterface {
   string: string;
   str: string;
 }
+
 export interface ArticleInterface {
   id: number;
   title: string;
@@ -73,11 +79,13 @@ export interface ArticleInterface {
   date: DateInterface;
   page_url: string;
 }
-export interface LicenseInreface {
+
+export interface LicenseInterface {
   id: number;
   text: string;
   image: ImageFromApiInterface;
 }
+
 export interface PaginationInterface {
   pagination: {
     current_page: number;
@@ -86,7 +94,14 @@ export interface PaginationInterface {
     total_page: number;
   };
 }
+
 export interface FilterInterface {
   colors: ColorInterface[];
   sizes: SizeInterface[];
+}
+
+export interface SeoInterface {
+  title: string;
+  keyword: string[];
+  meta_description: string;
 }
