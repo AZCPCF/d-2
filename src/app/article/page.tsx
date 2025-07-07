@@ -1,7 +1,16 @@
 import ArticleCard from "@/components/pages/articles/card";
 import { ArticleInterface } from "@/interfaces";
 import { fetcher } from "@/lib/fetcher";
-
+import { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "مقالات  | فروشگاه پوشاک دی دو",
+  keywords: [
+    "مقالات پوشاک مردانه",
+    "مقالات پوشاک بچگانه",
+    "فروشگاه اینترنتی پوشاک",
+    "فروشگاه پوشاک دی دو",
+  ],
+};
 export default async function Articles() {
   const res = await fetcher<{
     data: ArticleInterface[];
