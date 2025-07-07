@@ -1,7 +1,17 @@
 import LicenseGallery from "@/components/pages/licenses/gallery";
 import { LicenseInreface } from "@/interfaces";
 import { fetcher } from "@/lib/fetcher";
-
+import { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "گواهی نامه ها | فروشگاه پوشاک دی دو",
+  keywords: [
+    "گواهی نامه ها",
+    "پوشاک مردانه",
+    "پوشاک بچگانه",
+    "فروشگاه اینترنتی پوشاک",
+    "فروشگاه پوشاک دی دو",
+  ],
+};
 export default async function Licenses() {
   
 
