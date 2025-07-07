@@ -3,9 +3,9 @@ import { ColorBox } from "@/components/pages/products/color-box";
 import { FilterInterface } from "@/interfaces";
 import { cn } from "@/utils/cn";
 import { formatNumberWithCommas } from "@/utils/formater";
-import dynamic from "next/dynamic";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useReducer } from "react";
+import ReactRangeSliderInput from "react-range-slider-input";
 import "react-range-slider-input/dist/style.css";
 // ✨ Define this before the return statement
 const sortOptions = [
@@ -15,10 +15,6 @@ const sortOptions = [
   { value: "best_seller", label: "پرفروش‌ترین" },
   { value: "discount", label: "تخفیف٪" },
 ];
-
-const RangeSlider = dynamic(() => import("react-range-slider-input"), {
-  ssr: false,
-});
 
 type FilterState = {
   search: string;
@@ -104,31 +100,33 @@ export default function Search({ colors, sizes }: FilterInterface) {
   const activeFilterCount = [
     search ? 1 : 0,
     onlyAvailable ? 1 : 0,
-    selectedColors ? 1 : 0,
+    selectedColors[0] ? 1 : 0,
     selectedSize !== null ? 1 : 0,
     value[0] > 0 || value[1] < 3000000 ? 1 : 0,
   ].reduce((acc, val) => acc + val, 0);
   // 🛠️ Populate initial state from URL
   useEffect(() => {
-    const min = parseInt(searchParams.get("min_price") || "0");
-    const max = parseInt(searchParams.get("max_price") || "3000000");
-    const query = searchParams.get("search") || "";
-    const colorParam = searchParams.get("color_ids") || "";
-    const colorArray = colorParam
-      .split(",")
-      .map((id) => parseInt(id))
-      .filter((id) => !isNaN(id));
-    const availableParam = searchParams.get("only_available") === "1";
-    const sizeParam = searchParams.get("size_id");
-    const sizeId = sizeParam ? parseInt(sizeParam) : null;
+    if (searchParams.toString().length) {
+      console.log(searchParams.get("color_ids"));
+      const min = parseInt(searchParams.get("min_price") || "0");
+      const max = parseInt(searchParams.get("max_price") || "3000000");
+      const query = searchParams.get("search") || "";
+      const colorParam = searchParams.get("color_ids") || "";
+      const colorArray = colorParam.split(",").map((id) => parseInt(id));
+      const availableParam = searchParams.get("only_available") === "1";
+      const sizeParam = searchParams.get("size_id");
+      const sizeId = sizeParam ? parseInt(sizeParam) : null;
 
-    dispatch({ type: "SET_PRICE", payload: [min, max] });
-    dispatch({ type: "SET_SEARCH", payload: query });
-    colorArray.forEach((id) => dispatch({ type: "TOGGLE_COLOR", payload: id }));
-    dispatch({ type: "SET_AVAILABLE", payload: availableParam });
-    dispatch({ type: "SET_SIZE", payload: sizeId });
+      dispatch({ type: "SET_PRICE", payload: [min, max] });
+      dispatch({ type: "SET_SEARCH", payload: query });
+      colorArray
+        .filter((id) => !state.selectedColors.includes(id))
+        .forEach((id) => dispatch({ type: "TOGGLE_COLOR", payload: id }));
+      dispatch({ type: "SET_AVAILABLE", payload: availableParam });
+      dispatch({ type: "SET_SIZE", payload: sizeId });
+    }
   }, [searchParams]);
-
+  
   // 🎯 Apply Filters
   function handleSearch() {
     const params = new URLSearchParams(searchParams.toString());
@@ -255,7 +253,7 @@ export default function Search({ colors, sizes }: FilterInterface) {
                   </span>{" "}
                   تومان
                 </p>
-                <RangeSlider
+                <ReactRangeSliderInput
                   max={3000000}
                   value={value}
                   onInput={(val) =>
