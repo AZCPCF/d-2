@@ -1,7 +1,12 @@
 import { ImageFromApiInterface } from "@/interfaces";
+import { panelUrl } from "@/utils/env";
 import { ReactNode } from "react";
 import { IconType } from "react-icons";
-import { BiInfoCircle, BiPhoneCall, BiSolidUser } from "react-icons/bi";
+import {
+  BiInfoCircle,
+  BiPhoneCall,
+  BiSolidUser,
+} from "react-icons/bi";
 import {
   FaHome,
   FaInstagram,
@@ -10,45 +15,85 @@ import {
 } from "react-icons/fa";
 import { PiArticle } from "react-icons/pi";
 
-type AppBarlinkType = { href: string; label: string; icon: IconType };
-export const appBarlinks: AppBarlinkType[] = [
+/** 
+ * Represents a navigation link with label and icon.
+ */
+export type AppBarLinkType = {
+  href: string;
+  label: string;
+  icon: IconType;
+};
+
+/**
+ * Links shown in the app's top navigation bar.
+ */
+export const appBarLinks: AppBarLinkType[] = [
   { href: "/", label: "خانه", icon: FaHome },
-  { href: "http://localhost:5173", label: "حساب کاربری", icon: BiSolidUser },
+  { href: panelUrl, label: "حساب کاربری", icon: BiSolidUser },
   { href: "/articles-hub", label: "مقالات", icon: PiArticle },
   { href: "/about-us", label: "درباره ما", icon: BiInfoCircle },
   { href: "/contact-us", label: "تماس با ما", icon: BiPhoneCall },
 ];
 
-type SocialLinkType = {
+/**
+ * Represents a social media link with icon and type.
+ */
+export type SocialLinkType = {
   icon: ReactNode;
   href: "instagram" | "whatsapp" | "telegram";
 };
+
+/**
+ * Social media links with corresponding icons.
+ */
 export const socialLinksData: SocialLinkType[] = [
   { icon: <FaInstagram fontSize={24} />, href: "instagram" },
   { icon: <FaWhatsapp fontSize={24} />, href: "whatsapp" },
   { icon: <FaTelegramPlane fontSize={24} />, href: "telegram" },
 ];
 
-type FooterLinkType = { href: string; label: string };
-export const footerLinks: { main: FooterLinkType[]; others: FooterLinkType[] } =
-  {
-    main: [
-      { href: "/articles-hub", label: "اخبار و مقالات" },
-      { href: "/about-us", label: "درباره ما" },
-      { href: "/contact-us", label: "تماس با ما" },
-      { href: "/gallery", label: "گالری" },
-      { href: "/faq", label: "سوالات متداول" },
-    ],
-    others: [
-      { href: "http://localhost:5173", label: "ورود" },
-      { href: "/payment-rules", label: "نحوه ثبت سفارش" },
-      { href: "/privacy", label: "حریم خصوصی" },
-      { href: "/rules", label: "قوانین سایت" },
-      { href: "/licenses", label: "گواهی نامه ها" },
-    ],
-  };
+/**
+ * Simple link type used in footer sections.
+ */
+export type FooterLinkType = {
+  href: string;
+  label: string;
+};
 
-type CategoriesLinkType = { link: string; image: ImageFromApiInterface };
+/**
+ * Footer links grouped by main and other categories.
+ */
+export const footerLinks: {
+  main: FooterLinkType[];
+  others: FooterLinkType[];
+} = {
+  main: [
+    { href: "/articles-hub", label: "اخبار و مقالات" },
+    { href: "/about-us", label: "درباره ما" },
+    { href: "/contact-us", label: "تماس با ما" },
+    { href: "/gallery", label: "گالری" },
+    { href: "/faq", label: "سوالات متداول" },
+  ],
+  others: [
+    { href: panelUrl, label: "ورود" },
+    { href: "/payment-rules", label: "نحوه ثبت سفارش" },
+    { href: "/privacy", label: "حریم خصوصی" },
+    { href: "/rules", label: "قوانین سایت" },
+    { href: "/licenses", label: "گواهی نامه ها" },
+  ],
+};
+
+/**
+ * Link type for categories including the associated image metadata.
+ */
+export type CategoriesLinkType = {
+  link: string;
+  image: ImageFromApiInterface;
+};
+
+/**
+ * Categories links for the site with images and URLs.
+ */
 export const categoriesLinks: CategoriesLinkType[] = [
   {
     link: "men-clothes",
