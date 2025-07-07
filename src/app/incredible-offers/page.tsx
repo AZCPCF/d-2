@@ -1,6 +1,16 @@
 import ProductCard from "@/components/pages/products/card";
 import { GetByCategoryRequestInterface } from "@/interfaces/pages/category";
 import { fetcher } from "@/lib/fetcher";
+import { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "پیشنهاد های شگفت انگیز | فروشگاه پوشاک دی دو",
+  keywords: [
+    "پیشنهاد های شگفت انگیز مردانه",
+    "پیشنهاد های شگفت انگیز بچگانه",
+    "فروشگاه اینترنتی پوشاک",
+    "فروشگاه پوشاک دی دو",
+  ],
+};
 
 export default async function IncredibleOffers() {
   
