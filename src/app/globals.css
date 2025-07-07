@@ -81,7 +81,7 @@ body:has(.home) main {
   background-color: white;
 }
 main {
-  @apply bg-[#ececec] min-h-screen;
+  @apply bg-[#ececec];
 }
 
 .range-slider__range,
