@@ -1,12 +1,21 @@
 import ArticleCard from "@/components/pages/articles/card";
-import { ArticleInterface } from "@/interfaces";
+import { ArticleInterface, SeoInterface } from "@/interfaces";
 import { fetcher } from "@/lib/fetcher";
+import { Metadata } from "next";
+type Props = {
+  params: Promise<{ slug: string }>;
+};
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
+  const res = await fetcher<{ seo_options: SeoInterface }>({
+    endpoint: `article_category_seo_options/${slug}`,
+  });
+  return res.seo_options;
+}
 
 export default async function ArticlesSlug({
   params,
-}: {
-  params: Promise<{ slug: string }>;
-}) {
+}:Props) {
   const { slug } = await params;
   const res = await fetcher<{
     data: ArticleInterface[];
