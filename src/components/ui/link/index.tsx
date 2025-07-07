@@ -1,28 +1,35 @@
 import { cn } from "@/utils/cn";
 import Link from "next/link";
 import { ComponentPropsWithoutRef, ReactNode } from "react";
+
 type NextLinkProps = ComponentPropsWithoutRef<typeof Link> & {
   label: string | ReactNode;
   className?: string;
 };
+
+/**
+ * Wrapper around Next.js Link with added styling and accessible role.
+ * Supports `label` as string or JSX content.
+ */
 export default function NextLink({
   label,
   href,
   className,
-  role,
+  role = "link",
   ...rest
 }: NextLinkProps) {
   return (
     <Link
-      role={role || "link"}
       href={href}
-      className={cn(
-        "hover:text-primary-main duration-100 ",
-        className
-      )}
+      role={role}
+      className={cn("hover:text-primary-main duration-100", className)}
       {...rest}
     >
-      {label}
+      {typeof label === "string" ? (
+        <span>{label}</span>
+      ) : (
+        label
+      )}
     </Link>
   );
 }
