@@ -3,7 +3,17 @@ import { fetcher } from "@/lib/fetcher";
 import { parser } from "@/utils/parser";
 import { BiInfoCircle } from "react-icons/bi";
 import { VscLaw } from "react-icons/vsc";
-
+import { Metadata } from "next";
+export const metadata: Metadata = {
+  title: "حریم خصوصی | فروشگاه پوشاک دی دو",
+  keywords: [
+    "حریم خصوصی",
+    "پوشاک مردانه",
+    "پوشاک بچگانه",
+    "فروشگاه اینترنتی پوشاک",
+    "فروشگاه پوشاک دی دو",
+  ],
+};
 export default async function Privacy() {
   
   const res = await fetcher<{ data: { privacy: string } }>({
