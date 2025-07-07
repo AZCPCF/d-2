@@ -5,7 +5,7 @@ import { CommentSchema } from "@/schemas/add-comment";
 
 interface SubmitProductCommentResult {
   success: boolean;
-  errors: Record<string, string[]> | {};
+  errors: Record<string, string[]>;
   values: Record<string, unknown>;
 }
 
