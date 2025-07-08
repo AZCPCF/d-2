@@ -60,8 +60,8 @@ export default function HomePageProductsSlider({
         ref={sliderRef}
         className={cn(
           "keen-slider rounded-t-xl",
-          primary ? "bg-primary-300" : "bg-secondary-300",
-          disableButtons && "py-2"
+          primary ? "bg-primary-300 dark:bg-primary-600" : "bg-secondary-300 dark:bg-secondary-600",
+          disableButtons && "py-2 rounded-lg"
         )}
       >
         {products.map((product, index) => (
@@ -77,8 +77,8 @@ export default function HomePageProductsSlider({
         className={cn(
           "flex justify-end items-center rounded-b-xl gap-4 p-6 bg-primary-300",
           primary
-            ? "bg-primary-300 text-primary-main"
-            : "bg-secondary-300 text-secondary-main",
+            ? "bg-primary-300 dark:bg-primary-600 text-primary-main"
+            : "bg-secondary-300 text-secondary-main dark:bg-secondary-600",
           disableButtons && "hidden"
         )}
       >
