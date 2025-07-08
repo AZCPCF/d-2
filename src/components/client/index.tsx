@@ -4,9 +4,16 @@ import { useEffect } from "react";
 export default function ClientInit() {
   useEffect(() => {
     if ("serviceWorker" in navigator) {
-      navigator.serviceWorker
-        .register("/service-worker.js")
-        .then((registration) => console.log("scope is: ", registration.scope));
+      window.addEventListener("load", () => {
+        navigator.serviceWorker
+          .register("/sw.js")
+          .then((registration) => {
+            console.log("SW registered:", registration);
+          })
+          .catch((error) => {
+            console.error("SW registration failed:", error);
+          });
+      });
     }
   }, []);
   useEffect(() => {
