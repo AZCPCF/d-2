@@ -4,7 +4,7 @@ export default function ProductLoading() {
   return (
     <main className="bg-gray-100 py-10 px-8 max-sm:px-4">
       {/* Product Info + Description + Images */}
-      <section className="bg-white px-6 py-10 grid grid-cols-12 gap-8 max-md:gap-6 shadow-md rounded-lg max-sm:px-4 max-sm:py-6 mb-10 animate-pulse">
+      <section className="bg-background px-6 py-10 grid grid-cols-12 gap-8 max-md:gap-6 shadow-md rounded-lg max-sm:px-4 max-sm:py-6 mb-10 animate-pulse">
         {/* Left Column – Product Info */}
         <aside className="col-span-4 max-md:col-span-12 max-lg:col-span-6 space-y-4">
           <div className="flex gap-4 ">
