@@ -4,7 +4,7 @@ import { panelUrl } from "@/utils/env";
 import { FaSun, FaUser } from "react-icons/fa";
 import { FiShoppingCart } from "react-icons/fi";
 import NextButton from "../button";
-import ThemeInitializer, { toggleTheme } from "@/utils/toggle-theme";
+import { toggleTheme } from "@/utils/toggle-theme";
 import { BiMoon } from "react-icons/bi";
 
 /**
@@ -36,7 +36,6 @@ export default function HeaderButtons() {
         className="p-2.25 max-[500px]:p-1.5 rounded-md text-lg bg-primary-main hover:text-white duration-100 cursor-pointer text-white"
       />
       {/* Theme Toggle */}
-      <ThemeInitializer />
       <NextButton
         onClick={() => {
           toggleTheme();
