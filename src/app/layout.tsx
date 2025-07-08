@@ -1,3 +1,4 @@
+import ClientInit from "@/components/client";
 import AppBar from "@/components/ui/app-bar";
 import Footer from "@/components/ui/footer";
 import Header from "@/components/ui/header";
@@ -8,8 +9,6 @@ import localFont from "next/font/local";
 import { ReactNode } from "react";
 import { Toaster } from "sonner";
 import "./globals.css";
-import Head from "next/head";
-import ClientInit from "@/components/client";
 
 export const viewport: Viewport = {
   themeColor: "#fed00b",
@@ -102,12 +101,12 @@ export default function RootLayout({
       dir="rtl"
       className={cn("scroll-smooth", kalamehFont.className)}
     >
-      <Head>
+      <head>
         <meta name="theme-color" content="#fed00b" />
         <link rel="manifest" href="/manifest.webmanifest" />
-        <link rel="icon" href="/android/android-launchericon-192-192.png" />
-        <link rel="apple-touch-icon" href="/ios/180.png" />
-      </Head>
+        {/* <link rel="icon" href="/android/android-launchericon-192-192.png" />
+        <link rel="apple-touch-icon" href="/ios/180.png" /> */}
+      </head>
       <body className="antialiased">
         <ClientInit />
         <Toaster
