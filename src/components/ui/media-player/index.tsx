@@ -164,7 +164,7 @@ export default function MediaPlayer({ src, poster }: MediaPlayerProps) {
         ref={videoRef}
         src={src}
         poster={poster.url}
-        className={`w-full aspect-video bg-black relative z-20 transition-opacity duration-500 ${
+        className={`w-full aspect-video bg-background relative z-20 transition-opacity duration-500 ${
           videoLoaded ? "opacity-100" : "opacity-0"
         }`}
         preload="metadata"
@@ -173,7 +173,7 @@ export default function MediaPlayer({ src, poster }: MediaPlayerProps) {
 
       {/* Controls */}
       {videoLoaded && (
-        <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 p-3 flex items-center space-x-3 space-x-reverse select-none">
+        <div className="absolute bottom-0 left-0 right-0 bg-background bg-opacity-70 p-3 flex items-center space-x-3 space-x-reverse select-none">
           <button
             onClick={toggleFullscreen}
             aria-label={fullscreen ? "خروج از حالت تمام صفحه" : "تمام صفحه"}
