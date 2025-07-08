@@ -1,5 +1,6 @@
 "use client";
 import { ClientContextProvider } from "@/contexts/client-context";
+import { GoogleAnalytics } from "nextjs-google-analytics";
 import { ReactNode, useEffect } from "react";
 import { Toaster } from "sonner";
 
@@ -60,6 +61,7 @@ export default function ClientInit({ children }: { children: ReactNode }) {
           Tweet
         </a>
       </div>
+      <GoogleAnalytics trackPageViews />
     </ClientContextProvider>
   );
 }
