@@ -104,29 +104,33 @@ export default function Search({ colors, sizes }: FilterInterface) {
     selectedSize !== null ? 1 : 0,
     value[0] > 0 || value[1] < 3000000 ? 1 : 0,
   ].reduce((acc, val) => acc + val, 0);
-  // 🛠️ Populate initial state from URL
+  
   useEffect(() => {
     const min = parseInt(searchParams.get("min_price") || "0");
     const max = parseInt(searchParams.get("max_price") || "3000000");
-    const query = searchParams.get("search") || "";
-    const colorParam = searchParams.get("color_ids") || "";
+    const search = searchParams.get("search") || "";
+    const sort = searchParams.get("sort") || "";
+    const onlyAvailable = searchParams.get("only_available") === "1";
+    const selectedSize = searchParams.get("size_id")
+      ? parseInt(searchParams.get("size_id")!)
+      : null;
 
-    dispatch({ type: "SET_PRICE", payload: [min, max] });
-    dispatch({ type: "SET_SEARCH", payload: query });
-    const colorArray = colorParam
+    const colorParam = searchParams.get("color_ids") || "";
+    const selectedColors = colorParam
       .split(",")
       .map((id) => parseInt(id))
       .filter((id) => !isNaN(id));
-    const availableParam = searchParams.get("only_available") === "1";
-    const sizeParam = searchParams.get("size_id");
-    const sizeId = sizeParam ? parseInt(sizeParam) : null;
 
+    dispatch({ type: "SET_SEARCH", payload: search });
     dispatch({ type: "SET_PRICE", payload: [min, max] });
-    dispatch({ type: "SET_SEARCH", payload: query });
-    colorArray.forEach((id) => dispatch({ type: "TOGGLE_COLOR", payload: id }));
+    dispatch({ type: "SET_SORT", payload: sort });
+    dispatch({ type: "SET_AVAILABLE", payload: onlyAvailable });
+    dispatch({ type: "SET_SIZE", payload: selectedSize });
+    selectedColors.forEach((id) => {
+      dispatch({ type: "TOGGLE_COLOR", payload: id });
+    });
 
-    dispatch({ type: "SET_AVAILABLE", payload: availableParam });
-    dispatch({ type: "SET_SIZE", payload: sizeId });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   // 🎯 Apply Filters
