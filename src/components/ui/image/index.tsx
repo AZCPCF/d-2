@@ -61,8 +61,9 @@ export default function NextImage({
         src={src}
         alt={alt}
         onError={() => setSrc("/images/404.png")}
+        sizes="100vw"
         onLoad={() => setIsLoading(false)}
-        className={cn(className, isLoading ? "invisible" : "block")}
+        className={cn("w-full",className, isLoading ? "invisible" : "block")}
         // You might want to add priority or loading attributes here if needed
       />
     </div>
