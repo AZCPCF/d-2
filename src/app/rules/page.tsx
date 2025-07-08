@@ -23,7 +23,7 @@ export default async function Rules() {
   const { ParsedNode } = parser(res.data.rules);
   return (
     <main className="p-10 max-md:p-4 mx-auto bg-gray-100">
-      <section className="w-full bg-white rounded-xl shadow-sm mb-6">
+      <section className="w-full bg-background dark:text-white rounded-xl shadow-sm mb-6">
         <h1 className="flex items-center gap-3 max-sm:text-3xl text-4xl font-extrabold text-primary-main border-b border-gray-200 px-6 py-4">
           <VscLaw />
           قوانین سایت
