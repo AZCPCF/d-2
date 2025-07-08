@@ -48,7 +48,7 @@ export default async function Category({ params, searchParams }: Props) {
         </h1>
 
         {/* Search Filters */}
-        <div className="bg-white rounded-xl shadow-sm p-6">
+        <div className="bg-background rounded-xl shadow-sm p-6">
           <Search colors={filter.colors} sizes={filter.sizes} />
         </div>
 
