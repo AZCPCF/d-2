@@ -5,13 +5,13 @@ import { Metadata } from "next";
 type Props = {
   params: Promise<{ slug: string }>;
 };
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { slug } = await params;
-  const res = await fetcher<{ seo_options: SeoInterface }>({
-    endpoint: `article_category_seo_options/${slug}`,
-  });
-  return res.seo_options;
-}
+// export async function generateMetadata({ params }: Props): Promise<Metadata> {
+//   const { slug } = await params;
+//   const res = await fetcher<{ seo_options: SeoInterface }>({
+//     endpoint: `article_category_seo_options/${slug}`,
+//   });
+//   return res?.seo_options;
+// }
 
 export default async function ArticlesSlug({
   params,
@@ -29,7 +29,7 @@ export default async function ArticlesSlug({
   return (
     <main className="bg-gray-200/75 p-10 max-sm:p-4 flex flex-col gap-10">
       <section
-        className={`bg-gray-50 p-10 grid grid-cols-1 shadow-md rounded-lg max-sm:p-4`}
+        className={`bg-background p-10 grid grid-cols-1 shadow-md rounded-lg max-sm:p-4`}
       >
         <h1
           className={`text-3xl sm:text-4xl font-bold text-center text-primary-main p-4 tracking-wide`}
