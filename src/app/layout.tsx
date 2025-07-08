@@ -78,7 +78,7 @@ export const metadata: Metadata = {
     icon: "/favicon.ico",
   },
   other: {
-    "google-site-verification": "EL9Fiday4Iyqg073cWgC5GwhpAzj0F1BrTSuLnbxNdg",
+    "google-site-verification": "RqKyXT-2BF05A2ypG3nH0OMMcJNlaNqGDFt0IyrDQXA",
     category: "men-clothes , shoes-and-sneakers , کتونی, لباس مردانه",
     enamad: "۴۴۳۱۲۹۶۴",
     author: "d2collection",
