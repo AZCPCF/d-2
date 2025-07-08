@@ -7,7 +7,7 @@ import { IoIosArrowBack } from "react-icons/io";
 export default function HomePageAboutUs() {
   const { aboutUs } = useClientCtx();
   return (
-    <section className="grid max-md:grid-cols-1 grid-cols-2 gap-10 px-4 py-12 bg-white max-full mx-auto">
+    <section className="grid max-md:grid-cols-1 grid-cols-2 gap-10 px-4 py-12 bg-white dark:bg-slate-800 max-full mx-auto">
       <div className="overflow-hidden rounded-2xl shadow-md group">
         {aboutUs?.poster?.url ? (
           <NextImage
@@ -21,7 +21,7 @@ export default function HomePageAboutUs() {
         <h1 className="text-4xl font-extrabold text-primary-main leading-tight">
           درباره ما
         </h1>
-        <p className="text-xl text-gray-700 leading-relaxed sm:text-2xl">
+        <p className="text-xl text-gray-700 dark:text-white leading-relaxed sm:text-2xl">
           {aboutUs?.content}
         </p>
         <div className="mt-6 self-end">
