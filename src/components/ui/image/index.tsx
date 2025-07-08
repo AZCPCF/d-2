@@ -44,7 +44,7 @@ export default function NextImage({
   }, [resolvedUrl]);
 
   return (
-    <div className={cn("relative", wrapperClassName)}>
+    <div className={cn("relative ", wrapperClassName)}>
       {/* Placeholder while loading */}
       {isLoading && (
         <div
