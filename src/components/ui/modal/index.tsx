@@ -22,7 +22,7 @@ export default function NextModal({ onClose, jsx }: GalleryModalProps) {
       aria-modal="true"
     >
       <div
-        className="bg-white p-6 rounded-lg max-w-lg w-full relative max-md:w-11/12"
+        className="bg-background dark:text-white p-6 rounded-lg max-w-lg w-full relative max-md:w-11/12"
         onClick={(e) => e.stopPropagation()} // Prevent closing when clicking inside modal content
       >
         <button
