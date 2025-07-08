@@ -1,7 +1,7 @@
 export default function Loading() {
   return (
     <main className="p-10 max-md:p-4 mx-auto bg-gray-100 animate-pulse">
-      <section className="w-full bg-white rounded-lg p-8 shadow-md max-md:p-4">
+      <section className="w-full bg-background rounded-lg p-8 shadow-md max-md:p-4">
         <h1 className="text-4xl mb-8 text-center text-primary-main font-bold">
           سوالات متداول D2
         </h1>
