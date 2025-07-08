@@ -153,7 +153,6 @@ export default function Search({ colors, sizes }: FilterInterface) {
     replace(`${pathname}?${params.toString()}`);
     dispatch({ type: "SET_MODAL_OPEN", payload: false });
   }
-  console.log(colors);
 
   return (
     <>
