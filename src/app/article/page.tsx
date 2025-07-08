@@ -21,7 +21,7 @@ export default async function Articles() {
   return (
     <main className="bg-gray-200/75 p-10 max-sm:p-4 flex flex-col gap-10">
       <section
-        className={`bg-gray-50 p-10 grid grid-cols-1 shadow-md rounded-lg max-sm:p-4`}
+        className={`bg-gray-50 dark:bg-slate-600 p-10 grid grid-cols-1 shadow-md rounded-lg max-sm:p-4`}
       >
         <h1
           className={`text-3xl sm:text-4xl font-bold text-center text-primary-main p-4 tracking-wide`}
