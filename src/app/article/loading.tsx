@@ -5,7 +5,7 @@ export default function ArticlesLoading() {
     <main className="bg-gray-200/75 p-10 max-sm:p-4 flex flex-col gap-10">
       <section className="bg-background p-10 grid grid-cols-1 shadow-md rounded-lg max-sm:p-4">
         <div className="p-4">
-          <h1 className="text-4xl font-bold text-center text-primary-main tracking-wide animate-pulse">
+          <h1 className="text-4xl font-bold text-center text-primary-main tracking-wide loading">
             مقالات D2
           </h1>
         </div>
