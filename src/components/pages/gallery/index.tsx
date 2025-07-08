@@ -21,7 +21,7 @@ export default function Galleries(props: { res: GalleryRequestInterface }) {
             {...item.image}
             className="w-full h-auto"
           />
-          <div className="absolute inset-0 bg-black/50 text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity text-center">
+          <div className="absolute inset-0 bg-background/50 text-white flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity text-center">
             {item.text}
           </div>
         </div>
