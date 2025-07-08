@@ -1,13 +1,13 @@
 import ClientInit from "@/components/ui/init";
-import AppBar from "@/components/ui/app-bar";
-import Footer from "@/components/ui/footer";
-import Header from "@/components/ui/header";
 import { cn } from "@/utils/cn";
 import type { Metadata, Viewport } from "next";
+import dynamic from "next/dynamic";
 import localFont from "next/font/local";
 import { ReactNode } from "react";
 import "./globals.css";
-// import Script from "next/script";
+const AppBar = dynamic(() => import("@/components/ui/app-bar"));
+const Header = dynamic(() => import("@/components/ui/header"));
+const Footer = dynamic(() => import("@/components/ui/footer"));
 
 export const viewport: Viewport = {
   themeColor: "#fed00b",
@@ -101,22 +101,6 @@ export default function RootLayout({
       dir="rtl"
       className={cn("scroll-smooth", kalamehFont.className)}
     >
-      <head>
-        <meta name="theme-color" content="#fed00b" />
-        {/* <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-SJW7PL0MXP"
-          strategy="afterInteractive"
-          async
-        />
-        <Script id="gtag-init" strategy="afterInteractive">
-          {`
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date(), { cookie_domain: "auto" });
-    gtag('config', 'G-SJW7PL0MXP', { cookie_domain: "auto" });
-  `}
-        </Script> */}
-      </head>
       <body className="antialiased">
         <ClientInit>
           <Header />
@@ -124,24 +108,6 @@ export default function RootLayout({
           <Footer />
           <AppBar />
         </ClientInit>
-        <div className="hidden">
-          <div
-            className="fb-like"
-            data-href="https://d-2-orpin.vercel.app"
-            data-layout="standard"
-            data-action="like"
-            data-size="small"
-            data-share="true"
-          />
-          <a
-            href="https://twitter.com/share"
-            className="twitter-share-button"
-            data-url="https://d-2-orpin.vercel.app"
-            data-show-count="false"
-          >
-            Tweet
-          </a>
-        </div>
       </body>
     </html>
   );
