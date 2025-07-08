@@ -1,7 +1,6 @@
 import ArticleCard from "@/components/pages/articles/card";
-import { ArticleInterface, SeoInterface } from "@/interfaces";
+import { ArticleInterface } from "@/interfaces";
 import { fetcher } from "@/lib/fetcher";
-import { Metadata } from "next";
 type Props = {
   params: Promise<{ slug: string }>;
 };
