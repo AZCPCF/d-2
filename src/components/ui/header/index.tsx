@@ -7,7 +7,6 @@ import MobileNavbar from "./mobile-navbar";
 import HeaderNavbar from "./navbar";
 import HeaderSearchInput from "./search-input";
 import TopBanner from "./top-banner";
-import ThemeInitializer from "@/utils/toggle-theme";
 
 export type NavbarRequestType = {
   banner: {
