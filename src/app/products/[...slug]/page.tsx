@@ -24,10 +24,10 @@ export default async function Product({ params }: Props) {
 
   return (
     <main className="bg-gray-100 py-10 px-8 max-sm:px-4">
-      <section className="bg-white px-6 py-10 grid grid-cols-12 gap-8 max-md:gap-6 shadow-md rounded-lg max-sm:px-4 max-sm:py-6 mb-10">
-        <ProductInfo res={res} />
-        <ProductDescription res={res} />
+      <section className="bg-background px-6 py-10 grid grid-cols-12 gap-8 max-md:gap-6 shadow-md rounded-lg max-sm:px-4 max-sm:py-6 mb-10">
         <ProductImages res={res} />
+        <ProductDescription res={res} />
+        <ProductInfo res={res} />
       </section>
 
       <HomePageProductsSlider
