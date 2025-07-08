@@ -14,7 +14,7 @@ export default function AboutUsBranches(props: {
       </h1>
       <div className="grid grid-cols-4 max-lg:grid-cols-2 max-sm:grid-cols-1 gap-4">
         {props.res.branches.map((branch) => (
-          <div key={branch.id} className="bg-white p-3 rounded-lg shadow-md">
+          <div key={branch.id} className="bg-background p-3 rounded-lg shadow-md">
             {branch.image?.url && (
               <div className="w-full mb-4">
                 <NextImage
@@ -27,11 +27,11 @@ export default function AboutUsBranches(props: {
             <h3 className="text-xl font-bold text-primary-main mb-2">
               {branch.title}
             </h3>
-            <p className="text-gray-600 mb-2">{branch.description}</p>
-            <p className="text-gray-700 flex items-center gap-2">
+            <p className="text-gray-600 dark:text-white mb-2">{branch.description}</p>
+            <p className="text-gray-700 dark:text-white flex items-center gap-2">
               <FaLocationDot /> {branch.address}
             </p>
-            <p className="text-gray-700 flex items-center gap-2">
+            <p className="text-gray-700 dark:text-white flex items-center gap-2">
               <FaPhone /> {branch.phone_number1} | {branch.phone_number2}
             </p>
             <div className="mt-4 flex gap-4 text-primary-main justify-end">
