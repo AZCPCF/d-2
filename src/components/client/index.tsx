@@ -1,11 +1,7 @@
 "use client";
 import { useEffect } from "react";
-import { registerServiceWorker } from "@/utils/register-sw";
 
 export default function ClientInit() {
-  useEffect(() => {
-    registerServiceWorker();
-  }, []);
   useEffect(() => {
     if (typeof document === "undefined") return;
 
