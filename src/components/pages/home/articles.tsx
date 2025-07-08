@@ -14,11 +14,7 @@ export default function HomePageArticles({
 }) {
   const [sliderRef] = useKeenSlider<HTMLDivElement>({
     rtl: true,
-    slides: {
-      perView: "auto",
-      spacing: 16,
-    },
-    mode: "free",
+    slides: { spacing: 16, perView: "auto" },
   });
 
   return (
@@ -40,7 +36,7 @@ export default function HomePageArticles({
         {articles.map((article, index) => (
           <div
             key={`home-page-article-${index}`}
-            className="keen-slider__slide -m-0.5 !min-w-[250px] !max-w-[250px] rounded-lg shadow-md hover:shadow-lg duration-300"
+            className="keen-slider__slide -m-0.5 !min-w-[250px] !max-w-[250px] rounded-lg shadow-md hover:shadow-lg"
           >
             <ArticleCard article={article} />
           </div>
