@@ -31,5 +31,4 @@ const fetchEvent = () => {
     );
   });
 };
-
 fetchEvent();
