@@ -21,7 +21,7 @@ export default function AboutMediaSlider({
     mode: "snap",
   });
   return (
-    <section className="w-full max-w-4xl mx-auto mb-">
+    <section className="w-full max-w-4xl mx-auto">
       <div ref={sliderRef} className="keen-slider rounded-lg overflow-hidden">
         <div className="keen-slider__slide relative w-full h-full">
           <MediaPlayer poster={poster} src={video} />
