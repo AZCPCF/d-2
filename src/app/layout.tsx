@@ -5,9 +5,9 @@ import dynamic from "next/dynamic";
 import localFont from "next/font/local";
 import { ReactNode } from "react";
 import "./globals.css";
-const AppBar = dynamic(() => import("@/components/ui/app-bar"));
-const Header = dynamic(() => import("@/components/ui/header"));
-const Footer = dynamic(() => import("@/components/ui/footer"));
+import Footer from "@/components/ui/footer";
+import AppBar from "@/components/ui/app-bar";
+import Header from "@/components/ui/header";
 
 export const viewport: Viewport = {
   themeColor: "#fed00b",
