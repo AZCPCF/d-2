@@ -1,4 +1,4 @@
-import NextImage from "@/components/ui/image";
+import NextImage from "@/components/image";
 import SocialLinks from "@/components/ui/social-links";
 import { AboutUsRequestInterface } from "@/interfaces/pages/about-us";
 import { FaPhone } from "react-icons/fa";

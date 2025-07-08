@@ -1,6 +1,6 @@
 "use client";
-import NextImage from "@/components/ui/image";
-import NextModal from "@/components/ui/modal";
+import NextImage from "@/components/image";
+import NextModal from "@/components/modal";
 import { LicenseInterface } from "@/interfaces";
 import clsx from "clsx";
 import { useState } from "react";

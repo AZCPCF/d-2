@@ -1,4 +1,4 @@
-import NextImage from "@/components/ui/image";
+import NextImage from "@/components/image";
 import { ArticleInterface } from "@/interfaces";
 import Link from "next/link";
 

@@ -1,6 +1,6 @@
 "use client";
 
-import NextImage from "@/components/ui/image";
+import NextImage from "@/components/image";
 import { ProductInterface } from "@/interfaces";
 import { cn } from "@/utils/cn";
 import { useCallback, useEffect, useState } from "react";

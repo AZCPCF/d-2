@@ -2,10 +2,10 @@
 
 import { useState } from "react";
 import { CategoryInterface } from "@/interfaces";
-import NextLink from "../link";
 import { MdClose, MdMenu } from "react-icons/md";
 import { cn } from "@/utils/cn";
-import NextButton from "../button";
+import NextButton from "../../button";
+import NextLink from "@/components/link";
 
 interface MobileNavbarProps {
   categories: CategoryInterface[];

@@ -1,4 +1,4 @@
-import NextImage from "@/components/ui/image";
+import NextImage from "@/components/image";
 import { NavbarRequestType } from ".";
 
 export default function TopBanner({ banner }: Pick<NavbarRequestType, "banner">) {

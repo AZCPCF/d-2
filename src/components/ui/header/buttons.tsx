@@ -1,11 +1,11 @@
 "use client";
-import NextLink from "@/components/ui/link";
 import { panelUrl } from "@/utils/env";
 import { FaSun, FaUser } from "react-icons/fa";
 import { FiShoppingCart } from "react-icons/fi";
-import NextButton from "../button";
+import NextButton from "../../button";
 import { toggleTheme } from "@/utils/toggle-theme";
 import { BiMoon } from "react-icons/bi";
+import NextLink from "@/components/link";
 
 /**
  * Header buttons component displaying cart and user account links.

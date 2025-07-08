@@ -1,8 +1,9 @@
-import RedirectLink from "@/components/ui/link/redirect-link";
+
 import { fetcher } from "@/lib/fetcher";
 import { parser } from "@/utils/parser";
 import { BiInfoCircle, BiShoppingBag } from "react-icons/bi";
 import { Metadata } from "next";
+import RedirectLink from "@/components/link/redirect-link";
 export const metadata: Metadata = {
   title: "نحوه ثبت سفارش | فروشگاه پوشاک دی دو",
   keywords: [

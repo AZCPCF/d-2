@@ -2,8 +2,8 @@
 
 import { cn } from "@/utils/cn";
 import { usePathname } from "next/navigation";
-import NextLink from "../link";
 import { appBarLinks } from "@/static";
+import NextLink from "@/components/link";
 
 /**
  * Fixed bottom navigation bar with icon links.

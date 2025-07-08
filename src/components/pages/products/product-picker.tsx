@@ -1,6 +1,5 @@
 "use client";
 
-import Tooltip from "@/components/ui/tooltip";
 import type {
   ColorInterface,
   ProductInterface,
@@ -11,6 +10,7 @@ import { formatNumberWithCommas } from "@/utils/formater";
 import { useEffect, useMemo, useState } from "react";
 import { FiHeart } from "react-icons/fi";
 import { ColorBox } from "./color-box";
+import Tooltip from "@/components/tooltip";
 
 interface Props {
   res: ProductInterface;

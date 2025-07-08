@@ -1,8 +1,8 @@
 "use client";
 import { useState } from "react";
 import { BiSearch } from "react-icons/bi";
-import NextButton from "@/components/ui/button";
-import SearchModal from "../modal/search-modal";
+import NextButton from "@/components/button";
+import SearchModal from "@/components/modal/search-modal";
 
 export default function HeaderSearchInput() {
   const [open, setOpen] = useState(false);

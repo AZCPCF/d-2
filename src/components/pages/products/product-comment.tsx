@@ -1,6 +1,6 @@
 "use client";
 
-import AddCommentModal from "@/components/ui/modal/add-comment-modal";
+import AddCommentModal from "@/components/modal/add-comment-modal";
 import { CommentInterface } from "@/interfaces";
 import { useState } from "react";
 import { FaUserCircle } from "react-icons/fa";

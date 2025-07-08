@@ -1,7 +1,7 @@
 "use client";
 
-import NextImage from "@/components/ui/image";
-import MediaPlayer from "@/components/ui/media-player";
+import NextImage from "@/components/image";
+import MediaPlayer from "@/components/media-player";
 import "keen-slider/keen-slider.min.css";
 import { useKeenSlider } from "keen-slider/react";
 

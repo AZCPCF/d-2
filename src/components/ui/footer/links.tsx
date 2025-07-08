@@ -1,4 +1,4 @@
-import NextLink from "@/components/ui/link";
+import NextLink from "@/components/link";
 import { footerLinks } from "@/static";
 
 export default function FooterLinks() {

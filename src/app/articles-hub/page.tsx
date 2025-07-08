@@ -44,7 +44,7 @@ export default async function ArticlesHub() {
       {sections.map((section, i) => (
         <section
           key={i}
-          className={cn(`bg-slate-600 shadow-md p-10 grid grid-cols-1 max-sm:p-4`,section.id==2&&"bg-primary-400")}
+          className={cn(`dark:bg-slate-600 shadow-md p-10 grid grid-cols-1 max-sm:p-4`,section.id==2&&"!bg-primary-400")}
         >
           <div className="text-center pb-8">
             <h1 className={cn("max-sm:text-3xl text-4xl font-bold text-primary-main",section.id==2&&"text-white")}>

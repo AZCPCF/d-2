@@ -1,9 +1,9 @@
-import NextImage from "@/components/ui/image";
 import { ProductInterface } from "@/interfaces";
 import { cn } from "@/utils/cn";
 import { formatNumberWithCommas } from "@/utils/formater";
 import Link from "next/link";
 import { ColorBox } from "./color-box";
+import NextImage from "@/components/image";
 
 export default function ProductCard({
   product,

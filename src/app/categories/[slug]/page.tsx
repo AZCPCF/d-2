@@ -1,5 +1,5 @@
 import ProductCard from "@/components/pages/products/card";
-import EmptyData from "@/components/ui/empty-data";
+import EmptyData from "@/components/empty-data";
 import Search from "@/components/ui/search";
 import { FilterInterface, SeoInterface } from "@/interfaces";
 import { GetByCategoryRequestInterface } from "@/interfaces/pages/category";

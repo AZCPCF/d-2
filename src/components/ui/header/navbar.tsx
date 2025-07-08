@@ -1,7 +1,7 @@
 import { FaChevronDown } from "react-icons/fa";
-import NextLink from "../link";
 import { CategoryInterface } from "@/interfaces";
 import { cn } from "@/utils/cn";
+import NextLink from "@/components/link";
 
 interface HeaderNavbarProps {
   categories: CategoryInterface[];

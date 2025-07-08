@@ -1,5 +1,5 @@
 "use client";
-import NextImage from "@/components/ui/image";
+import NextImage from "@/components/image";
 import { useClientCtx } from "@/contexts/client-context";
 import Link from "next/link";
 import { IoIosArrowBack } from "react-icons/io";

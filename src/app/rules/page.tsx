@@ -1,9 +1,9 @@
-import RedirectLink from "@/components/ui/link/redirect-link";
 import { fetcher } from "@/lib/fetcher";
 import { parser } from "@/utils/parser";
 import { TbLicense } from "react-icons/tb";
 import { VscLaw } from "react-icons/vsc";
 import { Metadata } from "next";
+import RedirectLink from "@/components/link/redirect-link";
 export const metadata: Metadata = {
   title: "قوانین سایت | فروشگاه پوشاک دی دو",
   keywords: [

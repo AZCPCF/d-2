@@ -1,4 +1,5 @@
-import NextImage from "@/components/ui/image";
+
+import NextImage from "@/components/image";
 import Link from "next/link";
 
 export default function CreatedByInFooter() {
@@ -12,6 +13,7 @@ export default function CreatedByInFooter() {
       <NextImage
         url="/images/dadekavweb-logo.webp"
         alt="dadekavweb-logo"
+        className="!max-w-[57px]"
         width={57}
         height={50}
       />

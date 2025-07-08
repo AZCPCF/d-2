@@ -1,5 +1,6 @@
 "use client";
-import Tooltip from "@/components/ui/tooltip";
+
+import Tooltip from "@/components/tooltip";
 import { cn } from "@/utils/cn";
 import isDarkColor from "@/utils/color-checker";
 import { generateDynamicClass } from "@/utils/style-injector";

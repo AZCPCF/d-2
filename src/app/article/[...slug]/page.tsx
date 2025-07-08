@@ -1,5 +1,5 @@
-import NextImage from "@/components/ui/image";
-import { ShareButton } from "@/components/ui/share-button";
+import NextImage from "@/components/image";
+import { ShareButton } from "@/components/share-button";
 import { ArticleInterface, SeoInterface } from "@/interfaces";
 import { fetcher } from "@/lib/fetcher";
 import { parser } from "@/utils/parser";

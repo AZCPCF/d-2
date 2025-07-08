@@ -1,6 +1,6 @@
 "use client";
-import NextImage from "@/components/ui/image";
-import NextModal from "@/components/ui/modal";
+import NextImage from "@/components/image";
+import NextModal from "@/components/modal";
 import { HomePageRequestInterface } from "@/interfaces/pages/home";
 import Link from "next/link";
 import { useState } from "react";

@@ -1,4 +1,4 @@
-import ClientInit from "@/components/client";
+import ClientInit from "@/components/init";
 import AppBar from "@/components/ui/app-bar";
 import Footer from "@/components/ui/footer";
 import Header from "@/components/ui/header";

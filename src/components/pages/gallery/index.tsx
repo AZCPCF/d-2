@@ -1,6 +1,6 @@
 "use client";
-import NextImage from "@/components/ui/image";
-import NextModal from "@/components/ui/modal";
+import NextImage from "@/components/image";
+import NextModal from "@/components/modal";
 import { GalleryRequestInterface } from "@/interfaces/pages/gallery";
 import { useState } from "react";
 

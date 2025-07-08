@@ -1,8 +1,8 @@
 "use client";
 
+import NextLink from "@/components/link";
 import { useClientCtx } from "@/contexts/client-context";
 import { socialLinksData } from "@/static";
-import NextLink from "../link";
 
 interface SocialLinksProps {
   className?: string;
