@@ -50,7 +50,6 @@ export const ClientContextProvider = ({
     const res = await fetcher<AboutUsRequestInterface>({
       endpoint: "about_us",
     });
-    console.log(res.data.content);
     setAboutUs(res.data);
   };
 

@@ -6,7 +6,6 @@ import { IoIosArrowBack } from "react-icons/io";
 
 export default function HomePageAboutUs() {
   const { aboutUs } = useClientCtx();
-  console.log(aboutUs);
   return (
     <section className="grid max-md:grid-cols-1 grid-cols-2 gap-10 px-4 py-12 bg-white dark:bg-slate-800 max-full mx-auto">
       <div className="overflow-hidden rounded-2xl shadow-md group">
