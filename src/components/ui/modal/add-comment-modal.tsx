@@ -65,7 +65,7 @@ export default function AddCommentModal({
       aria-modal="true"
       aria-labelledby="add-comment-title"
     >
-      <div className="bg-white rounded-lg max-w-md w-full relative p-6 shadow-md">
+      <div className="bg-background rounded-lg max-w-md w-full relative p-6 shadow-md">
         <button
           onClick={onClose}
           className="absolute top-3 left-3 text-gray-500 hover:text-black text-xl"
