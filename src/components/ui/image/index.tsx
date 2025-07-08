@@ -60,6 +60,7 @@ export default function NextImage({
         {...imageProps}
         src={src}
         alt={alt}
+        loading="lazy"
         onError={() => setSrc("/images/404.png")}
         sizes="100vw"
         onLoad={() => setIsLoading(false)}
