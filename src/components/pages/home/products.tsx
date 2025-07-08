@@ -40,7 +40,7 @@ export default function HomePageProductsSlider({
 
   return (
     <section className={cn("my-20 max-md:my-10 px-4 rounded-xl", !products.length && "hidden")}>
-      <h1 className={cn("flex items-center justify-between flex-wrap gap-4 text-4xl font-extrabold text-primary-main m-10 max-md:m-4 relative")}>
+      <h2 className={cn("flex items-center justify-between flex-wrap gap-4 text-4xl font-extrabold text-primary-main m-10 max-md:m-4 relative")}>
         <span>{title}</span>
         <Link
           href={href}
@@ -54,7 +54,7 @@ export default function HomePageProductsSlider({
             <IoIosArrowBack className="text-[32px] max-md:text-[24px]" />
           </span>
         </Link>
-      </h1>
+      </h2>
 
       <div
         ref={sliderRef}

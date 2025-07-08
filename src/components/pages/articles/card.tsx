@@ -20,9 +20,9 @@ export default function ArticleCard({
         />
       </div>
       <div className="p-4 h-36 relative bg-white dark:bg-background ">
-        <h2 className="text-lg font-bold text-gray-800 dark:text-white group-hover:text-primary-main transition-colors duration-200 line-clamp-2">
+        <h3 className="text-lg font-bold text-gray-800 dark:text-white group-hover:text-primary-main transition-colors duration-200 line-clamp-2">
           {article.title}
-        </h2>
+        </h3>
         <p className="text-sm text-gray-500 absolute bottom-2 left-2">
           {article.date.str || article.date.string}
         </p>

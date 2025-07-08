@@ -19,7 +19,7 @@ export default function HomePageArticles({
 
   return (
     <section className="px-4 py-16 mx-auto w-full">
-      <h1 className="flex items-center justify-between flex-wrap gap-4 text-4xl font-extrabold text-primary-main m-10 max-md:m-4 relative">
+      <h2 className="flex items-center justify-between flex-wrap gap-4 text-4xl font-extrabold text-primary-main m-10 max-md:m-4 relative">
         <span>جدیدترین مقالات</span>
         <Link
           href={"/articles-hub"}
@@ -30,7 +30,7 @@ export default function HomePageArticles({
             <IoIosArrowBack className="text-[32px] max-md:text-[24px]" />
           </span>
         </Link>
-      </h1>
+      </h2>
 
       <div ref={sliderRef} className="keen-slider py-6">
         {articles.map((article, index) => (

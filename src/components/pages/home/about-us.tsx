@@ -18,9 +18,9 @@ export default function HomePageAboutUs() {
         ) : undefined}
       </div>
       <div className="flex flex-col justify-center gap-6 text-right">
-        <h1 className="text-4xl font-extrabold text-primary-main leading-tight">
+        <h2 className="text-4xl font-extrabold text-primary-main leading-tight">
           درباره ما
-        </h1>
+        </h2>
         <p className="text-xl text-gray-700 dark:text-white leading-relaxed sm:text-2xl">
           {aboutUs?.content}
         </p>
