@@ -1,6 +1,6 @@
 export default function Loading() {
   return (
-    <main className="grid grid-cols-12 max-md:grid-cols-1 gap-4 p-12 max-md:p-4 text-gray-800 bg-gray-100 animate-pulse">
+    <main className="grid grid-cols-12 max-md:grid-cols-1 gap-4 p-12 max-md:p-4 text-gray-800 bg-gray-100 loading">
       {/* Contact Form Skeleton */}
       <section className="bg-background p-6 rounded-xl shadow-md space-y-6 max-lg:col-span-7 max-md:p-2 max-md:rounded-lg col-span-8 max-md:col-span-full flex flex-col">
         <div className="h-8 w-1/2 bg-gray-300 rounded mx-auto mb-4" />
