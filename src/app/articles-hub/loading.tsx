@@ -12,7 +12,7 @@ export default function ArticlesHubLoading() {
       {fakeSections.map((title, i) => (
         <section
           key={i}
-          className="bg-gray-50 p-10 grid grid-cols-1 shadow-md rounded-lg max-sm:p-4"
+          className="bg-background p-10 grid grid-cols-1 shadow-md rounded-lg max-sm:p-4"
         >
           <div className="text-center pb-8">
             <h1 className="max-sm:text-3xl text-4xl font-bold text-primary-main animate-pulse">
