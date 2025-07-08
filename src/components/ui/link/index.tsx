@@ -22,7 +22,7 @@ export default function NextLink({
     <Link
       href={href}
       role={role}
-      className={cn("hover:text-primary-main duration-100", className)}
+      className={cn("hover:text-primary-main dark:text-white duration-100", className)}
       {...rest}
     >
       {typeof label === "string" ? (
