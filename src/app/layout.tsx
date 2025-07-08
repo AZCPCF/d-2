@@ -1,13 +1,13 @@
 import ClientInit from "@/components/ui/init";
 import { cn } from "@/utils/cn";
 import type { Metadata, Viewport } from "next";
-import dynamic from "next/dynamic";
 import localFont from "next/font/local";
 import { ReactNode } from "react";
 import "./globals.css";
 import Footer from "@/components/ui/footer";
 import AppBar from "@/components/ui/app-bar";
 import Header from "@/components/ui/header";
+import { GoogleAnalytics } from "nextjs-google-analytics";
 
 export const viewport: Viewport = {
   themeColor: "#fed00b",
@@ -108,6 +108,7 @@ export default function RootLayout({
           <Footer />
           <AppBar />
         </ClientInit>
+        <GoogleAnalytics trackPageViews />
       </body>
     </html>
   );
