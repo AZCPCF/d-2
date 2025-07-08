@@ -1,6 +1,6 @@
 export default function LicensesLoading() {
   return (
-    <main className="p-10 max-md:p-4 mx-auto bg-gray-100 animate-pulse">
+    <main className="p-10 max-md:p-4 mx-auto bg-gray-100 loading">
       <section className="w-full bg-background rounded-2xl shadow-md">
         <h1 className="text-4xl max-sm:text-3xl font-bold text-center text-primary-main p-6">
           گواهی نامه ها
