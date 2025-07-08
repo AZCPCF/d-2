@@ -19,7 +19,7 @@ export default async function BestSelling() {
   });
   return (
     <main className="bg-gray-100 p-10 max-sm:p-4">
-      <section className="bg-gray-50 p-10 gird grid-cols-1 shadow-md rounded-lg max-sm:p-4">
+      <section className="bg-gray-50 dark:bg-slate-600 p-10 gird grid-cols-1 shadow-md rounded-lg max-sm:p-4">
         <h1 className="text-4xl font-bold text-center text-primary-main p-4 mb-4">
           {"پرفروش ترین پوشاک"}
         </h1>
