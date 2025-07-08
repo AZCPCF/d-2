@@ -81,8 +81,8 @@ export default function ProductImages({ res }: { res: ProductInterface }) {
           {/* View Gallery Button */}
           <button
             onClick={() => setIsModalOpen(true)}
-            className={`rounded-lg shadow-lg overflow-hidden w-[100px] h-[100px]
-                max-lg:w-[75px] max-lg:h-[75px] max-md:w-[65px] max-md:h-[65px] bg-secondary-400 flex justify-center items-center text-white hover:bg-secondary-main duration-200`}
+            className={cn(`rounded-lg shadow-lg overflow-hidden w-[100px] h-[100px]
+                max-lg:w-[75px] max-lg:h-[75px] max-md:w-[65px] max-md:h-[65px] bg-secondary-400 flex justify-center items-center text-white hover:bg-secondary-main duration-200`,!res.images.length&&"hidden")}
           >
             <FaRegImages fontSize={36} />
           </button>
@@ -91,7 +91,7 @@ export default function ProductImages({ res }: { res: ProductInterface }) {
 
       {/* Modal */}
       {isModalOpen && (
-        <div className="fixed inset-0 z-50 bg-black/40 backdrop-blur-md bg-opacity-80 flex items-center justify-center px-4">
+        <div className="fixed inset-0 z-50 bg-background/40 backdrop-blur-md bg-opacity-80 flex items-center justify-center px-4">
           <button
             onClick={closeModal}
             className="absolute top-4 left-4 text-white text-2xl hover:text-red-400 transition"
@@ -110,7 +110,7 @@ export default function ProductImages({ res }: { res: ProductInterface }) {
             </div>
 
             {/* Thumbnail Bar in Bottom */}
-            <div className="absolute bottom-4 left-4 right-4 bg-black/40 backdrop-blur-md p-2 rounded-lg flex gap-2 justify-start flex-row-reverse overflow-x-auto">
+            <div className="absolute bottom-4 left-4 right-4 bg-background/40 backdrop-blur-md p-2 rounded-lg flex gap-2 justify-start flex-row-reverse overflow-x-auto">
               {res.images.map((img, index) => {
                 const isActive = index === activeIndex;
                 return (
