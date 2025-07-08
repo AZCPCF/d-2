@@ -22,7 +22,7 @@ export default async function Article({ params }: Props) {
   return (
     <main className="bg-gray-200/75 py-10 px-8 max-sm:px-4">
       <section className="grid-cols-12 grid gap-4">
-        <div className="col-span-8 max-md:col-span-full rounded-xl gird grid-cols-1 bg-white relative shadow-md">
+        <div className="col-span-8 max-md:col-span-full rounded-xl gird grid-cols-1 bg-background dark:text-white relative shadow-md">
           <div className="w-full flex items-center justify-center px-6 pt-6 mt-6">
             <h1 className="text-3xl font-bold max-md:text-2xl pt-8 text-primary-main text-center">
               {res.title}
@@ -44,7 +44,7 @@ export default async function Article({ params }: Props) {
           <ParsedNode />
         </div>
         <div className="col-span-4 max-md:col-span-full">
-          <div className="sticky top-4 bg-white rounded-xl shadow-md p-4 space-y-4">
+          <div className="sticky top-4 bg-background dark:text-white rounded-xl shadow-md p-4 space-y-4">
             <h2 className="text-2xl font-bold mb-2 max-md:text-xl">
               مقالات مشابه
             </h2>
@@ -52,7 +52,7 @@ export default async function Article({ params }: Props) {
               <Link
                 key={item.id}
                 href={`/article/${item.page_url}`}
-                className="flex items-start gap-4 border-b last:border-0 pb-3 hover:bg-gray-100 duration-200 rounded-md rounded-b-none p-2"
+                className="flex items-start gap-4 border-b last:border-0 pb-3 hover:bg-gray-800 duration-200 rounded-md rounded-b-none p-2"
               >
                 <NextImage
                   alt={item.title}
