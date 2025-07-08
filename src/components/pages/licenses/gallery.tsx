@@ -20,7 +20,7 @@ export default function LicenseGallery({ licenses }: Props) {
           <div
             key={`license-${index}`}
             className={clsx(
-              "w-full bg-white border border-gray-200 rounded-lg shadow-sm cursor-pointer transform transition-transform hover:scale-[1.03]"
+              "w-full bg-background border border-gray-200 rounded-lg shadow-sm cursor-pointer transform transition-transform hover:scale-[1.03]"
             )}
             onClick={() => setSelectedLicense(license)}
           >
@@ -31,7 +31,7 @@ export default function LicenseGallery({ licenses }: Props) {
                 className="w-full h-full object-cover rounded-t-lg"
               />
             </div>
-            <p className="p-4 text-gray-700 text-center text-base">
+            <p className="p-4 text-gray-700 dark:text-white text-center text-base">
               {license.text}
             </p>
           </div>
@@ -49,7 +49,7 @@ export default function LicenseGallery({ licenses }: Props) {
                   className="w-full h-full object-contain"
                 />
               </div>
-              <p className="p-3 text-lg text-gray-700 text-center">
+              <p className="p-3 text-lg text-gray-700 dark:text-white text-center">
                 {selectedLicense.text}
               </p>
             </>
