@@ -1,7 +1,11 @@
+"use client";
 import NextLink from "@/components/ui/link";
 import { panelUrl } from "@/utils/env";
-import { FaUser } from "react-icons/fa";
+import { FaSun, FaUser } from "react-icons/fa";
 import { FiShoppingCart } from "react-icons/fi";
+import NextButton from "../button";
+import ThemeInitializer, { toggleTheme } from "@/utils/toggle-theme";
+import { BiMoon } from "react-icons/bi";
 
 /**
  * Header buttons component displaying cart and user account links.
@@ -15,9 +19,9 @@ export default function HeaderButtons() {
         target="_blank"
         href={`${panelUrl}/cart`}
         label={<FiShoppingCart fontSize={24} />}
-        className="p-2.25 max-[500px]:p-1.5 bg-secondary-main text-white flex justify-center hover:text-white rounded-lg text-lg duration-100 cursor-pointer"
+        className="p-2.5 max-[500px]:p-1.5 bg-secondary-main text-white flex justify-center hover:text-white rounded-lg text-lg duration-100 cursor-pointer"
       />
-      
+
       {/* Login/User Account Button */}
       <NextLink
         target="_blank"
@@ -29,7 +33,21 @@ export default function HeaderButtons() {
             <FaUser fontSize={24} />
           </div>
         }
-        className="p-2.25 max-[500px]:p-1.5 rounded-md text-lg bg-primary-400 hover:text-white duration-100 cursor-pointer text-white"
+        className="p-2.25 max-[500px]:p-1.5 rounded-md text-lg bg-primary-main hover:text-white duration-100 cursor-pointer text-white"
+      />
+      {/* Theme Toggle */}
+      <ThemeInitializer />
+      <NextButton
+        onClick={() => {
+          toggleTheme();
+        }}
+        title={
+          <>
+            <BiMoon className="dark:hidden" fontSize={24} />
+            <FaSun className="dark:block hidden" fontSize={24} />
+          </>
+        }
+        className="p-2.25 max-[500px]:p-1.5 flex text-primary-main justify-center rounded-lg text-lg duration-100 cursor-pointer"
       />
     </div>
   );
