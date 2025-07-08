@@ -28,7 +28,7 @@ export default function MobileNavbar({ categories }: MobileNavbarProps) {
       {/* Hamburger Button */}
       <NextButton
         onClick={() => setOpen(true)}
-        className="bg-gray-100 p-3 max-[500px]:p-1.5 outline-0 rounded-md text-[#727272] hover:bg-gray-200 transition-colors duration-200 max-md:block hidden"
+        className="bg-gray-200 dark:bg-slate-600 dark:text-primary-main p-3 max-[500px]:p-1.5 outline-0 rounded-md text-[#727272] hover:bg-gray-200 transition-colors duration-200 max-md:block hidden"
         role="button"
         aria-label="باز کردن منوی موبایل"
         title={<MdMenu fontSize={24} />}
@@ -38,7 +38,7 @@ export default function MobileNavbar({ categories }: MobileNavbarProps) {
       {open && (
         <div
           onClick={handleClose}
-          className="fixed inset-0 bg-black/40 z-40 mobile-nav"
+          className="fixed inset-0 bg-background/40 z-40 mobile-nav"
           aria-hidden="true"
         />
       )}
@@ -46,7 +46,7 @@ export default function MobileNavbar({ categories }: MobileNavbarProps) {
       {/* Side Navigation */}
       <nav
         className={cn(
-          "fixed top-0 right-0 w-72 h-full bg-white shadow-lg z-50 transition-transform duration-300 ease-in-out",
+          "fixed top-0 right-0 w-72 h-full bg-background text-white shadow-lg z-50 transition-transform duration-300 ease-in-out",
           open ? "translate-x-0" : "translate-x-full"
         )}
         aria-label="منوی دسته‌بندی‌ها"
