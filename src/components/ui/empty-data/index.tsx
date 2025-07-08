@@ -10,10 +10,10 @@ interface EmptyDataProps {
  */
 export default function EmptyData({ title }: EmptyDataProps) {
   return (
-    <section className="w-full max-w-3xl mx-auto bg-white rounded-xl border border-gray-200 shadow-sm text-center px-8 py-16 space-y-6">
+    <section className="w-full max-w-3xl mx-auto bg-background  rounded-xl border border-gray-200 dark:border-slate-600 shadow-sm text-center px-8 py-16 space-y-6">
       {/* Render the title: string wrapped in <p>, otherwise render as is */}
       {typeof title === "string" ? (
-        <p className="text-2xl font-semibold text-gray-700">{title}</p>
+        <p className="text-2xl font-semibold text-gray-700 dark:text-white">{title}</p>
       ) : (
         title
       )}
