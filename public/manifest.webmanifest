@@ -1,13 +1,25 @@
 {
-  "name": "D2 Collection",
+  "name": "D2",
   "short_name": "D2 Collection",
-  "id": "azcpcf-d2-collection",
   "description": "فروشگاه پوشاک مردانه و بچگانه",
-  "background_color": "#ffffff",
-  "theme_color": "#fed00b",
   "start_url": "/",
-  "dir": "rtl",
-  "lang": "fa",
   "display": "standalone",
-  "categories": ["shopping"]
+  "theme_color": "#fed00b",
+  "background_color": "#ffffff",
+  "lang": "fa",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "categories": [
+    "shopping"
+  ]
 }
