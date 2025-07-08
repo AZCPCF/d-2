@@ -1,5 +1,9 @@
-User-agent: *
-Disallow: /accounts
-
+# *
 User-agent: *
 Allow: /
+
+# Host
+Host: https://d-2-orpin.vercel.app
+
+# Sitemaps
+Sitemap: https://d-2-orpin.vercel.app/sitemap.xml
