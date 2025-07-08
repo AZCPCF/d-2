@@ -1,7 +1,7 @@
 export default function ArticleCardSkeleton() {
   return (
     <div
-      className="min-w-[250px] max-w-full rounded-lg shadow-md bg-background animate-pulse overflow-hidden"
+      className="min-w-[250px] max-w-full rounded-lg shadow-md bg-background loading overflow-hidden"
       role="status"
       aria-label="Loading article card"
     >
