@@ -17,6 +17,7 @@ export default function HeaderButtons() {
       {/* Cart Button */}
       <NextLink
         target="_blank"
+        rel="noopener"
         href={`${panelUrl}/cart`}
         label={<FiShoppingCart fontSize={24} />}
         className="p-2.5 max-[500px]:p-1.5 bg-secondary-main text-white flex justify-center hover:text-white rounded-lg text-lg duration-100 cursor-pointer"
@@ -25,6 +26,7 @@ export default function HeaderButtons() {
       {/* Login/User Account Button */}
       <NextLink
         target="_blank"
+        rel="noopener"
         href={panelUrl}
         label={
           <div className="flex items-center gap-2">
