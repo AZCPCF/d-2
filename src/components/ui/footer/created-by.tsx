@@ -7,7 +7,7 @@ export default function CreatedByInFooter() {
       href="https://www.dadekavweb.ir"
       target="_blank"
       rel="noopener noreferrer"
-      className="w-full dark:bg-slate-800 dark:text-white justify-center flex p-4 text-2xl items-center gap-2 max-md:pb-20"
+      className="w-full dark:bg-slate-800 dark:text-white justify-center flex p-4 text-2xl items-center gap-2 max-md:pb-24"
     >
       <NextImage
         url="/images/dadekavweb-logo.webp"
