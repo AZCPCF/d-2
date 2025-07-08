@@ -1,14 +1,13 @@
+import AppBar from "@/components/ui/app-bar";
 import Footer from "@/components/ui/footer";
 import Header from "@/components/ui/header";
-import type { Metadata, Viewport } from "next";
-import { ReactNode } from "react";
-import "./globals.css";
-import AppBar from "@/components/ui/app-bar";
 import { ClientContextProvider } from "@/contexts/client-context";
-import localFont from "next/font/local";
 import { cn } from "@/utils/cn";
+import type { Metadata, Viewport } from "next";
+import localFont from "next/font/local";
+import { ReactNode } from "react";
 import { Toaster } from "sonner";
-import { toggleTheme } from "@/utils/toggle-theme";
+import "./globals.css";
 
 export const viewport: Viewport = {
   themeColor: "#fed00b",
