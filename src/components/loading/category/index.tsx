@@ -5,7 +5,7 @@ export default function CategoryPageLoading({ title }: { title?: string }) {
       role="status"
       aria-label="Loading categories"
     >
-      <section className="bg-gray-50 p-10 grid grid-cols-1 shadow-md rounded-lg max-sm:p-4">
+      <section className="bg-background p-10 grid grid-cols-1 shadow-md rounded-lg max-sm:p-4">
         <h1 className="text-4xl font-bold text-center text-primary-main p-4">
           {title ? (
             title
