@@ -8,6 +8,7 @@ import { ClientContextProvider } from "@/contexts/client-context";
 import localFont from "next/font/local";
 import { cn } from "@/utils/cn";
 import { Toaster } from "sonner";
+import { toggleTheme } from "@/utils/toggle-theme";
 
 export const viewport: Viewport = {
   themeColor: "#fed00b",
