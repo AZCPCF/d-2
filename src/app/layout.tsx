@@ -100,6 +100,11 @@ export default function RootLayout({
       dir="rtl"
       className={cn("scroll-smooth", kalamehFont.className)}
     >
+      <head>
+        <link rel="manifest" href="/manifest.webmanifest" />
+        <meta name="theme-color" content="#fed00b" />
+      </head>
+
       <body className="antialiased">
         <Toaster
           position="top-center"
