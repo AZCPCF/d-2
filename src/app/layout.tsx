@@ -77,6 +77,7 @@ export const metadata: Metadata = {
     icon: "/favicon.ico",
   },
   other: {
+    "google-adsense-account": "ca-pub-4948885497524533",
     "google-site-verification": "RqKyXT-2BF05A2ypG3nH0OMMcJNlaNqGDFt0IyrDQXA",
     category: "men-clothes , shoes-and-sneakers , کتونی, لباس مردانه",
     enamad: "۴۴۳۱۲۹۶۴",
