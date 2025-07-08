@@ -38,18 +38,20 @@ export const clientContext = createContext<ClientContextInterface>({
  * Provider component to wrap parts of the app that need access to clientContext.
  * Fetches `about_us` data once on mount and provides it via context.
  */
-export const ClientContextProvider = ({ children }: { children: ReactNode }) => {
+export const ClientContextProvider = ({
+  children,
+}: {
+  children: ReactNode;
+}) => {
   const [aboutUs, setAboutUs] = useState<AboutUsRequestInterface["data"]>();
 
   // Fetch the about_us data asynchronously
   const getData = async () => {
-    try {
-      const res = await fetcher<AboutUsRequestInterface>({ endpoint: "about_us" });
-      setAboutUs(res.data);
-    } catch (error) {
-      console.error("Failed to fetch about_us data:", error);
-      // Optionally handle error state here
-    }
+    const res = await fetcher<AboutUsRequestInterface>({
+      endpoint: "about_us",
+    });
+    console.log(res.data.content);
+    setAboutUs(res.data);
   };
 
   useEffect(() => {
@@ -66,4 +68,5 @@ export const ClientContextProvider = ({ children }: { children: ReactNode }) => 
 /**
  * Custom hook to easily consume clientContext.
  */
-export const useClientCtx = (): ClientContextInterface => useContext(clientContext);
+export const useClientCtx = (): ClientContextInterface =>
+  useContext(clientContext);
