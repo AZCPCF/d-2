@@ -26,7 +26,7 @@ export default function ProductComments({ comments, productId }: Props) {
       </div>
 
       {comments.length === 0 ? (
-        <p className="text-sm text-gray-500">
+        <p className="text-sm text-gray-500 dark:text-gray-300">
           هنوز دیدگاهی برای این محصول ثبت نشده است.
         </p>
       ) : (
