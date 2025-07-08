@@ -54,7 +54,7 @@ export default function SearchModal({ onClose }: SearchModalProps) {
       aria-modal="true"
       aria-labelledby="search-modal-title"
     >
-      <div className="bg-white w-full min-h-[650px] max-w-xl p-4 rounded-xl relative shadow-lg">
+      <div className="bg-background dark:text-white w-full min-h-[650px] max-w-xl p-4 rounded-xl relative shadow-lg">
         <div className="w-full flex items-center">
           <button
             onClick={onClose}
