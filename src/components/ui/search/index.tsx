@@ -106,27 +106,29 @@ export default function Search({ colors, sizes }: FilterInterface) {
   ].reduce((acc, val) => acc + val, 0);
   // 🛠️ Populate initial state from URL
   useEffect(() => {
-    if (searchParams.toString().length) {
-      console.log(searchParams.get("color_ids"));
-      const min = parseInt(searchParams.get("min_price") || "0");
-      const max = parseInt(searchParams.get("max_price") || "3000000");
-      const query = searchParams.get("search") || "";
-      const colorParam = searchParams.get("color_ids") || "";
-      const colorArray = colorParam.split(",").map((id) => parseInt(id));
-      const availableParam = searchParams.get("only_available") === "1";
-      const sizeParam = searchParams.get("size_id");
-      const sizeId = sizeParam ? parseInt(sizeParam) : null;
+    const min = parseInt(searchParams.get("min_price") || "0");
+    const max = parseInt(searchParams.get("max_price") || "3000000");
+    const query = searchParams.get("search") || "";
+    const colorParam = searchParams.get("color_ids") || "";
 
-      dispatch({ type: "SET_PRICE", payload: [min, max] });
-      dispatch({ type: "SET_SEARCH", payload: query });
-      colorArray
-        .filter((id) => !state.selectedColors.includes(id))
-        .forEach((id) => dispatch({ type: "TOGGLE_COLOR", payload: id }));
-      dispatch({ type: "SET_AVAILABLE", payload: availableParam });
-      dispatch({ type: "SET_SIZE", payload: sizeId });
-    }
-  }, [searchParams]);
-  
+    dispatch({ type: "SET_PRICE", payload: [min, max] });
+    dispatch({ type: "SET_SEARCH", payload: query });
+    const colorArray = colorParam
+      .split(",")
+      .map((id) => parseInt(id))
+      .filter((id) => !isNaN(id));
+    const availableParam = searchParams.get("only_available") === "1";
+    const sizeParam = searchParams.get("size_id");
+    const sizeId = sizeParam ? parseInt(sizeParam) : null;
+
+    dispatch({ type: "SET_PRICE", payload: [min, max] });
+    dispatch({ type: "SET_SEARCH", payload: query });
+    colorArray.forEach((id) => dispatch({ type: "TOGGLE_COLOR", payload: id }));
+
+    dispatch({ type: "SET_AVAILABLE", payload: availableParam });
+    dispatch({ type: "SET_SIZE", payload: sizeId });
+  }, []);
+
   // 🎯 Apply Filters
   function handleSearch() {
     const params = new URLSearchParams(searchParams.toString());
@@ -151,6 +153,7 @@ export default function Search({ colors, sizes }: FilterInterface) {
     replace(`${pathname}?${params.toString()}`);
     dispatch({ type: "SET_MODAL_OPEN", payload: false });
   }
+  console.log(colors);
 
   return (
     <>
@@ -170,10 +173,10 @@ export default function Search({ colors, sizes }: FilterInterface) {
                   replace(`${pathname}?${params.toString()}`);
                 }}
                 className={cn(
-                  `px-3 py-1 rounded-md text-lg transition-colors duration-75`,
+                  `px-3 py-1 rounded-md text-lg transition-colors duration-75 border-2 border-gray-200`,
                   sort === option.value || (!sort && option.value === "")
                     ? "bg-primary-main text-white"
-                    : "bg-white text-black border border-gray-300 hover:bg-gray-100"
+                    : "bg-primary-50 text-black hover:bg-primary-100"
                 )}
               >
                 {option.label}
@@ -201,7 +204,7 @@ export default function Search({ colors, sizes }: FilterInterface) {
       {/* 📱 Modal Filter Drawer (Mobile View) */}
       {isModalOpen && (
         <div className="fixed inset-0 z-50 bg-black/40 bg-opacity-50 flex items-center justify-center !font-kalameh modal">
-          <div className="bg-white w-[90%] max-h-[90vh] p-4 rounded-lg overflow-y-auto relative">
+          <div className="bg-background dark:text-white w-[90%] max-h-[90vh] p-4 rounded-lg overflow-y-auto relative">
             <div className="flex justify-between items-center mb-4">
               <h2 className="text-lg font-semibold">اعمال فیلتر</h2>
               <button
