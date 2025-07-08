@@ -20,7 +20,7 @@ export default async function Licenses() {
 
   return (
     <main className="p-10 max-md:p-4 mx-auto bg-gray-100">
-      <section className="w-full bg-white rounded-2xl shadow-md">
+      <section className="w-full bg-background dark:text-white rounded-2xl shadow-md">
         <h1 className="text-4xl max-sm:text-3xl font-bold text-center text-primary-main p-6">
           گواهی نامه ها
         </h1>
