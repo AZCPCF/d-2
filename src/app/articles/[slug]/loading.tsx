@@ -3,7 +3,7 @@ import ArticleCardSkeleton from "@/components/loading/ui/article-card";
 export default function ArticlesSlugLoading() {
   return (
     <main className="bg-gray-200/75 p-10 max-sm:p-4 flex flex-col gap-10">
-      <section className="bg-gray-50 p-10 grid grid-cols-1 shadow-md rounded-lg max-sm:p-4">
+      <section className="bg-background p-10 grid grid-cols-1 shadow-md rounded-lg max-sm:p-4">
         <div className="p-4">
           <h1 className="text-4xl font-bold text-center text-primary-main tracking-wide animate-pulse">
             {"...بارگذاری دسته‌بندی مقالات"}
