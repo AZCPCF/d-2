@@ -10,7 +10,7 @@ export default function ArticleCard({
   return (
     <Link
       href={`/article/${article.page_url}`}
-      className="group block overflow-hidden relative rounded-lg bg-white"
+      className="group block overflow-hidden relative rounded-lg bg-white dark:bg-background"
     >
       <div className="relative h-48 w-full overflow-hidden">
         <NextImage
@@ -19,8 +19,8 @@ export default function ArticleCard({
           className="w-full h-52 group-hover:scale-105 transition-transform duration-300"
         />
       </div>
-      <div className="p-4 h-36 relative bg-white">
-        <h2 className="text-lg font-bold text-gray-800 group-hover:text-primary-main transition-colors duration-200 line-clamp-2">
+      <div className="p-4 h-36 relative bg-white dark:bg-background ">
+        <h2 className="text-lg font-bold text-gray-800 dark:text-white group-hover:text-primary-main transition-colors duration-200 line-clamp-2">
           {article.title}
         </h2>
         <p className="text-sm text-gray-500 absolute bottom-2 left-2">
