@@ -7,11 +7,11 @@ export default function ContactUsLinks(props: {
 }) {
   return (
     <section className="flex gap-4 bg-transparent col-span-4 max-lg:col-span-5 max-md:order-first max-md:col-span-full">
-      <div className="bg-white shadow-md w-full rounded-xl max-md:rounded-lg  p-6 max-md:p-3 space-y-5 ">
-        <h2 className="text-2xl font-bold text-gray-900 border-b border-gray-200 pb-2">
+      <div className="bg-background shadow-md w-full rounded-xl max-md:rounded-lg  p-6 max-md:p-3 space-y-5 ">
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white border-b border-gray-200 pb-2">
           تماس با ما
         </h2>
-        <div className="space-y-3 text-gray-700 leading-relaxed text-xl max-md:text-lg">
+        <div className="space-y-3 text-gray-700 dark:text-gray-200 leading-relaxed text-xl max-md:text-lg">
           <p>{props.res.data.address}</p>
           <p>
             <Link
