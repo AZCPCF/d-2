@@ -131,6 +131,24 @@ export default function RootLayout({
           <Footer />
           <AppBar />
         </ClientContextProvider>
+        <div className="hidden">
+          <div
+            className="fb-like"
+            data-href="https://d-2-orpin.vercel.app"
+            data-layout="standard"
+            data-action="like"
+            data-size="small"
+            data-share="true"
+          />
+          <a
+            href="https://twitter.com/share"
+            className="twitter-share-button"
+            data-url="https://d-2-orpin.vercel.app"
+            data-show-count="false"
+          >
+            Tweet
+          </a>
+        </div>
       </body>
     </html>
   );
