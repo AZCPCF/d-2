@@ -5,7 +5,7 @@
   "description": "فروشگاه پوشاک مردانه و بچگانه",
   "background_color": "#ffffff",
   "theme_color": "#fed00b",
-  "start_url": "https://d-2-orpin.vercel.app",
+  "start_url": "/",
   "dir": "rtl",
   "lang": "fa",
   "display": "fullscreen",
