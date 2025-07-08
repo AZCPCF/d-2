@@ -59,7 +59,7 @@ export default function ContactForm() {
     }
   }, [state]);
   return (
-    <section className="bg-white p-6 rounded-xl shadow-md space-y-6 max-lg:col-span-7 max-md:p-2 max-md:rounded-lg col-span-8 max-md:col-span-full flex flex-col">
+    <section className="bg-background dark:text-white p-6 rounded-xl shadow-md space-y-6 max-lg:col-span-7 max-md:p-2 max-md:rounded-lg col-span-8 max-md:col-span-full flex flex-col">
       <h2 className="text-4xl text-primary-main font-bold mb-4 text-center max-md:text-2xl max-md:pt-3">
         تماس با D2
       </h2>
