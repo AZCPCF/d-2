@@ -7,6 +7,7 @@ import MobileNavbar from "./mobile-navbar";
 import HeaderNavbar from "./navbar";
 import HeaderSearchInput from "./search-input";
 import TopBanner from "./top-banner";
+import ThemeInitializer from "@/utils/toggle-theme";
 
 export type NavbarRequestType = {
   banner: {
@@ -23,7 +24,7 @@ export default async function Header() {
   const res = await fetcher<NavbarRequestType>({ endpoint: "navbar" });
 
   return (
-    <header className="shadow-md relative bg-white">
+    <header className="shadow-md relative bg-background">
       {/* Top banner section */}
       <TopBanner banner={res.banner} />
 
