@@ -18,7 +18,7 @@ export default function HeaderNavbar({ categories }: HeaderNavbarProps) {
         aria-expanded="false"
       >
         <div
-          className="flex items-center gap-2 cursor-pointer text-xl hover:text-primary-main"
+          className="flex items-center gap-2 cursor-pointer text-xl hover:text-primary-main dark:text-white"
           aria-controls="products-dropdown"
           aria-haspopup="true"
         >
@@ -30,7 +30,7 @@ export default function HeaderNavbar({ categories }: HeaderNavbarProps) {
         <div
           id="products-dropdown"
           className={cn(
-            "absolute right-0 w-56 max-lg:w-40 bg-white shadow-lg rounded-lg border border-gray-100 z-40",
+            "absolute right-0 w-56 max-lg:w-40 bg-background shadow-lg rounded-lg border border-gray-100 z-40",
             "group-hover:visible group-hover:opacity-100 opacity-0 invisible transition-all duration-300"
           )}
           role="menu"
@@ -42,13 +42,13 @@ export default function HeaderNavbar({ categories }: HeaderNavbarProps) {
                 <NextLink
                   href={`/categories/${cat.page_url}`}
                   label={cat.title}
-                  className="block px-4 py-2 hover:bg-primary-50 hover:text-primary-700 transition whitespace-nowrap"
+                  className="block px-4 py-2 hover:bg-primary-200 hover:text-primary-700 transition whitespace-nowrap"
                   role="menuitem"
                 />
                 {/* Subcategory */}
                 {cat.sub_categories?.length ? (
                   <ul
-                    className="absolute top-0 right-full py-2 mr-1 w-56 max-lg:w-40 bg-white shadow-lg rounded-lg border border-gray-100 invisible group-hover/item:visible opacity-0 group-hover/item:opacity-100 transition-all duration-300 z-50"
+                    className="absolute top-0 right-full py-2 mr-1 w-56 max-lg:w-40 bg-background shadow-lg rounded-lg border border-gray-100 invisible group-hover/item:visible opacity-0 group-hover/item:opacity-100 transition-all duration-300 z-50"
                     role="menu"
                     aria-label={`${cat.title} زیرمنو`}
                   >
@@ -61,13 +61,13 @@ export default function HeaderNavbar({ categories }: HeaderNavbarProps) {
                         <NextLink
                           href={`/categories/${sub.page_url}`}
                           label={sub.title}
-                          className="block px-4 py-2 text-sm hover:bg-primary-100 hover:text-primary-800 transition whitespace-nowrap"
+                          className="block px-4 py-2 text-sm hover:bg-primary-200 hover:text-primary-800 transition whitespace-nowrap"
                           role="menuitem"
                         />
                         {/* Deep Subcategory */}
                         {sub.sub_categories?.length ? (
                           <ul
-                            className="absolute top-0 right-full py-2 mr-1 w-56 max-lg:w-40 bg-white shadow-lg rounded-lg border border-gray-100 invisible group-hover/subitem:visible opacity-0 group-hover/subitem:opacity-100 transition-all duration-300 z-50"
+                            className="absolute top-0 right-full py-2 mr-1 w-56 max-lg:w-40 bg-background shadow-lg rounded-lg border border-gray-100 invisible group-hover/subitem:visible opacity-0 group-hover/subitem:opacity-100 transition-all duration-300 z-50"
                             role="menu"
                             aria-label={`${sub.title} زیرمنو`}
                           >
@@ -76,7 +76,7 @@ export default function HeaderNavbar({ categories }: HeaderNavbarProps) {
                                 <NextLink
                                   href={`/categories/${deep.page_url}`}
                                   label={deep.title}
-                                  className="block px-4 py-2 text-sm hover:bg-primary-100 hover:text-primary-800 transition whitespace-nowrap"
+                                  className="block px-4 py-2 text-sm hover:bg-primary-200 hover:text-primary-800 transition whitespace-nowrap"
                                   role="menuitem"
                                 />
                               </li>
