@@ -2,13 +2,12 @@ import ClientInit from "@/components/client";
 import AppBar from "@/components/ui/app-bar";
 import Footer from "@/components/ui/footer";
 import Header from "@/components/ui/header";
-import { ClientContextProvider } from "@/contexts/client-context";
 import { cn } from "@/utils/cn";
 import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import { ReactNode } from "react";
-import { Toaster } from "sonner";
 import "./globals.css";
+// import Script from "next/script";
 
 export const viewport: Viewport = {
   themeColor: "#fed00b",
@@ -103,34 +102,27 @@ export default function RootLayout({
     >
       <head>
         <meta name="theme-color" content="#fed00b" />
-        <link rel="manifest" href="/manifest.webmanifest" />
-        {/* <link rel="icon" href="/android/android-launchericon-192-192.png" />
-        <link rel="apple-touch-icon" href="/ios/180.png" /> */}
+        {/* <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-SJW7PL0MXP"
+          strategy="afterInteractive"
+          async
+        />
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date(), { cookie_domain: "auto" });
+    gtag('config', 'G-SJW7PL0MXP', { cookie_domain: "auto" });
+  `}
+        </Script> */}
       </head>
       <body className="antialiased">
-        <ClientInit />
-        <Toaster
-          position="top-center"
-          gap={4}
-          duration={2000}
-          toastOptions={{
-            classNames: {
-              toast: "!bg-gray-50",
-              title: "text-lg font-bold",
-              success: "!text-teal-500",
-              error: "!text-red-500",
-              warning: "!text-yellow-500",
-              info: "!text-blue-500",
-              description: "!text-sm !text-zinc-400",
-            },
-          }}
-        />
-        <ClientContextProvider>
+        <ClientInit>
           <Header />
           {children}
           <Footer />
           <AppBar />
-        </ClientContextProvider>
+        </ClientInit>
         <div className="hidden">
           <div
             className="fb-like"

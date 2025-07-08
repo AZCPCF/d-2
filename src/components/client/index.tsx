@@ -1,8 +1,9 @@
 "use client";
-import { useEffect } from "react";
+import { ClientContextProvider } from "@/contexts/client-context";
+import { ReactNode, useEffect } from "react";
+import { Toaster } from "sonner";
 
-export default function ClientInit() {
-
+export default function ClientInit({ children }: { children: ReactNode }) {
   useEffect(() => {
     if (typeof document === "undefined") return;
 
@@ -22,5 +23,25 @@ export default function ClientInit() {
       root.classList.remove("dark");
     }
   }, []);
-  return null;
+  return (
+    <ClientContextProvider>
+      <Toaster
+        position="top-center"
+        gap={4}
+        duration={2000}
+        toastOptions={{
+          classNames: {
+            toast: "!bg-gray-50",
+            title: "text-lg font-bold",
+            success: "!text-teal-500",
+            error: "!text-red-500",
+            warning: "!text-yellow-500",
+            info: "!text-blue-500",
+            description: "!text-sm !text-zinc-400",
+          },
+        }}
+      />
+      {children}
+    </ClientContextProvider>
+  );
 }
