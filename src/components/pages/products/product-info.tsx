@@ -12,7 +12,7 @@ export default function ProductInfo({res}:{res:ProductInterface}) {
             <div className="flex items-center" key={category.id}>
               <Link
                 href={`/categories/${category.page_url}`}
-                className="hover:underline px-2 py-1 rounded bg-secondary-50 text-base"
+                className="hover:underline px-2 py-1 rounded bg-secondary-50 dark:bg-slate-400 text-base"
               >
                 {category.title}
               </Link>
