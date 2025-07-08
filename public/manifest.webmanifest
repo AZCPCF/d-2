@@ -1,12 +1,23 @@
 {
-  "name": "D2",
+  "name": "D2 Collection",
   "short_name": "D2 Collection",
+  "id":"azcpcf-d2-collection",
   "description": "فروشگاه پوشاک مردانه و بچگانه",
-  "start_url": "/",
-  "display": "standalone",
-  "theme_color": "#fed00b",
   "background_color": "#ffffff",
+  "theme_color": "#fed00b",
+  "start_url": "https://d-2-orpin.vercel.app",
+  "dir": "rtl",
   "lang": "fa",
+  "display": "fullscreen",
+  "shortcuts": [
+  {
+    "name": "درباره ما",
+    "url": "/about-us"
+  },
+  {
+    "name": "ارتباط با ما",
+    "url": "/contact-us"
+  }],
   "icons": [
     {
       "src": "/icon-192.png",
@@ -18,5 +29,6 @@
       "sizes": "512x512",
       "type": "image/png"
     }
-  ]
+  ],
+  "categories": ["shopping"]
 }
