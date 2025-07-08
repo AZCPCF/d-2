@@ -58,7 +58,7 @@ export default function ProductSelector({ colorOptions, res }: Props) {
               className="text-base text-white"
             />
           </div>
-          <h3 className="font-medium mb-2 text-xl text-gray-500 text-start">
+          <h3 className="font-medium mb-2 text-xl text-gray-500 dark:text-white text-start">
             رنگ بندی‌های محصول
           </h3>
         </div>
@@ -86,7 +86,7 @@ export default function ProductSelector({ colorOptions, res }: Props) {
       {/* Size Selector */}
       {selectedColor && (
         <div>
-          <h3 className="font-medium mb-2 text-xl text-gray-500 text-start">
+          <h3 className="font-medium mb-2 text-xl text-gray-500 dark:text-white text-start">
             سایزبندی‌ها
           </h3>
           <div className="flex gap-3 flex-wrap">
@@ -102,12 +102,12 @@ export default function ProductSelector({ colorOptions, res }: Props) {
                     isAvailable && setSelectedSizeId(size.stock_id)
                   }
                   className={cn(
-                    `px-4 py-2 rounded border text-sm duration-200`,
+                    `px-4 py-2 rounded border text-sm duration-200 dark:text-white`,
                     isAvailable
                       ? isSelected
                         ? "bg-primary-main text-white border-primary-main"
                         : "border-gray-400 hover:bg-gray-100"
-                      : "border-red-300 text-red-400 !cursor-not-allowed"
+                      : "border-red-500 !text-red-500 !cursor-not-allowed"
                   )}
                 >
                   {size.title}
@@ -120,20 +120,20 @@ export default function ProductSelector({ colorOptions, res }: Props) {
       )}
       <div className="mt-10 space-y-4 border border-gray-200 rounded-lg p-6">
         {/* Title */}
-        <h2 className="text-xl font-semibold text-gray-800">
+        <h2 className="text-xl font-semibold text-gray-800 dark:text-white">
           خرید {res.title}
         </h2>
 
         {/* Price */}
         <div>
-          <p className="text-sm text-gray-500">قیمت محصول</p>
+          <p className="text-sm text-gray-500 dark:text-gray-50">قیمت محصول</p>
           <div className="flex items-center gap-4">
             <span className="text-2xl font-bold text-primary-main">
               {formatNumberWithCommas(res.after_price)} تومان
             </span>
             {res.discount > 0 && (
               <>
-                <span className="line-through text-gray-400 text-base">
+                <span className="line-through text-gray-400  text-base">
                   {formatNumberWithCommas(res.price)} تومان
                 </span>
                 <span className="text-red-500 font-medium">
@@ -146,7 +146,7 @@ export default function ProductSelector({ colorOptions, res }: Props) {
 
         {/* Selection Summary */}
         {selectedColor && selectedSizeId && (
-          <div className="text-xl text-gray-600 flex items-center gap-3">
+          <div className="text-xl text-gray-600 dark:text-gray-50 flex items-center gap-3">
             <ColorBox color={selectedColor.color} title={selectedColor.title} />
             رنگ: ({selectedColor.title}) - سایز{" "}
             {
@@ -167,7 +167,7 @@ export default function ProductSelector({ colorOptions, res }: Props) {
         ) : (
           <button
             disabled
-            className="w-full mt-4 bg-gray-200 text-gray-400 text-base font-medium py-3 rounded !cursor-not-allowed"
+            className="w-full mt-4 bg-gray-200 dark:bg-gray-500 dark:text-gray-200 text-gray-400 text-base font-medium py-3 rounded !cursor-not-allowed"
           >
             {res.stock_sum
               ? "انتخاب رنگ و سایز الزامی است"
