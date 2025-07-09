@@ -2,9 +2,10 @@
 
 import { submitProductComment } from "@/actions/add-comment";
 import { CommentSchemaValues } from "@/schemas/add-comment";
-import { useActionState, useEffect, useState, useTransition } from "react";
+import { useActionState, useEffect, useRef, useState, useTransition } from "react";
 import { FaSpinner } from "react-icons/fa";
 import { toast } from "sonner";
+import { useEffect as useEff } from "react";
 
 type FormState = {
   success: boolean;
@@ -26,30 +27,34 @@ interface AddCommentModalProps {
   onClose: () => void;
 }
 
-/**
- * Modal component for submitting product comments.
- * Handles form state, validation errors, and submission status.
- */
 export default function AddCommentModal({
   product_id,
   onClose,
 }: AddCommentModalProps) {
-  // Manage form submission state and response using useActionState hook
   const [state, formAction] = useActionState(
     async (_: FormState, formData: FormData): Promise<FormState> =>
       await submitProductComment(formData),
     initialState
   );
 
-  // Local form values state for controlled textarea
   const [formValues, setFormValues] = useState<Partial<CommentSchemaValues>>({
     product_id,
   });
 
-  // Manage transition state to show loading spinner while submitting
   const [isPending, startTransition] = useTransition();
 
-  // Effect: update form values on state changes and show success toast
+  // Close modal on Escape key press
+  useEffect(() => {
+    function handleKeyDown(e: KeyboardEvent) {
+      if (e.key === "Escape") {
+        onClose();
+      }
+    }
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [onClose]);
+
+  // Update form values & show toast on success
   useEffect(() => {
     setFormValues(state.success ? { product_id } : state.values);
     if (state.success) {
@@ -58,12 +63,47 @@ export default function AddCommentModal({
     }
   }, [state, product_id, onClose]);
 
+  // Basic focus trap: keep focus inside modal (very simple version)
+  const modalRef = useRef<HTMLDivElement>(null);
+
+  useEff(() => {
+    if (!modalRef.current) return;
+
+    function trapFocus(e: KeyboardEvent) {
+      if (e.key !== "Tab") return;
+
+      const focusableElements = modalRef.current!.querySelectorAll<HTMLElement>(
+        'a[href], button:not([disabled]), textarea, input, select, [tabindex]:not([tabindex="-1"])'
+      );
+      if (focusableElements.length === 0) return;
+
+      const firstEl = focusableElements[0];
+      const lastEl = focusableElements[focusableElements.length - 1];
+
+      if (e.shiftKey) {
+        if (document.activeElement === firstEl) {
+          e.preventDefault();
+          lastEl.focus();
+        }
+      } else {
+        if (document.activeElement === lastEl) {
+          e.preventDefault();
+          firstEl.focus();
+        }
+      }
+    }
+
+    modalRef.current.addEventListener("keydown", trapFocus);
+    return () => modalRef.current?.removeEventListener("keydown", trapFocus);
+  }, []);
+
   return (
     <div
       className="fixed inset-0 z-50 bg-black/40 backdrop-blur-sm flex items-center justify-center px-4"
       role="dialog"
       aria-modal="true"
       aria-labelledby="add-comment-title"
+      ref={modalRef}
     >
       <div className="bg-background rounded-lg max-w-md w-full relative p-6 shadow-md">
         <button

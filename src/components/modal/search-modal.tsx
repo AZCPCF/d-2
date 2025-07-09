@@ -51,8 +51,8 @@ export default function SearchModal({ onClose }: SearchModalProps) {
     <div
       className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm px-4 modal"
       role="dialog"
+      id="search-modal"
       aria-modal="true"
-      aria-labelledby="search-modal-title"
     >
       <div className="bg-background dark:text-white w-full min-h-[650px] max-w-xl p-4 rounded-xl relative shadow-lg">
         <div className="w-full flex items-center">

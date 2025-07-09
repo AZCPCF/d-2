@@ -23,6 +23,15 @@ export default function MobileNavbar({ categories }: MobileNavbarProps) {
     setExpandedSub(null);
   };
 
+  // Toggle helper
+  const toggleExpanded = (
+    id: number,
+    current: number | null,
+    setFunc: (id: number | null) => void
+  ) => {
+    setFunc(current === id ? null : id);
+  };
+
   return (
     <div className="max-md:block hidden">
       {/* Hamburger Button */}
@@ -50,6 +59,7 @@ export default function MobileNavbar({ categories }: MobileNavbarProps) {
           open ? "translate-x-0" : "translate-x-full"
         )}
         aria-label="منوی دسته‌بندی‌ها"
+        aria-hidden={open ? "false" : "true"}
       >
         <div className="p-5 h-full flex flex-col overflow-y-auto">
           {/* Header with title and close button */}
@@ -59,6 +69,7 @@ export default function MobileNavbar({ categories }: MobileNavbarProps) {
               onClick={handleClose}
               aria-label="بستن منو"
               className="text-gray-700 hover:text-black transition"
+              type="button"
             >
               <MdClose fontSize={22} />
             </button>
@@ -68,20 +79,7 @@ export default function MobileNavbar({ categories }: MobileNavbarProps) {
           <ul className="space-y-2" role="list">
             {categories.map((cat) => (
               <li key={cat.id}>
-                <div
-                  className="flex justify-between items-center cursor-pointer"
-                  onClick={() => setExpanded(expanded === cat.id ? null : cat.id)}
-                  role="button"
-                  tabIndex={0}
-                  onKeyDown={(e) => {
-                    if (e.key === "Enter" || e.key === " ") {
-                      e.preventDefault();
-                      setExpanded(expanded === cat.id ? null : cat.id);
-                    }
-                  }}
-                  aria-expanded={expanded === cat.id}
-                  aria-controls={`sub-cat-${cat.id}`}
-                >
+                <div className="flex justify-between items-center">
                   <NextLink
                     href={`/categories/${cat.page_url}`}
                     label={cat.title}
@@ -92,9 +90,20 @@ export default function MobileNavbar({ categories }: MobileNavbarProps) {
                     onClick={handleClose}
                   />
                   {cat.sub_categories?.length ? (
-                    <span className="text-2xl text-gray-500" aria-hidden="true">
+                    <button
+                      onClick={() =>
+                        toggleExpanded(cat.id, expanded, setExpanded)
+                      }
+                      aria-expanded={expanded === cat.id}
+                      aria-controls={`sub-cat-${cat.id}`}
+                      className="text-2xl text-gray-500"
+                      aria-label={
+                        expanded === cat.id ? "بستن زیرمنو" : "باز کردن زیرمنو"
+                      }
+                      type="button"
+                    >
                       {expanded === cat.id ? "–" : "+"}
-                    </span>
+                    </button>
                   ) : null}
                 </div>
 
@@ -107,22 +116,7 @@ export default function MobileNavbar({ categories }: MobileNavbarProps) {
                   >
                     {cat.sub_categories.map((sub) => (
                       <li key={sub.id}>
-                        <div
-                          className="flex justify-between items-center cursor-pointer"
-                          onClick={() =>
-                            setExpandedSub(expandedSub === sub.id ? null : sub.id)
-                          }
-                          role="button"
-                          tabIndex={0}
-                          onKeyDown={(e) => {
-                            if (e.key === "Enter" || e.key === " ") {
-                              e.preventDefault();
-                              setExpandedSub(expandedSub === sub.id ? null : sub.id);
-                            }
-                          }}
-                          aria-expanded={expandedSub === sub.id}
-                          aria-controls={`deep-sub-cat-${sub.id}`}
-                        >
+                        <div className="flex justify-between items-center">
                           <NextLink
                             href={`/categories/${sub.page_url}`}
                             label={sub.title}
@@ -133,31 +127,49 @@ export default function MobileNavbar({ categories }: MobileNavbarProps) {
                             onClick={handleClose}
                           />
                           {sub.sub_categories?.length ? (
-                            <span className="text-2xl text-gray-400" aria-hidden="true">
+                            <button
+                              onClick={() =>
+                                toggleExpanded(
+                                  sub.id,
+                                  expandedSub,
+                                  setExpandedSub
+                                )
+                              }
+                              aria-expanded={expandedSub === sub.id}
+                              aria-controls={`deep-sub-cat-${sub.id}`}
+                              className="text-2xl text-gray-400"
+                              aria-label={
+                                expandedSub === sub.id
+                                  ? "بستن زیرمنوی عمیق"
+                                  : "باز کردن زیرمنوی عمیق"
+                              }
+                              type="button"
+                            >
                               {expandedSub === sub.id ? "–" : "+"}
-                            </span>
+                            </button>
                           ) : null}
                         </div>
 
                         {/* Deeper sub-categories */}
-                        {expandedSub === sub.id && sub.sub_categories?.length && (
-                          <ul
-                            className="ml-4 mt-1 space-y-1 border-r border-primary-main pr-2"
-                            id={`deep-sub-cat-${sub.id}`}
-                            role="list"
-                          >
-                            {sub.sub_categories.map((deep) => (
-                              <li key={deep.id} className="p-0.5 flex">
-                                <NextLink
-                                  href={`/categories/${deep.page_url}`}
-                                  label={deep.title}
-                                  className="text-xs text-gray-600 w-full"
-                                  onClick={handleClose}
-                                />
-                              </li>
-                            ))}
-                          </ul>
-                        )}
+                        {expandedSub === sub.id &&
+                          sub.sub_categories?.length && (
+                            <ul
+                              className="ml-4 mt-1 space-y-1 border-r border-primary-main pr-2"
+                              id={`deep-sub-cat-${sub.id}`}
+                              role="list"
+                            >
+                              {sub.sub_categories.map((deep) => (
+                                <li key={deep.id} className="p-0.5 flex">
+                                  <NextLink
+                                    href={`/categories/${deep.page_url}`}
+                                    label={deep.title}
+                                    className="text-xs text-gray-600 w-full"
+                                    onClick={handleClose}
+                                  />
+                                </li>
+                              ))}
+                            </ul>
+                          )}
                       </li>
                     ))}
                   </ul>

@@ -3,7 +3,8 @@ export default function CategoryPageLoading({ title }: { title?: string }) {
     <main
       className="bg-gray-100 p-10 max-sm:p-4 min-h-screen"
       role="status"
-      aria-label="Loading categories"
+      aria-label="در حال بارگذاری دسته‌بندی‌ها"
+      aria-busy="true"
     >
       <section className="bg-background p-10 grid grid-cols-1 shadow-md rounded-lg max-sm:p-4">
         <h1 className="text-4xl font-bold text-center text-primary-main p-4">
@@ -32,7 +33,7 @@ export default function CategoryPageLoading({ title }: { title?: string }) {
                   className="h-4 bg-gray-300 rounded w-5/6 loading"
                   aria-hidden="true"
                 />
-                <div className="flex w-full justify-end ">
+                <div className="flex w-full justify-end">
                   <div
                     className="h-3 bg-gray-200 rounded w-1/3 loading"
                     aria-hidden="true"

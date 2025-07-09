@@ -14,7 +14,7 @@ interface NextImageProps extends ImageFromApiInterface {
 
 /**
  * Wrapper around Next.js Image component.
- * Resolves image URLs properly, handles loading state, and fallback on error.
+ * Handles absolute/relative URLs, fallback, and loading visuals.
  */
 export default function NextImage({
   className,
@@ -22,17 +22,14 @@ export default function NextImage({
   wrapperClassName,
   ...imageProps
 }: NextImageProps) {
-  // Compute the resolved URL based on whether the URL is absolute or relative
   const resolvedUrl =
     imageProps.url.startsWith("https") || imageProps.url.startsWith("/images")
       ? imageProps.url
       : `${fileUrl}${imageProps.url}`;
 
-  // State for current image source and loading status
   const [src, setSrc] = useState(resolvedUrl);
   const [isLoading, setIsLoading] = useState(true);
 
-  // Update src and loading state when resolvedUrl changes
   useEffect(() => {
     setSrc((prev) => {
       if (prev !== resolvedUrl) {
@@ -44,8 +41,7 @@ export default function NextImage({
   }, [resolvedUrl]);
 
   return (
-    <div className={cn("relative ", wrapperClassName)}>
-      {/* Placeholder while loading */}
+    <div className={cn("relative", wrapperClassName)}>
       {isLoading && (
         <div
           className={cn(
@@ -53,6 +49,7 @@ export default function NextImage({
             className
           )}
           aria-hidden="true"
+          role="presentation"
         />
       )}
 
@@ -64,8 +61,11 @@ export default function NextImage({
         onError={() => setSrc("/images/404.png")}
         sizes="100vw"
         onLoad={() => setIsLoading(false)}
-        className={cn("w-full",className, isLoading ? "invisible" : "block")}
-        // You might want to add priority or loading attributes here if needed
+        className={cn(
+          "w-full",
+          className,
+          isLoading ? "opacity-0" : "opacity-100 transition-opacity duration-300"
+        )}
       />
     </div>
   );

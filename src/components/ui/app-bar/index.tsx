@@ -34,9 +34,10 @@ export default function AppBar() {
                   ? "text-primary-main hover:text-primary-main"
                   : "text-white hover:text-primary-main"
               )}
+              aria-current={isActive ? "page" : undefined}
               label={
                 <>
-                  <link.icon size={20} />
+                  <link.icon aria-hidden="true" size={20} />
                   <span className="mt-1">{link.label}</span>
                 </>
               }
