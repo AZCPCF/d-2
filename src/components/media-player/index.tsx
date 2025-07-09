@@ -16,33 +16,29 @@ interface MediaPlayerProps {
 }
 
 /**
- * MediaPlayer component renders a customizable video player with
- * controls for play/pause, volume, mute, seek, and fullscreen.
+ * Accessible MediaPlayer with full controls.
  */
 export default function MediaPlayer({ src, poster }: MediaPlayerProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
-
-  // State for tracking video and UI statuses
   const [videoLoaded, setVideoLoaded] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
-  const [progress, setProgress] = useState(0); // percentage 0 - 100
-  const [volume, setVolume] = useState(1); // 0 to 1
+  const [progress, setProgress] = useState(0); // 0–100 %
+  const [volume, setVolume] = useState(1); // 0–1
   const [muted, setMuted] = useState(false);
   const [fullscreen, setFullscreen] = useState(false);
   const [error, setError] = useState(false);
 
-  // If video or poster is not loaded within 6 seconds, show error
+  // Handle timeout error
   useEffect(() => {
     const timer = setTimeout(() => {
       if (!videoLoaded) setError(true);
-    }, 6000);
+    }, 20000);
     return () => clearTimeout(timer);
   }, [videoLoaded]);
 
-  // Handler for when video metadata is loaded
   const onVideoLoadedMetadata = () => setVideoLoaded(true);
 
-  // Setup and cleanup video event listeners
+  // Video events
   useEffect(() => {
     const video = videoRef.current;
     if (!video) return;
@@ -60,7 +56,6 @@ export default function MediaPlayer({ src, poster }: MediaPlayerProps) {
     video.addEventListener("error", handleError);
     video.addEventListener("loadedmetadata", onVideoLoadedMetadata);
 
-    // Sync volume and muted states to the video element
     video.volume = volume;
     video.muted = muted;
 
@@ -73,7 +68,6 @@ export default function MediaPlayer({ src, poster }: MediaPlayerProps) {
     };
   }, [volume, muted]);
 
-  // Play or pause the video
   const togglePlay = () => {
     const video = videoRef.current;
     if (!video) return;
@@ -84,7 +78,6 @@ export default function MediaPlayer({ src, poster }: MediaPlayerProps) {
     video.pause();
   };
 
-  // Seek video by progress slider (percentage)
   const onSeek = (e: React.ChangeEvent<HTMLInputElement>) => {
     const video = videoRef.current;
     if (!video) return;
@@ -93,7 +86,6 @@ export default function MediaPlayer({ src, poster }: MediaPlayerProps) {
     setProgress(parseFloat(e.target.value));
   };
 
-  // Adjust volume slider
   const onVolumeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const vol = parseFloat(e.target.value);
     setVolume(vol);
@@ -104,13 +96,10 @@ export default function MediaPlayer({ src, poster }: MediaPlayerProps) {
     }
   };
 
-  // Toggle mute state
   const toggleMute = () => {
-    setMuted((prevMuted) => {
-      const newMuted = !prevMuted;
+    setMuted((prev) => {
+      const newMuted = !prev;
       if (videoRef.current) videoRef.current.muted = newMuted;
-
-      // If unmuting and volume is 0, set volume to 0.5 by default
       if (!newMuted && volume === 0) {
         setVolume(0.5);
         if (videoRef.current) videoRef.current.volume = 0.5;
@@ -119,7 +108,6 @@ export default function MediaPlayer({ src, poster }: MediaPlayerProps) {
     });
   };
 
-  // Toggle fullscreen for video container
   const toggleFullscreen = () => {
     const container = videoRef.current?.parentElement;
     if (!container) return;
@@ -133,13 +121,11 @@ export default function MediaPlayer({ src, poster }: MediaPlayerProps) {
     }
   };
 
-  // Format seconds into "m:ss" string with leading zeros for seconds
   const formatTime = (time?: number) => {
     if (!time || isNaN(time)) return "0:00";
     const minutes = Math.floor(time / 60);
     const seconds = Math.floor(time % 60);
-    const pad = (n: number) => (n < 10 ? "0" + n : n);
-    return `${minutes}:${pad(seconds)}`;
+    return `${minutes}:${seconds < 10 ? "0" + seconds : seconds}`;
   };
 
   if (error) {
@@ -150,82 +136,118 @@ export default function MediaPlayer({ src, poster }: MediaPlayerProps) {
         role="alert"
         aria-live="assertive"
       >
-        ویدیو مورد نظر در دسترس نمیباشد.
+        ویدیو مورد نظر در دسترس نمی‌باشد.
       </div>
     );
   }
-
   return (
     <div
       className="relative bg-gray-200 rounded-md overflow-hidden max-w-full"
       dir="rtl"
+      role="region"
+      aria-label="پخش‌کننده ویدیو"
     >
       <video
         ref={videoRef}
         src={src}
         poster={poster.url}
-        className={`w-full aspect-video bg-background relative z-20 transition-opacity duration-500 ${
+        className={`w-full aspect-video bg-background relative transition-opacity duration-500 ${
           videoLoaded ? "opacity-100" : "opacity-0"
         }`}
         preload="metadata"
         playsInline
       />
 
-      {/* Controls */}
       {videoLoaded && (
-        <div className="absolute bottom-0 left-0 right-0 bg-background bg-opacity-70 p-3 flex items-center space-x-3 space-x-reverse select-none">
+        <div
+          data-controls
+          className="absolute bg-gray-200 z-10 border border-primary-main rounded-b-lg bottom-0 flex-row-reverse left-0 right-0 dark:bg-background bg-opacity-70 p-3 flex items-center space-x-3 space-x-reverse select-none"
+        >
+          {/* Fullscreen */}
           <button
-            onClick={toggleFullscreen}
+            onClick={(e) => {
+              e.stopPropagation();
+              toggleFullscreen();
+            }}
             aria-label={fullscreen ? "خروج از حالت تمام صفحه" : "تمام صفحه"}
-            className="text-white text-xl hover:text-blue-400 transition"
+            className="text-primary-main text-xl hover:text-primary-400 transition"
             type="button"
           >
-            {fullscreen ? <FaCompress /> : <FaExpand />}
+            {fullscreen ? (
+              <FaCompress aria-hidden="true" focusable="false" />
+            ) : (
+              <FaExpand aria-hidden="true" focusable="false" />
+            )}
           </button>
 
+          {/* Volume Slider */}
           <input
             type="range"
             min={0}
             max={1}
             step={0.05}
             value={volume}
-            onChange={onVolumeChange}
+            onChange={(e) => {
+              e.stopPropagation();
+              onVolumeChange(e);
+            }}
             aria-label="حجم صدا"
-            className="w-24 accent-blue-500 cursor-pointer"
+            className="w-24 accent-primary-500 cursor-pointer"
           />
 
+          {/* Mute/Unmute */}
           <button
-            onClick={toggleMute}
+            onClick={(e) => {
+              e.stopPropagation();
+              toggleMute();
+            }}
             aria-label={muted ? "بی‌صدا کردن را غیرفعال کن" : "بی‌صدا کن"}
-            className="text-white text-xl hover:text-blue-400 transition"
+            className="text-primary-main text-xl hover:text-primary-400 transition"
             type="button"
           >
-            {muted || volume === 0 ? <FaVolumeMute /> : <FaVolumeUp />}
+            {muted || volume === 0 ? (
+              <FaVolumeMute aria-hidden="true" focusable="false" />
+            ) : (
+              <FaVolumeUp aria-hidden="true" focusable="false" />
+            )}
           </button>
 
-          <span className="text-white text-sm tabular-nums w-20 text-left font-mono select-none">
+          {/* Time */}
+          <span className="text-primary-main text-sm tabular-nums w-20 text-left font-mono select-none">
             {formatTime(videoRef.current?.currentTime)} /{" "}
             {formatTime(videoRef.current?.duration)}
           </span>
 
+          {/* Seek */}
           <input
             type="range"
             min={0}
             max={100}
             step={0.1}
             value={progress}
-            onChange={onSeek}
+            onChange={(e) => {
+              e.stopPropagation();
+              onSeek(e);
+            }}
             aria-label="موقعیت ویدیو"
-            className="flex-grow accent-blue-500 cursor-pointer"
+            className="flex-grow flex-row-reverse flex accent-primary-500 cursor-pointer"
           />
 
+          {/* Play/Pause */}
           <button
-            onClick={togglePlay}
+            onClick={(e) => {
+              e.stopPropagation();
+              togglePlay();
+            }}
             aria-label={isPlaying ? "توقف" : "پخش"}
-            className="text-white text-2xl hover:text-blue-400 transition"
+            className="text-primary-main text-2xl hover:text-primary-400 transition"
             type="button"
           >
-            {isPlaying ? <FaPause /> : <FaPlay />}
+            {isPlaying ? (
+              <FaPause aria-hidden="true" focusable="false" />
+            ) : (
+              <FaPlay aria-hidden="true" focusable="false" />
+            )}
           </button>
         </div>
       )}

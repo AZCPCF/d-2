@@ -6,7 +6,7 @@ interface RedirectLinkProps {
   href: string;
   className?: string;
   title: ReactNode;
-  ariaLabel?: string; // optional for accessibility
+  ariaLabel?: string;
 }
 
 export default function RedirectLink({
@@ -15,6 +15,9 @@ export default function RedirectLink({
   title,
   ariaLabel,
 }: RedirectLinkProps) {
+  const computedAriaLabel =
+    ariaLabel ?? (typeof title === "string" ? title : undefined);
+
   return (
     <Link
       href={href}
@@ -22,7 +25,7 @@ export default function RedirectLink({
         "flex items-center gap-2 w-full p-4 text-white bg-primary-400 rounded-lg text-xl",
         className
       )}
-      aria-label={ariaLabel}
+      aria-label={computedAriaLabel}
     >
       {title}
     </Link>

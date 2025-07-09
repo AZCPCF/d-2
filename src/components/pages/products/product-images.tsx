@@ -86,21 +86,28 @@ export default function ProductImages({ res }: { res: ProductInterface }) {
                 max-lg:w-[75px] max-lg:h-[75px] max-md:w-[65px] max-md:h-[65px] bg-secondary-400 flex justify-center items-center text-white hover:bg-secondary-main duration-200`,
               !res.images.length && "hidden"
             )}
+            aria-label="مشاهده گالری تصاویر"
           >
-            <FaRegImages fontSize={36} />
+            <FaRegImages fontSize={36} aria-hidden="true" focusable="false" />
           </button>
         </div>
       </div>
 
       {/* Modal */}
       {isModalOpen && (
-        <div className="fixed inset-0 z-50 bg-black/40 backdrop-blur-md bg-opacity-80 flex items-center justify-center px-4">
+        <div
+          role="dialog"
+          tabIndex={-1}
+          aria-modal="true"
+          aria-labelledby="gallery-modal-title"
+          className="fixed inset-0 z-50 bg-black/40 backdrop-blur-md bg-opacity-80 flex items-center justify-center px-4"
+        >
           <button
             onClick={closeModal}
             className="absolute top-4 left-4 text-white text-2xl hover:text-red-400 transition"
-            aria-label="Close modal"
+            aria-label="بستن گالری"
           >
-            <IoMdClose />
+            <IoMdClose aria-hidden="true" focusable="false" />
           </button>
           <div className="w-2xl flex flex-col gap-4 items-center relative max-md:pb-20 bg-white rounded-lg">
             <div className="w-full aspect-square">
