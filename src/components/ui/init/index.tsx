@@ -1,5 +1,6 @@
 "use client";
 import { ClientContextProvider } from "@/contexts/client-context";
+import { gaID } from "@/utils/env";
 import { GoogleAnalytics } from "nextjs-google-analytics";
 import { ReactNode, useEffect } from "react";
 import { Toaster } from "sonner";
@@ -24,6 +25,7 @@ export default function ClientInit({ children }: { children: ReactNode }) {
       root.classList.remove("dark");
     }
   }, []);
+  console.log(gaID);
   return (
     <ClientContextProvider>
       <Toaster
@@ -61,7 +63,7 @@ export default function ClientInit({ children }: { children: ReactNode }) {
           Tweet
         </a>
       </div>
-      <GoogleAnalytics trackPageViews />
+      <GoogleAnalytics trackPageViews gaMeasurementId={gaID} />
     </ClientContextProvider>
   );
 }
