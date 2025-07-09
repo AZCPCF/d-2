@@ -6,4 +6,5 @@ Allow: /
 Host: https://azcpcf-d-2.vercel.app
 
 # Sitemaps
-Sitemap: https://azcpcf-d-2.vercel.app/sitemap.xml
+Sitemap: https://azcpcf-d-2.vercel.app/api/sitemap.xml
+
