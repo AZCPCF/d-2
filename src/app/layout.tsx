@@ -7,7 +7,7 @@ import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import { ReactNode } from "react";
 import "./globals.css";
-
+import { SpeedInsights } from "@vercel/speed-insights/next";
 export const viewport: Viewport = {
   themeColor: "#fed00b",
   colorScheme: "light",
@@ -110,6 +110,7 @@ export default function RootLayout({
           <Footer />
           <AppBar />
         </ClientInit>
+        <SpeedInsights />
       </body>
     </html>
   );
