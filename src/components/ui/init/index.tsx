@@ -48,7 +48,7 @@ export default function ClientInit({ children }: { children: ReactNode }) {
       <div className="hidden">
         <div
           className="fb-like"
-          data-href="https://azcpcf-d-2.vercel.app"
+          data-href="https://d-2-orpin.vercel.app"
           data-layout="standard"
           data-action="like"
           data-size="small"
@@ -57,7 +57,7 @@ export default function ClientInit({ children }: { children: ReactNode }) {
         <a
           href="https://twitter.com/share"
           className="twitter-share-button"
-          data-url="https://azcpcf-d-2.vercel.app"
+          data-url="https://d-2-orpin.vercel.app"
           data-show-count="false"
         >
           Tweet

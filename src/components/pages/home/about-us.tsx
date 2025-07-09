@@ -9,20 +9,19 @@ export default function HomePageAboutUs() {
   return (
     <section className="grid max-md:grid-cols-1 grid-cols-2 gap-10 px-4 py-12 bg-white dark:bg-slate-800 max-full mx-auto">
       <div className="overflow-hidden rounded-2xl shadow-md group">
-        {aboutUs?.poster?.url ? (
-          <NextImage
-            {...aboutUs?.poster}
-            alt={aboutUs?.poster.alt || "درباره ما"}
-            className="w-full h-full object-cover aspect-video transition-transform duration-700 group-hover:scale-105"
-          />
-        ) : undefined}
+        <NextImage
+          url="_"
+          {...aboutUs?.poster}
+          alt={aboutUs?.poster?.alt || "درباره ما"}
+          className="w-full h-full object-cover aspect-video transition-transform duration-700 group-hover:scale-105"
+        />
       </div>
       <div className="flex flex-col justify-center gap-6 text-right">
         <h2 className="text-4xl font-extrabold text-primary-main leading-tight">
           درباره ما
         </h2>
         <p className="text-xl text-gray-700 dark:text-white leading-relaxed sm:text-2xl">
-          {aboutUs?.content}
+          {aboutUs?.content || "پوشاک D2 با بیش از دو دهه سابقه فعالیت در زمینه تولید و عرضه پوشاک مردانه و بچگانه با پایبندی به دو اصل کلیدی، 7 روز ضمانت بازگشت کالا و تضمین اصل‌بودن کالا، موفق شده ،به یکی از بهترین فروشگاه اینترنتی ایران تبدیل شود. ما به جرئت میتونیم بگیم که از فروشگاه ما دست خالی بیرون نمیرید و خرید لذت بخشی را تجربه میکنید."}
         </p>
         <div className="mt-6 self-end">
           <Link
