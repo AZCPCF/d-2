@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   ],
   applicationName: "فروشگاه پوشاک D2",
   publisher: "شرکت داده کاو وب",
-  metadataBase: new URL("https://d-2-orpin.vercel.app"),
+  metadataBase: new URL("https://azcpcf-d-2.vercel.app"),
   alternates: {
     canonical: "/",
   },
@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     title: "فروشگاه پوشاک دی دو",
     description:
       "فروشگاه اینترنتی پوشاک D2 در شمال کشور با تولید انواع لباس و پوشاک مردانه و بچگانه و هدف اصلی فروشگاه دی دو لباس ارزان با کیفیت عالی در مازندران و ارسال و فروش اینترنتی به سایر نقاط کشور است.",
-    url: "https://d-2-orpin.vercel.app",
+    url: "https://azcpcf-d-2.vercel.app",
     siteName: "فروشگاه پوشاک دی دو",
     locale: "fa-IR",
     images: [
@@ -106,7 +106,7 @@ export default function RootLayout({
       className={cn("scroll-smooth", kalamehFont.className)}
     >
       <Head>
-        <link rel="canonical" href="https://d-2-orpin.vercel.app/" />
+        <link rel="canonical" href="https://azcpcf-d-2.vercel.app/" />
       </Head>
       <body className="antialiased">
         <ClientInit>

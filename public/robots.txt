@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: d-2-orpin.vercel.app
+Host: azcpcf-d-2.vercel.app
 
 # Sitemaps
-Sitemap: https://d-2-orpin.vercel.app/sitemap.xml
+Sitemap: https://azcpcf-d-2.vercel.app/sitemap.xml
