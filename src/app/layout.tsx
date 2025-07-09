@@ -82,7 +82,7 @@ export const metadata: Metadata = {
   },
   other: {
     "google-adsense-account": "ca-pub-4948885497524533",
-    "google-site-verification": "RqKyXT-2BF05A2ypG3nH0OMMcJNlaNqGDFt0IyrDQXA",
+    "google-site-verification": "76ChdviXsYz1QU2HNUJ599yvEF0E2aHDc4LU9z5FrE4",
     enamad: "۴۴۳۱۲۹۶۴",
     author: "azcpcf",
   },
