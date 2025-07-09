@@ -26,9 +26,13 @@ export const metadata: Metadata = {
     "تیشرت",
     "شلوار",
     "شلوارک",
-    "تومان",
+    "خرید لباس در قائمشهر",
+    "خرید لباس در قائم شهر",
     "ساده",
     "خرید لباس",
+    "فروشگاه پوشاک D2",
+    "d2collection",
+    "تومان",
     "فروشگاه D2",
   ],
   applicationName: "فروشگاه پوشاک D2",
@@ -78,9 +82,8 @@ export const metadata: Metadata = {
   other: {
     "google-adsense-account": "ca-pub-4948885497524533",
     "google-site-verification": "RqKyXT-2BF05A2ypG3nH0OMMcJNlaNqGDFt0IyrDQXA",
-    category: "men-clothes , shoes-and-sneakers , کتونی, لباس مردانه",
     enamad: "۴۴۳۱۲۹۶۴",
-    author: "d2collection",
+    author: "azcpcf",
   },
 };
 
