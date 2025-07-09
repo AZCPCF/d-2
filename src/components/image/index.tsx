@@ -63,8 +63,8 @@ export default function NextImage({
         onLoad={() => setIsLoading(false)}
         className={cn(
           "w-full",
+          isLoading ? "opacity-0" : "opacity-100 transition-opacity duration-300",
           className,
-          isLoading ? "opacity-0" : "opacity-100 transition-opacity duration-300"
         )}
       />
     </div>
