@@ -1,6 +1,6 @@
 "use client";
 import { ClientContextProvider } from "@/contexts/client-context";
-import { gaID } from "@/utils/env";
+import { appUrl, gaID } from "@/utils/env";
 import { GoogleAnalytics } from "nextjs-google-analytics";
 import { ReactNode, useEffect } from "react";
 import { Toaster } from "sonner";
@@ -25,7 +25,6 @@ export default function ClientInit({ children }: { children: ReactNode }) {
       root.classList.remove("dark");
     }
   }, []);
-  console.log(gaID);
   return (
     <ClientContextProvider>
       <Toaster
@@ -48,7 +47,7 @@ export default function ClientInit({ children }: { children: ReactNode }) {
       <div className="hidden">
         <div
           className="fb-like"
-          data-href="https://d-2-orpin.vercel.app"
+          data-href={appUrl}
           data-layout="standard"
           data-action="like"
           data-size="small"
@@ -57,7 +56,7 @@ export default function ClientInit({ children }: { children: ReactNode }) {
         <a
           href="https://twitter.com/share"
           className="twitter-share-button"
-          data-url="https://d-2-orpin.vercel.app"
+          data-url={appUrl}
           data-show-count="false"
         >
           Tweet

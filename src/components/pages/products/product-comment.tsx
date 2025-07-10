@@ -1,6 +1,8 @@
 "use client";
 
 import AddCommentModal from "@/components/modal/add-comment-modal";
+import LogoutModal from "@/components/modal/logout-modal";
+import { useClientCtx } from "@/contexts/client-context";
 import { CommentInterface } from "@/interfaces";
 import { useState } from "react";
 import { FaUserCircle } from "react-icons/fa";
@@ -12,7 +14,7 @@ interface Props {
 
 export default function ProductComments({ comments, productId }: Props) {
   const [showModal, setShowModal] = useState(false);
-
+  const { isLoggedIn } = useClientCtx();
   return (
     <div className="mt-10 space-y-6">
       <div className="text-lg font-semibold text-gray-700 border-b pb-2 flex justify-between items-center">
@@ -68,12 +70,18 @@ export default function ProductComments({ comments, productId }: Props) {
         </div>
       )}
 
-      {showModal && (
-        <AddCommentModal
-          product_id={productId}
-          onClose={() => setShowModal(false)}
-        />
-      )}
+      {showModal &&
+        (isLoggedIn ? (
+          <AddCommentModal
+            product_id={productId}
+            onClose={() => setShowModal(false)}
+          />
+        ) : (
+          <LogoutModal
+            onClose={() => setShowModal(false)}
+            title={"ثبت دیدگاه"}
+          />
+        ))}
     </div>
   );
 }

@@ -10,7 +10,7 @@ type Props = {
 };
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const res = await fetcher<{ seo_options: SeoInterface }>({
+  const { data: res } = await fetcher<{ seo_options: SeoInterface }>({
     endpoint: `product_seo_options/${slug[0]}`,
   });
   return res.seo_options;
@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function Product({ params }: Props) {
   const { slug } = await params;
-  const res = await fetcher<ProductInterface>({
+  const { data: res } = await fetcher<ProductInterface>({
     endpoint: `products/${slug[0]}`,
   });
 

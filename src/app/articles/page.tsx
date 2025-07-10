@@ -10,7 +10,7 @@ import { fetcher } from "@/lib/fetcher";
 // }
 
 export default async function Articles() {
-  const res = await fetcher<{
+  const { data: res } = await fetcher<{
     data: ArticleInterface[];
     category: string;
   }>({

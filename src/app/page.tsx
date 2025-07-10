@@ -8,27 +8,27 @@ import { HomePageRequestInterface } from "@/interfaces/pages/home";
 import { fetcher } from "@/lib/fetcher";
 
 export default async function Home() {
-  const res = await fetcher<HomePageRequestInterface>({
+  const { data: res } = await fetcher<HomePageRequestInterface>({
     endpoint: "home_page",
   });
   return (
-      <main className="home">
-        <HomeStories stories={res.stories} />
-        <HomePageSlider slides={res.slides} />
-        <HomePageCategories />
-        <HomePageProductsSlider
-          title="پیشنهاد شگفت انگیز"
-          href="/incredible-offers"
-          products={res.special_suggestion}
-        />
-        <HomePageAboutUs />
-        <HomePageProductsSlider
-          href="/best-selling"
-          primary={false}
-          title="پر فروش ترین ها"
-          products={res.top_sellers}
-        />
-        <HomePageArticles articles={res.articles} />
-      </main>
+    <main className="home">
+      <HomeStories stories={res.stories} />
+      <HomePageSlider slides={res.slides} />
+      <HomePageCategories />
+      <HomePageProductsSlider
+        title="پیشنهاد شگفت انگیز"
+        href="/incredible-offers"
+        products={res.special_suggestion}
+      />
+      <HomePageAboutUs />
+      <HomePageProductsSlider
+        href="/best-selling"
+        primary={false}
+        title="پر فروش ترین ها"
+        products={res.top_sellers}
+      />
+      <HomePageArticles articles={res.articles} />
+    </main>
   );
 }

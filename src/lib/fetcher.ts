@@ -3,11 +3,6 @@
 import { apiUrlPrimary, apiUrlSecondary, tokenKey } from "@/utils/env";
 import { cookies } from "next/headers";
 
-/**
- * Options for the fetcher function.
- *
- * @template B - Type of the request body.
- */
 type RequestOptions<B = unknown> = {
   endpoint: string;
   method?: "GET" | "POST" | "PUT" | "DELETE" | "PATCH";
@@ -20,14 +15,11 @@ type RequestOptions<B = unknown> = {
 };
 
 /**
- * Generic fetcher utility for server-side API requests.
- * Supports JSON and FormData bodies, query parameters, and automatic token auth from cookies.
+ * Generic fetcher with metadata.
  *
- * @template T - Expected response JSON shape.
+ * @template T - Parsed response data type.
  * @template B - Request body type.
- * @param options - Configuration for the API request.
- * @returns Parsed JSON response as type T.
- * @throws Throws an error if response is not OK (status outside 200-299).
+ * @returns Object containing response `data`, `status`, `ok`, and `headers`.
  */
 export const fetcher = async <T, B = unknown>({
   endpoint,
@@ -38,29 +30,27 @@ export const fetcher = async <T, B = unknown>({
   cache = "force-cache",
   apiUrl = "primary",
   next,
-}: RequestOptions<B>): Promise<T> => {
-  // Retrieve auth token from cookies
+}: RequestOptions<B>): Promise<{
+  data: T;
+  status: number;
+  ok: boolean;
+  headers: Headers;
+}> => {
   const cookieStore = await cookies();
   const token = cookieStore.get(tokenKey || "")?.value;
-
-  // Detect if body is FormData (for file uploads, etc.)
   const isFormData =
     typeof FormData !== "undefined" && body instanceof FormData;
 
-  // Compose request headers
   const headers: Record<string, string> = {
     ...(token ? { Authorization: token } : {}),
     ...customHeaders,
   };
 
-  // If not FormData and not GET, set content type to JSON
   if (!isFormData && method !== "GET") {
     headers["Content-Type"] = "application/json";
   }
-
-  // Build query string from params object
   const queryString = params
-    ? `?${new URLSearchParams(
+    ? `?${apiUrl == "secondary" ? "password=alisun" : ""}${new URLSearchParams(
         Object.entries(params).reduce<Record<string, string>>(
           (acc, [key, value]) => {
             if (value !== undefined) acc[key] = String(value);
@@ -71,7 +61,6 @@ export const fetcher = async <T, B = unknown>({
       ).toString()}`
     : "";
 
-  // Perform the fetch request
   const res = await fetch(
     `${
       apiUrl === "primary" ? apiUrlPrimary : apiUrlSecondary
@@ -80,7 +69,7 @@ export const fetcher = async <T, B = unknown>({
       method,
       headers,
       body: isFormData
-        ? body
+        ? (body as BodyInit)
         : body
         ? JSON.stringify(body as Record<string, unknown>)
         : undefined,
@@ -89,14 +78,31 @@ export const fetcher = async <T, B = unknown>({
     }
   );
 
-  // Throw if HTTP response status is not OK
+  const contentType = res.headers.get("content-type");
+  let data: any = null;
+
+  if (contentType?.includes("application/json")) {
+    data = await res.json();
+  } else {
+    data = await res.text(); // fallback for non-JSON (optional)
+  }
+  if (res.status == 401) {
+    return {
+      data: data?.data ?? data,
+      status: res.status,
+      ok: res.ok,
+      headers: res.headers,
+    };
+  }
   if (!res.ok) {
-    const errorText = await res.text();
     throw new Error(
-      `API Error ${res.status}: ${res.statusText} - ${errorText}`
+      `API Error ${res.status}: ${res.statusText} - ${JSON.stringify(data)}`
     );
   }
-
-  // Parse and return JSON response
-  return res.json() as Promise<T>;
+  return {
+    data: data?.data ?? data, // auto-extract `data` field if exists
+    status: res.status,
+    ok: res.ok,
+    headers: res.headers,
+  };
 };

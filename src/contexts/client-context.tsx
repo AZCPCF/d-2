@@ -1,71 +1,84 @@
 "use client";
 
-import { AboutUsRequestInterface } from "@/interfaces/pages/about-us";
-import { fetcher } from "@/lib/fetcher";
+import { usePathname } from "next/navigation";
 import {
-  createContext,
-  ReactNode,
-  useContext,
   useEffect,
   useState,
+  createContext,
+  useContext,
+  ReactNode,
 } from "react";
+import { AboutUsRequestInterface } from "@/interfaces/pages/about-us";
+import { fetcher } from "@/lib/fetcher";
 
-/**
- * Interface for the client context state.
- * Currently holds optional aboutUs data.
- */
 interface ClientContextInterface {
   aboutUs?: Partial<AboutUsRequestInterface["data"]>;
+  isLoggedIn: boolean;
+  logout: () => void;
 }
 
-/**
- * Default aboutUs content as a fallback before fetching real data.
- */
 const defaultAboutUsContent = {
   content:
     "پوشاک D2 با بیش از دو دهه سابقه فعالیت در زمینه تولید و عرضه پوشاک مردانه و بچگانه با پایبندی به دو اصل کلیدی، 7 روز ضمانت بازگشت کالا و تضمین اصل‌بودن کالا، موفق شده ،به یکی از بهترین فروشگاه اینترنتی ایران تبدیل  شود.\r\n\r\n ما به جرئت میتونیم بگیم که از فروشگاه ما دست خالی بیرون نمیرید و خرید لذت بخشی را تجربه میکنید.",
 };
 
-/**
- * React context for client-side data sharing.
- * Initialized with default aboutUs content.
- */
 export const clientContext = createContext<ClientContextInterface>({
   aboutUs: defaultAboutUsContent,
+  isLoggedIn: false,
+  logout: () => {},
 });
 
-/**
- * Provider component to wrap parts of the app that need access to clientContext.
- * Fetches `about_us` data once on mount and provides it via context.
- */
 export const ClientContextProvider = ({
   children,
 }: {
   children: ReactNode;
 }) => {
   const [aboutUs, setAboutUs] = useState<AboutUsRequestInterface["data"]>();
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const pathname = usePathname(); // for route detection
 
-  // Fetch the about_us data asynchronously
-  const getData = async () => {
-    const res = await fetcher<AboutUsRequestInterface>({
-      endpoint: "about_us",
-    });
-    setAboutUs(res.data);
+  const fetchAboutUs = async () => {
+    try {
+      const { data } = await fetcher<AboutUsRequestInterface>({
+        endpoint: "about_us",
+      });
+      setAboutUs(data.data);
+    } catch (err) {
+      console.error("Failed to fetch about_us:", err);
+    }
   };
-
+  const checkUserStatus = async () => {
+    const { status } = await fetcher<{ status: number }>({
+      endpoint: "user/stats",
+      apiUrl: "secondary",
+    });
+    setIsLoggedIn(status !== 401);
+  };
+  // Fetch once on mount
   useEffect(() => {
-    getData();
+    fetchAboutUs();
+    checkUserStatus();
   }, []);
 
+  // Only refetch user status on route change
+  useEffect(() => {
+    checkUserStatus();
+  }, [pathname]);
+
   return (
-    <clientContext.Provider value={{ aboutUs }}>
+    <clientContext.Provider
+      value={{
+        aboutUs,
+        isLoggedIn,
+        logout: () => {
+          setIsLoggedIn(false);
+        },
+      }}
+    >
       {children}
     </clientContext.Provider>
   );
 };
 
-/**
- * Custom hook to easily consume clientContext.
- */
 export const useClientCtx = (): ClientContextInterface =>
   useContext(clientContext);

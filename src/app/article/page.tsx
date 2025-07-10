@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   ],
 };
 export default async function Articles() {
-  const res = await fetcher<{
+  const { data: res } = await fetcher<{
     data: ArticleInterface[];
     category: string;
   }>({

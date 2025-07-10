@@ -14,8 +14,7 @@ export const metadata: Metadata = {
   ],
 };
 export default async function ContactUs() {
-  
-  const res = await fetcher<AboutUsRequestInterface>({
+  const { data: res } = await fetcher<AboutUsRequestInterface>({
     endpoint: "about_us",
   });
 

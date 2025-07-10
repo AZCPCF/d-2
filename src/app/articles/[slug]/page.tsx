@@ -12,11 +12,9 @@ type Props = {
 //   return res?.seo_options;
 // }
 
-export default async function ArticlesSlug({
-  params,
-}:Props) {
+export default async function ArticlesSlug({ params }: Props) {
   const { slug } = await params;
-  const res = await fetcher<{
+  const { data: res } = await fetcher<{
     data: ArticleInterface[];
     category: string;
   }>({

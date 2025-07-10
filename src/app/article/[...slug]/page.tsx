@@ -8,14 +8,14 @@ import Link from "next/link";
 type Props = { params: Promise<{ slug: string[] }> };
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const res = await fetcher<{ seo_options: SeoInterface }>({
+  const { data: res } = await fetcher<{ seo_options: SeoInterface }>({
     endpoint: `article_seo_options/${slug[0]}`,
   });
   return res.seo_options;
 }
 export default async function Article({ params }: Props) {
   const { slug } = await params;
-  const res = await fetcher<ArticleInterface>({
+  const { data: res } = await fetcher<ArticleInterface>({
     endpoint: `article/${slug[0]}`,
   });
   const { ParsedNode } = parser(res.text);

@@ -2,7 +2,7 @@
 
 import { fetcher } from "@/lib/fetcher";
 
-/** 
+/**
  * Input type for addToCart function
  */
 interface AddToCartInput {
@@ -10,7 +10,7 @@ interface AddToCartInput {
   count: number;
 }
 
-/** 
+/**
  * Response type returned by addToCart
  */
 interface AddToCartResponse {
@@ -27,7 +27,7 @@ interface AddToCartResponse {
 export async function addToCart(
   input: AddToCartInput
 ): Promise<AddToCartResponse> {
-  const res = await fetcher<{ message: string }>({
+  const { data: res } = await fetcher<{ message: string }>({
     endpoint: "comment", // Consider changing to "cart/add"
     method: "POST",
     body: input,

@@ -11,7 +11,7 @@ interface SubmitProductCommentResult {
 
 /**
  * Validates and submits a product comment.
- * 
+ *
  * @param formData - FormData containing `message` and `product_id`.
  * @returns Object with success flag, validation errors (if any), and submitted values.
  */
@@ -35,7 +35,7 @@ export async function submitProductComment(
   }
 
   // Submit validated formData to API
-  const res = await fetcher<{ message: string }>({
+  const { data: res } = await fetcher<{ message: string }>({
     endpoint: "comment",
     method: "POST",
     body: formData,

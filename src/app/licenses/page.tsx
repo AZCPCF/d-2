@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   ],
 };
 export default async function Licenses() {
-  const res = await fetcher<{ data: LicenseInterface[] }>({
+  const { data: res } = await fetcher<{ data: LicenseInterface[] }>({
     endpoint: "licenses",
   });
 

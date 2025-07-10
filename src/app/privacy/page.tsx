@@ -15,8 +15,7 @@ export const metadata: Metadata = {
   ],
 };
 export default async function Privacy() {
-  
-  const res = await fetcher<{ data: { privacy: string } }>({
+  const { data: res } = await fetcher<{ data: { privacy: string } }>({
     endpoint: "privacy_rules",
   });
 

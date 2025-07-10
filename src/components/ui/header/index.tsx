@@ -20,7 +20,9 @@ export type NavbarRequestType = {
 
 export default async function Header() {
   // Fetch navbar data (banner + categories)
-  const res = await fetcher<NavbarRequestType>({ endpoint: "navbar" });
+  const { data: res } = await fetcher<NavbarRequestType>({
+    endpoint: "navbar",
+  });
 
   return (
     <header className="shadow-md relative bg-background">

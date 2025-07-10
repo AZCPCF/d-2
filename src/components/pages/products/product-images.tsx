@@ -37,7 +37,7 @@ export default function ProductImages({ res }: { res: ProductInterface }) {
   }, [handleKeyDown]);
 
   return (
-    <div className="col-span-4 max-md:col-span-12 max-md:order-2 max-lg:col-span-6">
+    <div className="col-span-4 max-md:col-span-12 max-lg:col-span-6 max-md:order-first">
       <div className="sticky top-4 max-md:static flex flex-col items-end gap-6 max-md:items-center">
         {/* Main Image */}
         <button

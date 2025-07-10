@@ -38,7 +38,7 @@ export async function submitContactForm(
   }
 
   // Submit the form data using the secondary API URL
-  const res = await fetcher<{ message: string }>({
+  const { data: res } = await fetcher<{ message: string }>({
     endpoint: "contact_us",
     apiUrl: "secondary",
     method: "POST",

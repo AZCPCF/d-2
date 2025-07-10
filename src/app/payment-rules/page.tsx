@@ -1,4 +1,3 @@
-
 import { fetcher } from "@/lib/fetcher";
 import { parser } from "@/utils/parser";
 import { BiInfoCircle, BiShoppingBag } from "react-icons/bi";
@@ -15,8 +14,7 @@ export const metadata: Metadata = {
   ],
 };
 export default async function PaymentRules() {
-  
-  const res = await fetcher<{ data: { text: string } }>({
+  const { data: res } = await fetcher<{ data: { text: string } }>({
     endpoint: "how_to_order",
     apiUrl: "secondary",
   });

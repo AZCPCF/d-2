@@ -14,8 +14,7 @@ export const metadata: Metadata = {
 };
 
 export default async function Faq() {
-
-  const res = await fetcher<FaqRequestInterface>({ endpoint: "faq" });
+  const { data: res } = await fetcher<FaqRequestInterface>({ endpoint: "faq" });
 
   return (
     <main className="p-10 max-md:p-4 mx-auto bg-gray-100">

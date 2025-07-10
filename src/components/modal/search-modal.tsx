@@ -30,7 +30,9 @@ export default function SearchModal({ onClose }: SearchModalProps) {
     const timeout = setTimeout(async () => {
       setLoading(true);
       try {
-        const { data } = await fetcher<{ data: ProductInterface[] }>({
+        const {
+          data: { data },
+        } = await fetcher<{ data: ProductInterface[] }>({
           endpoint: "search_products",
           params: { search: query },
           apiUrl: "secondary",

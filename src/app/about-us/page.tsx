@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 };
 
 export default async function AboutUs() {
-  const res = await fetcher<AboutUsRequestInterface>({
+  const { data: res } = await fetcher<AboutUsRequestInterface>({
     endpoint: "about_us",
   });
   const { ParsedNode } = parser(res.data.content);

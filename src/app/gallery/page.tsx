@@ -14,9 +14,9 @@ export const metadata: Metadata = {
 };
 
 export default async function Page() {
-  
-
-  const res = await fetcher<GalleryRequestInterface>({ endpoint: "galleries" });
+  const { data: res } = await fetcher<GalleryRequestInterface>({
+    endpoint: "galleries",
+  });
   return (
     <main className="bg-gray-100 p-10 max-md:p-4">
       <section className="bg-background p-10 max-md:p-4 rounded-lg grid grid-cols-4 max-md:grid-cols-2 gap-3 shadow-md">

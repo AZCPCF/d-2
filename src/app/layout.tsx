@@ -9,6 +9,7 @@ import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import { ReactNode } from "react";
 import "./globals.css";
+import { appUrl } from "@/utils/env";
 export const viewport: Viewport = {
   themeColor: "#fed00b",
   colorScheme: "light",
@@ -38,7 +39,7 @@ export const metadata: Metadata = {
   ],
   applicationName: "فروشگاه پوشاک D2",
   publisher: "شرکت داده کاو وب",
-  metadataBase: new URL("https://d-2-orpin.vercel.app"),
+  metadataBase: new URL(appUrl),
   alternates: {
     canonical: "/",
   },
@@ -58,12 +59,12 @@ export const metadata: Metadata = {
     title: "فروشگاه پوشاک دی دو",
     description:
       "فروشگاه اینترنتی پوشاک D2 در شمال کشور با تولید انواع لباس و پوشاک مردانه و بچگانه و هدف اصلی فروشگاه دی دو لباس ارزان با کیفیت عالی در مازندران و ارسال و فروش اینترنتی به سایر نقاط کشور است.",
-    url: "https://d-2-orpin.vercel.app",
+    url: appUrl,
     siteName: "فروشگاه پوشاک دی دو",
     locale: "fa-IR",
     images: [
       {
-        url: "https://d-2-orpin.vercel.app/images/logo.png",
+        url: `${appUrl}/images/logo.png`,
         width: 1200,
         height: 630,
         alt: "فروشگاه پوشاک دی دو",
@@ -75,10 +76,10 @@ export const metadata: Metadata = {
     title: "فروشگاه پوشاک دی دو",
     description:
       "فروشگاه اینترنتی پوشاک D2 در شمال کشور با تولید انواع لباس و پوشاک مردانه و بچگانه و هدف اصلی فروشگاه دی دو لباس ارزان با کیفیت عالی در مازندران و ارسال و فروش اینترنتی به سایر نقاط کشور است.",
-    images: ["https://d-2-orpin.vercel.app/images/logo.png"],
+    images: [`${appUrl}/images/logo.png`],
   },
   icons: {
-    icon: "https://d-2-orpin.vercel.app/images/logo.png",
+    icon: `${appUrl}/images/logo.png`,
   },
   other: {
     "google-adsense-account": "ca-pub-4948885497524533",

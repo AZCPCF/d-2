@@ -14,7 +14,7 @@ type Props = {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const res = await fetcher<{ seo_options: SeoInterface }>({
+  const { data: res } = await fetcher<{ seo_options: SeoInterface }>({
     endpoint: `category_seo_options/${slug}`,
   });
   return res.seo_options;
@@ -24,7 +24,7 @@ export default async function Category({ params, searchParams }: Props) {
   const { slug } = await params;
   const search = await searchParams;
 
-  const res = await fetcher<GetByCategoryRequestInterface>({
+  const { data: res } = await fetcher<GetByCategoryRequestInterface>({
     endpoint: "get_products",
     params: {
       page_url: slug,
@@ -33,7 +33,7 @@ export default async function Category({ params, searchParams }: Props) {
     },
   });
 
-  const filter = await fetcher<FilterInterface>({
+  const { data: filter } = await fetcher<FilterInterface>({
     endpoint: `filters/${slug}`,
   });
 

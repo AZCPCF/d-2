@@ -12,8 +12,7 @@ export const metadata = {
   ],
 };
 export default async function ArticlesHub() {
-  
-  const res = await fetcher<{
+  const { data: res } = await fetcher<{
     important: ArticleInterface[];
     other: ArticleInterface[];
     other_important: ArticleInterface[];
@@ -23,17 +22,17 @@ export default async function ArticlesHub() {
 
   const sections = [
     {
-      id:1,
+      id: 1,
       title: "جدید ترین مقالات مد و پوشاک",
       data: res.important,
     },
     {
-      id:2,
+      id: 2,
       title: "مقالات منتخب پوشاک",
       data: res.other_important,
     },
     {
-      id:3,
+      id: 3,
       title: "سایر مقالات",
       data: res.other,
     },
@@ -44,13 +43,26 @@ export default async function ArticlesHub() {
       {sections.map((section, i) => (
         <section
           key={i}
-          className={cn(`dark:bg-slate-600 shadow-md p-10 grid grid-cols-1 max-sm:p-4`,section.id==2&&"!bg-primary-400")}
+          className={cn(
+            `dark:bg-slate-600 shadow-md p-10 grid grid-cols-1 max-sm:p-4`,
+            section.id == 2 && "!bg-primary-400"
+          )}
         >
           <div className="text-center pb-8">
-            <h1 className={cn("max-sm:text-3xl text-4xl font-bold text-primary-main",section.id==2&&"text-white")}>
+            <h1
+              className={cn(
+                "max-sm:text-3xl text-4xl font-bold text-primary-main",
+                section.id == 2 && "text-white"
+              )}
+            >
               {section.title}
             </h1>
-            <p className={cn("text-gray-500 text-md",section.id==2&&"text-gray-100")}>
+            <p
+              className={cn(
+                "text-gray-500 text-md",
+                section.id == 2 && "text-gray-100"
+              )}
+            >
               مشاهده مقالات منتخب این دسته برای آشنایی بیشتر با سبک‌ها، برندها و
               ترندهای روز.
             </p>
