@@ -50,7 +50,7 @@ export const fetcher = async <T, B = unknown>({
     headers["Content-Type"] = "application/json";
   }
   const queryString = params
-    ? `?${apiUrl == "secondary" ? "password=alisun" : ""}${new URLSearchParams(
+    ? `?${apiUrl == "secondary" ? "password=alisun&" : ""}${new URLSearchParams(
         Object.entries(params).reduce<Record<string, string>>(
           (acc, [key, value]) => {
             if (value !== undefined) acc[key] = String(value);
