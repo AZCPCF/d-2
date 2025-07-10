@@ -1,710 +1,813 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-
+<?xml version="1.0" encoding="UTF-8"?> 
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9"> 
 <url>
   <loc>https://azcpcf-d-2.vercel.app/</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>1.00</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/men-clothes</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/children-clothes-boys</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/children-clothes-girls</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/shoes-and-sneakers</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/ladies-sneakers</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/children-sneakers</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/t-shirt</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/Basic-T-shirt</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/Patterned-T-shirt</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/Dors</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/dors-Basic</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/dors-patterned</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/hoodie</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/Basic-hoodie</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/Patterned-hoodie</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/shirt</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/pirahan-marakeshi</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/pirahan-linen</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/shirt-sport</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/Pirahan-pashmi</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/Pirahan-jean</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/pants</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/comfortable-pants</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/jeans</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/Mom-fit-pants</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/bag-pants</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/cargo-pants</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/shorts</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/Mens-top</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/socks</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/mens-set</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/mens-set-t</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/dors-and-pants-set</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/tops-and-shorts-set</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/Baft</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/patterned-baft</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/Baft-basic</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/puffer-mens</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/puffer-basic</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/puffer-mens-h</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/Jacket-sweatshirt</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/Jacket-sweatshirt-ba</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/Jacket-sweatshirt-p</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/jean-coat</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/Jile</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/C-kot-jean</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/winter-hat</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/winter-hat-basic</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/shorts-pants-men</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/accessories-hat-bag</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/bag-sport-mens</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/kids-set</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/kids-set-shalvar</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/set-kids</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/kids-hoodei</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/kids-shlavar</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/kids-pants</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/kids-dors</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/kids-dors-t</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/kids-hoodie</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/girls-t-shart</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/Basic-T-shirt-for-girls</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/Patterned-t-shirt-girls</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/Girls-set</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/T-shirt-and-shorts-set</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/Hoodie-and-pants-set</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/girls-pants</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/Girls-dors</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/Basic-dors-girls</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/Patterned-dors-girls</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/Girls-hoodie</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/Basic-hoodie-girls</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/Patterned-hoodie-girls</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/SET-CROPTOP</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/set-douther-baby</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/Vance</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/Vance-Amiri</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/Vance-Breschka</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/Vance-Nike</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/Vans-Adidas</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/Running</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/Running-New-Balance</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/Running-Balenciaga</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/Adidas-running</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/Running-Nike</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/Mens-boots</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/Breshka-boot</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/half-boot</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/majlesi-shoes</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/College-shoes</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/Vance-baby</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/Running-child</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/Running-balenciaga</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/sport-child</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/categories/sport-fashion</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/articles-hub</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/about-us</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/contact-us</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://azcpcf-d-2.vercel.app/incredible-offers</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://azcpcf-d-2.vercel.app/products/tshirt-mens-ballenciaga/%D8%AA%DB%8C%D8%B4%D8%B1%D8%AA%20%D8%A8%D8%A7%D9%84%D9%86%D8%B3%DB%8C%D8%A7%DA%AF%D8%A7%20%D9%85%D8%B1%D8%AF%D8%A7%D9%86%D9%87%201</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://azcpcf-d-2.vercel.app/products/tshirt-org-branding/%D8%AA%DB%8C%D8%B4%D8%B1%D8%AA%20%D8%A7%D9%88%D8%B1%D8%AC%DB%8C%D9%86%D8%A7%D9%84%201</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://azcpcf-d-2.vercel.app/products/pants-streetstyle-mens/%D8%B4%D9%84%D9%88%D8%A7%D8%B1%20%D8%A8%DA%AF%20%D8%AC%DB%8C%D9%86%20%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C3</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://azcpcf-d-2.vercel.app/products/pants-streetstyle/%D8%B4%D9%84%D9%88%D8%A7%D8%B1%20%D8%A8%DA%AF%20%D8%AC%DB%8C%D9%86%20%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C2</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://azcpcf-d-2.vercel.app/products/jean-streetstyle/%D8%B4%D9%84%D9%88%D8%A7%D8%B1%20%D8%A8%DA%AF%20%D8%AC%DB%8C%D9%86%20%D9%88%D8%A7%D8%B1%D8%AF%D8%A7%D8%AA%DB%8C%201</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://azcpcf-d-2.vercel.app/products/set-sport-jordan/%D8%B3%D8%AA%20%D8%AA%DB%8C%D8%B4%D8%B1%D8%AA%20%D9%88%20%D8%B4%D9%84%D9%88%D8%A7%D8%B1%DA%A9%20%D9%88%D8%B1%D8%B2%D8%B4%DB%8C3</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://azcpcf-d-2.vercel.app/products/mens-joggers-pants/%D8%B4%D9%84%D9%88%D8%A7%D8%B1%20%D8%A7%D8%B3%D9%84%D8%B4%20%D8%AC%D8%A7%DA%AF%D8%B1%201</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://azcpcf-d-2.vercel.app/products/poloshirt-mens-tshirt/%D8%AA%DB%8C%D8%B4%D8%B1%D8%AA%20%D8%AC%D9%88%D8%AF%D9%88%D9%86%20%DB%8C%D9%82%D9%87%20%D8%AF%D8%A7%D8%B1</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://azcpcf-d-2.vercel.app/products/SHORTS-MENS-FOOTBALL/%D8%B4%D9%84%D9%88%D8%A7%D8%B1%DA%A9%20%DA%A9%DB%8C%D8%AA%20%D8%A8%D8%A7%D8%B4%DA%AF%D8%A7%D9%87%DB%8C%20%201</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://azcpcf-d-2.vercel.app/products/tshirt-mens-kite/%D8%AA%DB%8C%D8%B4%D8%B1%D8%AA%20%DA%A9%DB%8C%D8%AA%20%D8%A8%D8%A7%D8%B4%DA%AF%D8%A7%D9%87%DB%8C%201</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://azcpcf-d-2.vercel.app/products/SHORTS-MENS-NIKE/%D8%B4%D9%84%D9%88%D8%A7%D8%B1%DA%A9%20%D9%BE%D9%86%D8%A8%D9%87%20%D9%84%D8%A7%DA%A9%D8%B1%D8%A7%20%D9%86%D8%A7%DB%8C%DA%A9</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://azcpcf-d-2.vercel.app/products/TSHIRT-MENS-MOROCOU/%D8%AA%DB%8C%D8%B4%D8%B1%D8%AA%20%D9%85%D8%B1%D8%A7%DA%A9%D8%B4%DB%8C%20%D9%86%DB%8C%D9%85%20%D8%B2%DB%8C%D9%BE</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://azcpcf-d-2.vercel.app/products/set-sport-mens/%D8%B3%D8%AA%20%D9%88%D8%B1%D8%B2%D8%B4%DB%8C%20%D9%82%D9%87%D8%B1%D9%85%D8%A7%D9%86%DB%8C%20%D8%AC%D8%B1%D8%AF%D9%86</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://azcpcf-d-2.vercel.app/products/set-sport-mens/%D8%B3%D8%AA%20%D9%88%D8%B1%D8%B2%D8%B4%DB%8C%20%D9%82%D9%87%D8%B1%D9%85%D8%A7%D9%86%DB%8C%20%D9%86%D8%A7%DB%8C%DA%A9</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://azcpcf-d-2.vercel.app/products/tshirt-mens-clothes/%D8%AA%DB%8C%D8%B4%D8%B1%D8%AA%20%D8%B1%DB%8C%D9%86%DA%AF%D8%B1</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://azcpcf-d-2.vercel.app/products/tshirt-mens-shorts/%D8%AA%DB%8C%D8%B4%D8%B1%D8%AA%20%D9%88%20%D8%B4%D9%84%D9%88%D8%A7%D8%B1%DA%A9%20%D9%88%D8%B1%D8%B2%D8%B4%DB%8C</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://azcpcf-d-2.vercel.app/products/set-machinist-mens/%D8%B3%D8%AA%20%D9%88%D8%B1%D8%B2%D8%B4%DB%8C%20%D9%85%DA%86%DB%8C%D9%86%D8%B3%D8%AA</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://azcpcf-d-2.vercel.app/products/bag-sport-mens/%D8%B3%D8%A7%DA%A9%20%D9%88%D8%B1%D8%B2%D8%B4%DB%8C%20just%20do%20it</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://azcpcf-d-2.vercel.app/products/tshirt-cotton-orginal/%D8%AA%DB%8C%D8%B4%D8%B1%D8%AA%20%DB%8C%D9%82%D9%87%20%D8%A8%D9%84%DB%8C%D8%B2%D8%B1%20%D9%84%DB%8C%D9%86%D9%86</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://azcpcf-d-2.vercel.app/best-selling</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://azcpcf-d-2.vercel.app/article/tshirt-box-style</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://azcpcf-d-2.vercel.app/article/style-sport-mens</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://azcpcf-d-2.vercel.app/article/Washing-clothes</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/gallery</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/faq</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/payment-rules</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/privacy</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/rules</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
   <loc>https://azcpcf-d-2.vercel.app/licenses</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
-  <loc>https://azcpcf-d-2.vercel.app/products/TSHIRT-MACHINIST-MEN/%D8%AA%DB%8C%D8%B4%D8%B1%D8%AA%20%D9%85%DA%86%DB%8C%D9%86%DB%8C%D8%B3%D8%AA%201</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>https://azcpcf-d-2.vercel.app/incredible-offers</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
-  <loc>https://azcpcf-d-2.vercel.app/products/pants-morocco-mens/%D8%B4%D9%84%D9%88%D8%A7%D8%B1%20%D8%A7%D9%88%D9%84%D8%AF%20%D9%85%D8%A7%D9%86%DB%8C</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>https://azcpcf-d-2.vercel.app/products/tshirt-mens-ballenciaga/تیشرت بالنسیاگا مردانه 1</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
-  <loc>https://azcpcf-d-2.vercel.app/products/jacet-coat-sport/%D9%BE%DB%8C%D8%B1%D8%A7%D9%87%D9%86%20%D9%84%DB%8C%D9%86%D9%86%20%D8%B7%D8%B1%D8%AD%D8%AF%D8%A7%D8%B1</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>https://azcpcf-d-2.vercel.app/products/tshirt-org-branding/تیشرت اورجینال 1</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
-  <loc>https://azcpcf-d-2.vercel.app/products/TSHIRT-SHORTS-COTTON/%D8%B3%D8%AA%20%D8%AA%DB%8C%D8%B4%D8%B1%D8%AA%20%D9%88%20%D8%B4%D9%84%D9%88%D8%A7%D8%B1%DA%A9%20%D9%86%D8%AE%20%D9%BE%D9%86%D8%A8%D9%872</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>https://azcpcf-d-2.vercel.app/products/pants-streetstyle-mens/شلوار بگ جین وارداتی3</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
-  <loc>https://azcpcf-d-2.vercel.app/products/SET-BULLS-SPORT/%D8%B3%D8%AA%20%D8%AA%D8%A7%D9%BE%20%D9%88%20%D8%B4%D9%84%D9%88%D8%A7%D8%B1%DA%A9%20%D9%88%D8%B1%D8%B2%D8%B4%DB%8C%203</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>https://azcpcf-d-2.vercel.app/products/pants-streetstyle/شلوار بگ جین وارداتی2</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
-  <loc>https://azcpcf-d-2.vercel.app/products/Tshirt-nike-shorts/%D8%B3%D8%AA%20%D8%AA%DB%8C%D8%B4%D8%B1%D8%AA%20%D9%88%20%D8%B4%D9%84%D9%88%D8%A7%D8%B1%DA%A9%20%D9%86%D8%AE%20%D9%BE%D9%86%D8%A8%D9%87</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>https://azcpcf-d-2.vercel.app/products/jean-streetstyle/شلوار بگ جین وارداتی 1</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
-  <loc>https://azcpcf-d-2.vercel.app/article/pantone-mochamousse</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>https://azcpcf-d-2.vercel.app/products/set-sport-jordan/ست تیشرت و شلوارک ورزشی3</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
-  <loc>https://azcpcf-d-2.vercel.app/article/Longevity-of-clothing</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>https://azcpcf-d-2.vercel.app/products/mens-joggers-pants/شلوار اسلش جاگر 1</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
-  <loc>https://azcpcf-d-2.vercel.app/article/Clothing-printing</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>https://azcpcf-d-2.vercel.app/products/poloshirt-mens-tshirt/تیشرت جودون یقه دار</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
-  <loc>https://azcpcf-d-2.vercel.app/article/style</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>https://azcpcf-d-2.vercel.app/products/SHORTS-MENS-FOOTBALL/شلوارک کیت باشگاهی  1</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
 <url>
-  <loc>https://azcpcf-d-2.vercel.app/article/terend</loc>
-  <lastmod>2025-07-09T23:18:56+00:00</lastmod>
-  <priority>0.64</priority>
+  <loc>https://azcpcf-d-2.vercel.app/products/tshirt-mens-kite/تیشرت کیت باشگاهی 1</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
 </url>
-
-
+<url>
+  <loc>https://azcpcf-d-2.vercel.app/products/SHORTS-MENS-NIKE/شلوارک پنبه لاکرا نایک</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
+</url>
+<url>
+  <loc>https://azcpcf-d-2.vercel.app/products/TSHIRT-MENS-MOROCOU/تیشرت مراکشی نیم زیپ</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
+</url>
+<url>
+  <loc>https://azcpcf-d-2.vercel.app/products/set-sport-mens/ست ورزشی قهرمانی جردن</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
+</url>
+<url>
+  <loc>https://azcpcf-d-2.vercel.app/products/set-sport-mens/ست ورزشی قهرمانی نایک</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
+</url>
+<url>
+  <loc>https://azcpcf-d-2.vercel.app/products/tshirt-mens-clothes/تیشرت رینگر</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
+</url>
+<url>
+  <loc>https://azcpcf-d-2.vercel.app/products/tshirt-mens-shorts/تیشرت و شلوارک ورزشی</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
+</url>
+<url>
+  <loc>https://azcpcf-d-2.vercel.app/products/set-machinist-mens/ست ورزشی مچینست</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
+</url>
+<url>
+  <loc>https://azcpcf-d-2.vercel.app/products/bag-sport-mens/ساک ورزشی just do it</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
+</url>
+<url>
+  <loc>https://azcpcf-d-2.vercel.app/products/tshirt-cotton-orginal/تیشرت یقه بلیزر لینن</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
+</url>
+<url>
+  <loc>https://azcpcf-d-2.vercel.app/best-selling</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
+</url>
+<url>
+  <loc>https://azcpcf-d-2.vercel.app/article/tshirt-box-style</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
+</url>
+<url>
+  <loc>https://azcpcf-d-2.vercel.app/article/style-sport-mens</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
+</url>
+<url>
+  <loc>https://azcpcf-d-2.vercel.app/article/Washing-clothes</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
+</url>
+<url>
+  <loc>https://azcpcf-d-2.vercel.app/products/TSHIRT-MACHINIST-MEN/تیشرت مچینیست 1</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
+</url>
+<url>
+  <loc>https://azcpcf-d-2.vercel.app/products/pants-morocco-mens/شلوار اولد مانی</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
+</url>
+<url>
+  <loc>https://azcpcf-d-2.vercel.app/products/jacet-coat-sport/پیراهن لینن طرحدار</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
+</url>
+<url>
+  <loc>https://azcpcf-d-2.vercel.app/products/TSHIRT-SHORTS-COTTON/ست تیشرت و شلوارک نخ پنبه2</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
+</url>
+<url>
+  <loc>https://azcpcf-d-2.vercel.app/products/SET-BULLS-SPORT/ست تاپ و شلوارک ورزشی 3</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
+</url>
+<url>
+  <loc>https://azcpcf-d-2.vercel.app/products/Tshirt-nike-shorts/ست تیشرت و شلوارک نخ پنبه</loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <lastmod>2025-07-10</lastmod>
+</url>
 </urlset>
