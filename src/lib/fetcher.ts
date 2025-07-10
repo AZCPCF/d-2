@@ -86,13 +86,9 @@ export const fetcher = async <T, B = unknown>({
   } else {
     data = await res.text(); // fallback for non-JSON (optional)
   }
-  const finalData =
-    typeof data === "object" && data !== null && "data" in data
-      ? (data as { data: T }).data
-      : (data as T);
   if (res.status == 401) {
     return {
-      data:finalData,
+      data: data as T,
       status: res.status,
       ok: res.ok,
       headers: res.headers,
@@ -104,7 +100,7 @@ export const fetcher = async <T, B = unknown>({
     );
   }
   return {
-    data: finalData,
+    data: data as T,
     status: res.status,
     ok: res.ok,
     headers: res.headers,
