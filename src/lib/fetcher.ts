@@ -79,16 +79,20 @@ export const fetcher = async <T, B = unknown>({
   );
 
   const contentType = res.headers.get("content-type");
-  let data: any = null;
+  let data: unknown = null;
 
   if (contentType?.includes("application/json")) {
     data = await res.json();
   } else {
     data = await res.text(); // fallback for non-JSON (optional)
   }
+  const finalData =
+    typeof data === "object" && data !== null && "data" in data
+      ? (data as { data: T }).data
+      : (data as T);
   if (res.status == 401) {
     return {
-      data: data?.data ?? data,
+      data:finalData,
       status: res.status,
       ok: res.ok,
       headers: res.headers,
@@ -100,7 +104,7 @@ export const fetcher = async <T, B = unknown>({
     );
   }
   return {
-    data: data?.data ?? data, // auto-extract `data` field if exists
+    data: finalData,
     status: res.status,
     ok: res.ok,
     headers: res.headers,

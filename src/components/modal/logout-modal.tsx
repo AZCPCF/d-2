@@ -16,7 +16,7 @@ export default function LogoutModal({
     <NextModal
       jsx={
         <div className="flex justify-center flex-wrap gap-4 py-8">
-          <p className="text-xl text-primary-main max-md:text-lg">
+          <p className="text-lg text-primary-main max-md:text-lg max-sm:text-base">
             برای {title} ابتدا باید وارد حساب کاربری خود شوید.
           </p>
           <NextLink
