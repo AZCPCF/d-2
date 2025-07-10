@@ -14,6 +14,7 @@ import { fetcher } from "@/lib/fetcher";
 interface ClientContextInterface {
   aboutUs?: Partial<AboutUsRequestInterface["data"]>;
   isLoggedIn: boolean;
+  user: { id: number };
   logout: () => void;
 }
 
@@ -26,6 +27,7 @@ export const clientContext = createContext<ClientContextInterface>({
   aboutUs: defaultAboutUsContent,
   isLoggedIn: false,
   logout: () => {},
+  user: { id: 0 },
 });
 
 export const ClientContextProvider = ({
@@ -35,6 +37,7 @@ export const ClientContextProvider = ({
 }) => {
   const [aboutUs, setAboutUs] = useState<AboutUsRequestInterface["data"]>();
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [user, setUser] = useState({ id: 0 });
   const pathname = usePathname(); // for route detection
 
   const fetchAboutUs = async () => {
@@ -52,6 +55,11 @@ export const ClientContextProvider = ({
       endpoint: "user/stats",
       apiUrl: "secondary",
     });
+    const { data } = await fetcher<{ data: { id: number } }>({
+      endpoint: "user_info",
+      apiUrl: "secondary",
+    });
+    setUser(data.data);
     setIsLoggedIn(status !== 401);
   };
   // Fetch once on mount
@@ -69,6 +77,7 @@ export const ClientContextProvider = ({
     <clientContext.Provider
       value={{
         aboutUs,
+        user,
         isLoggedIn,
         logout: () => {
           setIsLoggedIn(false);

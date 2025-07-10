@@ -54,6 +54,7 @@ export interface ProductInterface {
   color_size_cache: (ColorInterface & { sizes: SizeInterface[] })[];
   stock_sum: number;
   description: string;
+  favorites: string;
   categories: CategoryInterface[];
   similar: ProductInterface[];
   comments: CommentInterface[];
