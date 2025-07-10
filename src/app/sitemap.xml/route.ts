@@ -1,11 +1,10 @@
-export const dynamic = 'force-dynamic';
+export const dynamic = "force-dynamic";
 
 export async function GET() {
   const baseUrl = "https://d-2-orpin.vercel.app/";
   return new Response(
     `<?xml version="1.0" encoding="UTF-8"?>
     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-        <url><loc>${baseUrl}</loc><lastmod>2025-07-10</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url>
         <url><loc>${baseUrl}categories/men-clothes</loc><priority>1.0</priority><changefreq>daily</changefreq><lastmod>2025-07-10</lastmod></url>
         <url><loc>${baseUrl}categories/children-clothes-boys</loc><priority>1.0</priority><changefreq>daily</changefreq><lastmod>2025-07-10</lastmod></url>
         <url><loc>${baseUrl}categories/children-clothes-girls</loc><priority>1.0</priority><changefreq>daily</changefreq><lastmod>2025-07-10</lastmod></url>
@@ -142,8 +141,10 @@ export async function GET() {
         <url><loc>${baseUrl}products/Tshirt-nike-shorts/ست تیشرت و شلوارک نخ پنبه</loc><priority>1.0</priority><changefreq>daily</changefreq><lastmod>2025-07-10</lastmod></url>
     </urlset>`.trim(),
     {
+      status: 200,
       headers: {
         "Content-Type": "application/xml",
+        "Cache-Control": "no-store",
       },
     }
   );
