@@ -14,6 +14,7 @@ export const fileUrl: string | undefined = process.env.NEXT_PUBLIC_FILE_URL;
 // Provide a default empty string if PANEL_URL is not defined
 export const panelUrl: string = process.env.NEXT_PUBLIC_PANEL_URL || "";
 export const gaID: string = process.env.NEXT_PUBLIC_GA_ID || "";
+export const appUrl: string = process.env.NEXT_PUBLIC_APP_URL || "";
 const env = {
   apiUrlPrimary,
   apiUrlSecondary,
@@ -21,6 +22,7 @@ const env = {
   fileUrl,
   panelUrl,
   gaID,
+  appUrl,
 };
 
 export default env;
