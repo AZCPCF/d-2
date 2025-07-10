@@ -3,13 +3,12 @@ import Footer from "@/components/ui/footer";
 import Header from "@/components/ui/header";
 import ClientInit from "@/components/ui/init";
 import { cn } from "@/utils/cn";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import { ReactNode } from "react";
 import "./globals.css";
-import { SpeedInsights } from "@vercel/speed-insights/next";
-import { Analytics } from "@vercel/analytics/next";
-import Head from "next/head";
 export const viewport: Viewport = {
   themeColor: "#fed00b",
   colorScheme: "light",
@@ -39,7 +38,7 @@ export const metadata: Metadata = {
   ],
   applicationName: "فروشگاه پوشاک D2",
   publisher: "شرکت داده کاو وب",
-  metadataBase: new URL("https://azcpcf-d-2.vercel.app"),
+  metadataBase: new URL("https://d-2-orpin.vercel.app"),
   alternates: {
     canonical: "/",
   },
@@ -59,12 +58,12 @@ export const metadata: Metadata = {
     title: "فروشگاه پوشاک دی دو",
     description:
       "فروشگاه اینترنتی پوشاک D2 در شمال کشور با تولید انواع لباس و پوشاک مردانه و بچگانه و هدف اصلی فروشگاه دی دو لباس ارزان با کیفیت عالی در مازندران و ارسال و فروش اینترنتی به سایر نقاط کشور است.",
-    url: "https://azcpcf-d-2.vercel.app",
+    url: "https://d-2-orpin.vercel.app",
     siteName: "فروشگاه پوشاک دی دو",
     locale: "fa-IR",
     images: [
       {
-        url: "/favicon.ico",
+        url: "https://d-2-orpin.vercel.app/images/logo.png",
         width: 1200,
         height: 630,
         alt: "فروشگاه پوشاک دی دو",
@@ -76,10 +75,10 @@ export const metadata: Metadata = {
     title: "فروشگاه پوشاک دی دو",
     description:
       "فروشگاه اینترنتی پوشاک D2 در شمال کشور با تولید انواع لباس و پوشاک مردانه و بچگانه و هدف اصلی فروشگاه دی دو لباس ارزان با کیفیت عالی در مازندران و ارسال و فروش اینترنتی به سایر نقاط کشور است.",
-    images: ["/favicon.ico"],
+    images: ["https://d-2-orpin.vercel.app/images/logo.png"],
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: "https://d-2-orpin.vercel.app/images/logo.png",
   },
   other: {
     "google-adsense-account": "ca-pub-4948885497524533",
@@ -105,9 +104,6 @@ export default function RootLayout({
       dir="rtl"
       className={cn("scroll-smooth", kalamehFont.className)}
     >
-      <Head>
-        <link rel="canonical" href="https://azcpcf-d-2.vercel.app/" />
-      </Head>
       <body className="antialiased">
         <ClientInit>
           <Header />
