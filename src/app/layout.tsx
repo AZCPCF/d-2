@@ -100,11 +100,7 @@ export default function RootLayout({
   children: ReactNode;
 }>) {
   return (
-    <html
-      lang="fa"
-      dir="rtl"
-      className={cn("scroll-smooth", kalamehFont.className)}
-    >
+    <html lang="fa" dir="rtl" className={kalamehFont.className}>
       <body className="antialiased">
         <ClientInit>
           <Header />

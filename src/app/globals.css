@@ -8,6 +8,9 @@
   --background: #ffffff;
   --foreground: #171717;
 }
+html {
+  scroll-behavior: smooth;
+}
 * {
   direction: rtl;
   font-family: kalameh !important;
@@ -15,6 +18,22 @@
 ::selection {
   background-color: var(--color-primary-main);
   color: black;
+}
+.dark {
+  --color-background: var(--color-slate-700);
+  --color-foreground: var(--foreground, #f1f1f1);
+  /* 🌌 Sky (Primary) */
+  --color-primary-50: var(--color-sky-50);
+  --color-primary-100: var(--color-sky-100);
+  --color-primary-200: var(--color-sky-200);
+  --color-primary-300: var(--color-sky-300);
+  --color-primary-400: var(--color-sky-400);
+  --color-primary-500: var(--color-sky-500);
+  --color-primary-600: var(--color-sky-600);
+  --color-primary-700: var(--color-sky-700);
+  --color-primary-800: var(--color-sky-800);
+  --color-primary-900: var(--color-sky-900);
+  --color-primary-main: var(--color-primary-500);
 }
 @theme {
   --color-background: var(--background);
@@ -44,35 +63,6 @@
   --font-kalameh: kalameh;
 }
 @custom-variant dark (&:where(.dark, .dark *));
-.dark {
-  --color-background: var(--color-slate-700);
-  --color-foreground: var(--foreground, #f1f1f1);
-  /* 🌌 Sky (Primary) */
-  --color-primary-50: var(--color-sky-50);
-  --color-primary-100: var(--color-sky-100);
-  --color-primary-200: var(--color-sky-200);
-  --color-primary-300: var(--color-sky-300);
-  --color-primary-400: var(--color-sky-400);
-  --color-primary-500: var(--color-sky-500);
-  --color-primary-600: var(--color-sky-600);
-  --color-primary-700: var(--color-sky-700);
-  --color-primary-800: var(--color-sky-800);
-  --color-primary-900: var(--color-sky-900);
-  --color-primary-main: var(--color-primary-500);
-
-  /* 🍃 teal (Secondary) */
-  /* --color-secondary-50: var(--color-teal-50);
-  --color-secondary-100: var(--color-teal-100);
-  --color-secondary-200: var(--color-teal-200);
-  --color-secondary-300: var(--color-teal-300);
-  --color-secondary-400: var(--color-teal-400);
-  --color-secondary-500: var(--color-teal-500);
-  --color-secondary-600: var(--color-teal-600);
-  --color-secondary-700: var(--color-teal-700);
-  --color-secondary-800: var(--color-teal-800);
-  --color-secondary-900: var(--color-teal-900);
-  --color-secondary-main: var(--color-teal-500); */
-}
 
 .scrollbar-none {
   overflow: scroll;
