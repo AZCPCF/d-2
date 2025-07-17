@@ -9,7 +9,7 @@ export default function ProductInfo({res}:{res:ProductInterface}) {
       <div className="sticky top-4 max-md:static flex flex-col gap-4">
         <div className="flex flex-wrap items-center gap-1 text-sm text-secondary-600">
           {res.categories.reverse().map((category, index, self) => (
-            <div className="flex items-center" key={category.id}>
+            <div className="flex items-center" key={index}>
               <Link
                 href={`/categories/${category.page_url}`}
                 className="hover:underline px-2 py-1 rounded bg-secondary-50 dark:bg-slate-400 text-base"

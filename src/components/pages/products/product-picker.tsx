@@ -31,7 +31,7 @@ export default function ProductSelector({ colorOptions, res }: Props) {
   const [title, setTitle] = useState("");
 
   const { user } = useClientCtx();
-  const [isFav, setIsFav] = useState(favorites.includes(user.id));
+  const [isFav, setIsFav] = useState(favorites.includes(user?.id));
 
   const selectedColor = useMemo(
     () => colorOptions.find((c) => c.color_id === selectedColorId),
@@ -39,8 +39,8 @@ export default function ProductSelector({ colorOptions, res }: Props) {
   );
 
   useEffect(() => {
-    setIsFav(favorites.includes(user.id));
-  }, [user.id, favorites]);
+    setIsFav(favorites.includes(user?.id));
+  }, [user?.id, favorites]);
 
   useEffect(() => {
     if (selectedColor?.sizes?.length) {

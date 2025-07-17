@@ -40,7 +40,7 @@ export default async function Category({ params, searchParams }: Props) {
   const hasProducts = res.data.length;
 
   return (
-    <main className={cn("px-6 py-10 max-sm:px-3", !hasProducts && "bg-white")}>
+    <main className={cn("px-6 py-10 max-sm:px-3 !bg-gray-50 dark:!bg-slate-800", !hasProducts && "bg-background")}>
       <section className="mx-auto space-y-10">
         {/* Title */}
         <h1 className="text-4xl font-bold text-center text-primary-main">
@@ -53,7 +53,7 @@ export default async function Category({ params, searchParams }: Props) {
         </div>
 
         {hasProducts ? (
-          <div className="grid grid-cols-5 gap-6 max-xl:grid-cols-4 max-lg:grid-cols-3 max-md:grid-cols-2 max-sm:grid-cols-1">
+          <div className="grid grid-cols-5 gap-6 max-xl:grid-cols-4 max-lg:grid-cols-3 max-md:!grid-cols-2">
             {res.data.map((product, index) => (
               <ProductCard
                 key={`categories-product-item-${index}`}

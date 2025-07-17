@@ -2,14 +2,13 @@ import AppBar from "@/components/ui/app-bar";
 import Footer from "@/components/ui/footer";
 import Header from "@/components/ui/header";
 import ClientInit from "@/components/ui/init";
-import { cn } from "@/utils/cn";
+import { appUrl } from "@/utils/env";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import { ReactNode } from "react";
 import "./globals.css";
-import { appUrl } from "@/utils/env";
 export const viewport: Viewport = {
   themeColor: "#fed00b",
   colorScheme: "light",
