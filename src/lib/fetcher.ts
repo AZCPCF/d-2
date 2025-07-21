@@ -42,7 +42,7 @@ export const fetcher = async <T, B = unknown>({
     typeof FormData !== "undefined" && body instanceof FormData;
 
   const headers: Record<string, string> = {
-    ...(token ? { Authorization: token } : {}),
+    ...(token ? { Authorization: `Bearer ${token}` } : {}),
     ...customHeaders,
   };
 

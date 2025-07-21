@@ -28,11 +28,11 @@ export async function addToCart(
   input: AddToCartInput
 ): Promise<AddToCartResponse> {
   const { data: res } = await fetcher<{ message: string }>({
-    endpoint: "comment", // Consider changing to "cart/add"
+    endpoint: "user/cart",
     method: "POST",
+    apiUrl: "secondary",
     body: input,
   });
-
   if (res.message !== "ok") {
     return {
       success: false,
@@ -40,7 +40,6 @@ export async function addToCart(
       values: {},
     };
   }
-
   return {
     success: true,
     errors: {},

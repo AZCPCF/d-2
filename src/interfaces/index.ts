@@ -10,6 +10,7 @@ export interface CategoryInterface {
 export interface ColorInterface {
   id: number;
   title: string;
+  stock:number;
   color: string;
   color_id: string;
 }
@@ -27,7 +28,7 @@ export interface SizeInterface {
   id: number;
   title: string;
   stock: number;
-  stock_id: string;
+  stock_id: number;
   color_size: string;
 }
 
@@ -55,6 +56,7 @@ export interface ProductInterface {
   stock_sum: number;
   description: string;
   favorites: string;
+  reminders: number[];
   categories: CategoryInterface[];
   similar: ProductInterface[];
   comments: CommentInterface[];

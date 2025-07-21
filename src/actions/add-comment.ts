@@ -36,11 +36,12 @@ export async function submitProductComment(
 
   // Submit validated formData to API
   const { data: res } = await fetcher<{ message: string }>({
-    endpoint: "comment",
+    endpoint: "user/comment",
     method: "POST",
+    apiUrl: "secondary",
     body: formData,
   });
-
+  console.log(res);
   // Return result status
   return {
     success: res.message === "ok",
