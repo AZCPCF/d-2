@@ -14,11 +14,24 @@ import NextLink from "@/components/link";
 export default function HeaderButtons() {
   return (
     <div className="flex gap-3 max-[500px]:gap-2 items-center">
+      {/* Theme Toggle */}
+      <NextButton
+        onClick={() => {
+          toggleTheme();
+        }}
+        title={
+          <>
+            <BiMoon className="dark:hidden" fontSize={24} />
+            <FaSun className="dark:block hidden" fontSize={24} />
+          </>
+        }
+        className="p-2.25 max-[500px]:p-1.5 flex text-primary-main justify-center rounded-lg text-lg duration-100 cursor-pointer"
+      />
       {/* Cart Button */}
       <NextLink
         target="_blank"
         rel="noopener"
-        href={`${panelUrl}/cart`}
+        href={`${panelUrl}`}
         label={<FiShoppingCart fontSize={24} />}
         className="p-2.5 max-[500px]:p-1.5 bg-secondary-main text-white flex justify-center hover:text-white rounded-lg text-lg duration-100 cursor-pointer"
       />
@@ -36,19 +49,6 @@ export default function HeaderButtons() {
           </div>
         }
         className="p-2.25 max-[500px]:p-1.5 rounded-md text-lg bg-primary-main hover:text-white duration-100 cursor-pointer text-white"
-      />
-      {/* Theme Toggle */}
-      <NextButton
-        onClick={() => {
-          toggleTheme();
-        }}
-        title={
-          <>
-            <BiMoon className="dark:hidden" fontSize={24} />
-            <FaSun className="dark:block hidden" fontSize={24} />
-          </>
-        }
-        className="p-2.25 max-[500px]:p-1.5 flex text-primary-main justify-center rounded-lg text-lg duration-100 cursor-pointer"
       />
     </div>
   );

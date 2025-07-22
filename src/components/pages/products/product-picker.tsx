@@ -87,7 +87,7 @@ export default function ProductSelector({ colorOptions, res }: Props) {
 
   const toggleFavorite = async () => {
     setLoading(true);
-    const { status,data } = await fetcher({
+    const { status } = await fetcher({
       endpoint: `user/favorite/${res.id}`,
       apiUrl: "secondary",
       cache: "no-store",

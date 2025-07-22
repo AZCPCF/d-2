@@ -1,0 +1,73 @@
+{
+  "id": "azcpcf-d2-userpanel",
+  "dir": "rtl",
+  "lang": "fa",
+  "name": "D2 Collection (User Panel)",
+  "short_name": "D2 Collection (User Panel)",
+  "description": "پنل کاربری فروشگاه پوشاک مردانه و بچگانه D2 Collection",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "display_override": ["standalone", "fullscreen", "window-controls-overlay"],
+  "orientation": "portrait",
+  "background_color": "#ffffff",
+  "theme_color": "#fed00b",
+  "prefer_related_applications": false,
+  "launch_handler": {
+    "client_mode": "auto"
+  },
+  "categories": ["shopping", "dashboard", "user"],
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "/screenshots/userpanel-light.png",
+      "platform": "windows"
+    },
+    {
+      "src": "/screenshots/userpanel-dark.png",
+      "platform": "windows"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "داشبورد",
+      "url": "/dashboard",
+      "icons": [{ "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" }]
+    },
+    {
+      "name": "سفارش‌های من",
+      "url": "/orders",
+      "icons": [{ "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" }]
+    },
+    {
+      "name": "ویرایش حساب",
+      "url": "/profile",
+      "icons": [{ "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" }]
+    }
+  ]
+}
