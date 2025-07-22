@@ -1,8 +1,7 @@
 "use client";
-import { usePathname } from "next/navigation";
+import { panelUrl } from "@/utils/env";
 import NextModal from ".";
 import NextLink from "../link";
-import { panelUrl } from "@/utils/env";
 
 export default function LogoutModal({
   onClose,
@@ -11,7 +10,6 @@ export default function LogoutModal({
   onClose: () => void;
   title: string;
 }) {
-  const pathname = usePathname();
   return (
     <NextModal
       jsx={
@@ -20,7 +18,7 @@ export default function LogoutModal({
             برای {title} ابتدا باید وارد حساب کاربری خود شوید.
           </p>
           <NextLink
-            href={`${panelUrl}/login?back=${pathname}`}
+            href={`${panelUrl}`}
             label={"ورود به حساب کاربری"}
             className="bg-primary-main hover:bg-primary-600 hover:text-white text-white px-5 py-2 rounded transition"
           />
