@@ -1,4 +1,4 @@
-import { appUrl, tokenKey } from "@/utils/env";
+import { appUrl } from "@/utils/env";
 import { cookies } from "next/headers";
 
 export async function POST(request: Request): Promise<Response> {
@@ -13,12 +13,8 @@ export async function POST(request: Request): Promise<Response> {
       });
     }
     const nextCookies = await cookies();
-
-    nextCookies.set({
-      name: tokenKey!,
-      value: token,
-      maxAge: 60 * 60 * 24 * 365,
-    });
+    const age = 60 * 60 * 24 * 365;
+    nextCookies.set("_2ktd__", token, { maxAge: age, expires: age });
 
     return new Response(
       JSON.stringify({ message: "Token received and set", appUrl }),
