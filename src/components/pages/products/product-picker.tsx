@@ -63,28 +63,41 @@ export default function ProductSelector({ colorOptions, res }: Props) {
       setSelectedSizeId(null);
     }
   }, [selectedColor]);
-
-  useEffect(() => {
-    if (!user) return;
-    fetcher<{
+  const fetch = async () => {
+    const res = await fetcher<{
       product: { stock_id: number; id: number; count: number }[];
-    }>({ endpoint: "user/cart", apiUrl: "secondary" }).then((res) => {
-      if (res.data.product) {
-        setCartItems(res.data.product);
-      }
+    }>({
+      endpoint: "user/cart",
+      apiUrl: "secondary",
+      cache: "no-store",
+      headers: {
+        "Cache-Control": "no-store",
+      },
     });
+    console.log(res);
+    if (res.data.product) {
+      setCartItems(res.data.product);
+    }
+  };
+  useEffect(() => {
+    fetch();
   }, [user]);
-console.log(cartItems);
+  console.log(cartItems);
   const existingCartItem = cartItems.find(
     (item) => item.stock_id === Number(selectedSizeId)
   );
 
   const toggleFavorite = async () => {
     setLoading(true);
-    const { status } = await fetcher({
+    const { status,data } = await fetcher({
       endpoint: `user/favorite/${res.id}`,
       apiUrl: "secondary",
+      cache: "no-store",
+      headers: {
+        "Cache-Control": "no-store",
+      },
     });
+    console.log(data);
     if (status === 401) {
       setTitle("ثبت علاقه مندی");
     }

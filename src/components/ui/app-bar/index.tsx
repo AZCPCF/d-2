@@ -24,6 +24,7 @@ export default function AppBar() {
       >
         {appBarLinks.map((link, index) => {
           const isActive = pathname === link.href;
+          console.log(isActive);
           return (
             <NextLink
               key={`app-bar-link-${index}`}
@@ -31,8 +32,8 @@ export default function AppBar() {
               className={cn(
                 "flex flex-col items-center text-xs font-medium duration-200",
                 isActive
-                  ? "text-primary-main hover:text-primary-main"
-                  : "text-white hover:text-primary-main"
+                  ? "!text-primary-300 hover:!text-primary-300"
+                  : "text-white hover:text-primary-300"
               )}
               aria-current={isActive ? "page" : undefined}
               label={

@@ -32,6 +32,10 @@ export async function addToCart(
     method: "POST",
     apiUrl: "secondary",
     body: input,
+    cache: "no-store",
+    headers: {
+      "Cache-Control": "no-store",
+    },
   });
   if (res.message !== "ok") {
     return {
