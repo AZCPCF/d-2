@@ -5,7 +5,6 @@ import { fetcher } from "@/lib/fetcher";
 //   const res = await fetcher<{ seo_options: SeoInterface }>({
 //     endpoint: `article_category_seo_options/1`,
 //   });
-//   console.log(res);
 //   return res.seo_options;
 // }
 

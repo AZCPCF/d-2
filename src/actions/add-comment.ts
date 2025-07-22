@@ -41,7 +41,6 @@ export async function submitProductComment(
     apiUrl: "secondary",
     body: formData,
   });
-  console.log(res);
   // Return result status
   return {
     success: res.message === "ok",

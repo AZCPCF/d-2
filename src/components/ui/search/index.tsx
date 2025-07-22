@@ -206,7 +206,7 @@ export default function Search({ colors, sizes }: FilterInterface) {
 
       {/* 📱 Modal Filter Drawer (Mobile View) */}
       {isModalOpen && (
-        <div className="fixed inset-0 z-50 bg-black/40 bg-opacity-50 flex items-center justify-center !font-kalameh modal">
+        <div className="fixed inset-0 z-50 bg-black/40 backdrop-blur-md bg-opacity-50 flex items-center justify-center !font-kalameh modal">
           <div className="bg-background dark:text-white w-[90%] max-h-[90vh] p-4 rounded-lg overflow-y-auto relative">
             <div className="flex justify-between items-center mb-4">
               <h2 className="text-lg font-semibold">اعمال فیلتر</h2>

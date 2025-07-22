@@ -74,7 +74,6 @@ export default function ProductSelector({ colorOptions, res }: Props) {
         "Cache-Control": "no-store",
       },
     });
-    console.log(res);
     if (res.data.product) {
       setCartItems(res.data.product);
     }
@@ -82,7 +81,6 @@ export default function ProductSelector({ colorOptions, res }: Props) {
   useEffect(() => {
     fetch();
   }, [user]);
-  console.log(cartItems);
   const existingCartItem = cartItems.find(
     (item) => item.stock_id === Number(selectedSizeId)
   );
@@ -97,7 +95,6 @@ export default function ProductSelector({ colorOptions, res }: Props) {
         "Cache-Control": "no-store",
       },
     });
-    console.log(data);
     if (status === 401) {
       setTitle("ثبت علاقه مندی");
     }
@@ -109,7 +106,6 @@ export default function ProductSelector({ colorOptions, res }: Props) {
 
   const handleToggleReminder = async () => {
     const _res = await toggleReminder(res.id);
-    console.log(_res);
     if (_res.success) {
       setReminder((prev) => !prev);
       toast.success(reminder ? "یادآوری لغو شد" : "یادآوری فعال شد");
@@ -235,7 +231,6 @@ export default function ProductSelector({ colorOptions, res }: Props) {
                         stock_id: +selectedSizeId,
                         count: 0,
                       });
-                      console.log(resRemove);
                       if (resRemove.success) {
                         setCartItems((prev) =>
                           prev.filter(

@@ -24,7 +24,6 @@ export default function AppBar() {
       >
         {appBarLinks.map((link, index) => {
           const isActive = pathname === link.href;
-          console.log(isActive);
           return (
             <NextLink
               key={`app-bar-link-${index}`}
